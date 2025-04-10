@@ -1,0 +1,50 @@
+
+body, html, main, section, div {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+  
+.hover-overlay {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.hover-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E63822; /* Atur warna efek di sini */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    border-radius: 6px;
+}
+
+.hover-overlay:hover::after {
+    opacity: 1;
+}
+
+.hover-overlay span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.nav-link.hover-overlay:not(:last-child)::after {
+    /* nonaktifkan efek hover di item lain */
+    display: none;
+}
+
+.footer-mod {
+    background: linear-gradient(90deg, #D00001 0%, #6A0000 100%); 
+    color: #fff; 
+    width: 100%;
+    height: 100%;  
+}

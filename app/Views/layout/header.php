@@ -3,37 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= esc($title ?? 'Web Profil Saya') ?></title>
+  <link rel="icon" type="image/png" href="<?=base_url('favicon.png')?>">
+  <title><?= esc($title ?? 'Top Security Service Company in Bali | Tailored Solutions | Bali') ?></title>
 
   <!-- Bootstrap CSS -->
-  <link href="<?=base_url('adminlte/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+  <link href="<?=base_url('assets/adminlte/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
 
   <!-- Font Awesome (kalau kamu pakai) -->
-  <link href="<?=base_url('adminlte/plugins/font-awesome-free/css/all.min.css')?>" rel="stylesheet">
+  <link href="<?=base_url('assets/adminlte/plugins/font-awesome-free/css/all.min.css')?>" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="<?= base_url('css/style.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="<?= base_url('/') ?>">Web Saya</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark position-absolute w-100 top-0 z-3">
+  <div class="container-fluid">
+    <a class="navbar-brand ps-5" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>"> EAGLE PROTECT</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/') ?>">Beranda</a>
+        <li class="nav-item px-2">
+          <a class="nav-link hover-overlay" href="<?= base_url('about_us') ?>"><span>ABOUT US</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/tentang') ?>">Tentang</a>
+        <li class="nav-item px-2 ">
+          <a class="nav-link hover-overlay" href="<?= base_url('/pricelist') ?>"><span>PRICELIST</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/kontak') ?>">Kontak</a>
+        <li class="nav-item px-2">
+          <a class="nav-link hover-overlay" href="<?= base_url('/services') ?>"><span>SERVICES</span></a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link hover-overlay" href="<?= base_url('/projects') ?>"><span>PROJECTS</span></a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link hover-overlay" href="<?= base_url('/news_room') ?>"><span>NEWS ROOM</span></a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link hover-overlay" href="<?= base_url('/careers') ?>"><span>CAREERS</span></a>
+        </li>
+        <li class="nav-item px-4">
+          <a class="nav-link hover-overlay contact-hover" href="<?= base_url('/contact_us') ?>"><span>CONTACT US</span></a>
         </li>
       </ul>
     </div>
