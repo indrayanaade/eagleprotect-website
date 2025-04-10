@@ -1,0 +1,32 @@
+services:
+  eagleprotect-development:
+    image: eagleprotect:apache2
+    container_name: eagleprotect-development
+    hostname: eagleprotect-development
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - "8001:80"
+      - "8002:443"
+    volumes:
+      - type: bind
+        source: /storage/source-code/development/eagleprotect-website
+        target: /var/www/html
+      - type: bind
+        source: /etc/letsencrypt
+        target: /etc/letsencrypt
+    networks:
+      - gcloud-apps-net
+    healthcheck:
+      test: curl --fail https://google.com || exit 1
+      interval: 30s
+      timeout: 30s
+      retries: 3
+      start_period: 60s
+
+# Docker Networks
+networks:
+  gcloud-apps-net:
+    name: gcloud-apps-net
+    external: true
