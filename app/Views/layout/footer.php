@@ -1,8 +1,15 @@
 <footer class="footer-mod">
     <div class="container-fluid">
-        <div class="border-bottom px 3">
+        <div style="border-bottom: 1px solid #B82020;">
+        <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
+            <div class="container text-left footer-txt p-4">
+                <p>CONTACT US FOR COMPREHENSIVE</p>
+                <p class="mb-5">SECURITY SOLUTIONS!</p>
+                <a href="#contact-form" class="btn btn-light">Contact Us</a>
+            </div>
+        </section>
             <section class="justify-content-center justify-content-lg-between p-4">
-                <div class="container text-center text-md-start mt-5">
+                <div class="container-fluid text-center text-md-start mt-5">
                     <div class="row mt-3">
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
                             <h6 class="text-uppercase fw-bold mb-5">
@@ -10,7 +17,7 @@
                             </h6>
                         </div>
     
-                        <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+                        <div class="col-md-1 col-lg-1 col-xl-1 mb-4">
                             <h6 class="fw-bold mb-5">Page</h6>
                             <p><a href="#!" class="text-reset text-decoration-none">Home</a></p>
                             <p><a href="#!" class="text-reset text-decoration-none">Packages</a></p>
@@ -35,7 +42,7 @@
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0">
                             <h6 class="fw-bold mb-5 invisible">Contact</h6>
                             <span class="mb-2">General Inquiries:</span><p><i class="fas fa-envelope me-2"></i>info@eagleprotect.id</p>
-                            <span class="mb-2">Instagram:</span><p><i class="fas fa-envelope me-2"></i> @eagleprotect.bali</p>
+                            <span class="mb-2">Instagram:</span><p><i class="fab fa-instagram me-2"></i> @eagleprotect.bali</p>
                         </div>
                     </div>
                 </div>

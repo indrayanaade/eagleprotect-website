@@ -2,9 +2,83 @@
 body, html, main, section, div {
     margin: 0 !important;
     padding: 0 !important;
-    box-sizing: border-box;
 }
-  
+
+/* Responsif untuk ukuran layar kecil (430px x 932px) */
+@media (max-width: 430px) {
+    /* .footer-mod {
+        background: linear-gradient(90deg, #D00001 0%, #6A0000 100%); 
+        color: #fff; 
+        width: 100%;
+    } */
+    .footer-bg-image {
+        padding: 20px 10px; /* Memberikan padding lebih kecil untuk menghindari elemen terlalu mepet di layar kecil */
+        background-size: cover; /* Pastikan gambar latar belakang tetap menutupi area */
+    }
+
+    .footer-txt {
+        text-align: center; /* Menjaga teks berada di tengah layar */
+        padding: 10px; /* Mengurangi padding di dalam kontainer */
+    }
+
+    .footer-txt p {
+        font-size: 1rem; /* Menurunkan ukuran font untuk tampilan kecil */
+    }
+
+    .footer-txt .btn {
+        font-size: 1rem; /* Mengurangi ukuran tombol */
+        padding: 8px 25px; /* Memberikan ruang yang lebih sedikit di sekitar tombol */
+        width: 100%; /* Membuat tombol penuh lebar pada layar kecil */
+        margin-top: 15px; /* Memberikan jarak antar tombol dan teks */
+    }
+}
+
+/* Untuk ukuran layar sangat kecil seperti mobile portrait */
+@media (max-width: 375px) {
+    .footer-bg-image {
+        padding: 15px 5px; /* Mengurangi padding untuk layar yang lebih kecil */
+    }
+
+    .footer-txt .btn {
+        padding: 8px 20px; /* Menyesuaikan ukuran tombol agar tidak terlalu besar */
+    }
+
+    .footer-txt p {
+        font-size: 0.9rem; /* Mengurangi ukuran font untuk lebih pas di layar kecil */
+    }
+}
+
+.contact-btn {
+    background-color: #E63822; /* Warna latar belakang tombol */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghapus border default */
+    padding: 10px 20px; /* Menambahkan padding ke dalam tombol */
+    font-size: 16px; /* Ukuran font */
+    border-radius: 5px; /* Sudut tombol sedikit membulat */
+    cursor: pointer; /* Menunjukkan cursor pointer untuk interaksi */
+    transition: background-color 0.3s ease; /* Menambahkan efek transisi pada warna latar belakang */
+}
+
+.hero-section{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/bg-hero.png'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100%; 
+}
+
+.hero-left-image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* Sesuaikan ukuran gambar */
+    z-index: 5; /* Agar gambar berada di atas konten */
+}
+
+.contact-btn:hover {
+    background-color: #D1281A; 
+}
+
 .hover-overlay {
     position: relative;
     padding: 8px 16px;
@@ -45,6 +119,133 @@ body, html, main, section, div {
 .footer-mod {
     background: linear-gradient(90deg, #D00001 0%, #6A0000 100%); 
     color: #fff; 
-    width: 100%;
-    height: 100%;  
+    /* width: 100%;
+    height: 100%;  */
 }
+
+/* .footer-bg-image {
+    background-image: url('/assets/img/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+} */
+
+.footer-bg-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/footer-bg.png'); /* Gambar utama */
+    background-position: center center; /* Posisi gambar pertama di tengah */
+    background-size: cover; /* Agar gambar pertama menutupi seluruh area */
+    background-repeat: no-repeat; /* Tidak mengulang gambar utama */
+    
+    /* Gambar kedua, akan di-overlay di atas gambar utama */
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .footer-bg-image::after {
+    content: "";
+    background-image: url('/assets/img/footer-img-right.png'); /* Gambar kedua */
+    background-position: right center; /* Posisi gambar kedua di kanan */
+    background-size: contain; /* Ukuran gambar kedua agar tetap proporsional */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; /* Sesuaikan lebar gambar kedua */
+    height: 100%; /* Sesuaikan tinggi gambar dengan area */
+    background-repeat: no-repeat;
+  }
+
+  /* .footer-txt{
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    color: #E63822;
+  } */
+  
+  .footer-txt {
+    padding: 34px;
+    border-radius: 10px;
+    text-align: left; /* Mengatur teks ke kiri */
+    margin-top: 50px; /* Menambahkan ruang dari atas ke teks */
+    color: #E63822;
+}
+
+.footer-txt p {
+    font-size: 1.5rem; /* Ukuran font deskripsi */
+    margin-bottom: 5px; /* Jarak bawah antara paragraf dan tombol */
+}
+
+.footer-txt .btn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-txt .btn:hover {
+    background-color: white; /* Warna latar belakang menjadi putih saat hover */
+    color: #D00001; /* Ubah warna teks menjadi merah saat hover */
+    border-color: #D00001; /* Ubah warna border menjadi merah saat hover */
+}
+
+.cta-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(141deg, #DF0001 -3.88%, #000 62.65%);
+    overflow: hidden;
+  }
+  
+  .quote-bg {
+    background-image: url('/assets/img/quote-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15; /* <--- lebih transparan */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .quote-front-bg {
+    background-image: url('/assets/img/quote-front-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* Ini bikin posisinya di tengah */
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .cta-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .icon-eagle{
+    background-image: url('/assets/img/eagle-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    filter: brightness(0) invert(1);
+    height: 62px;
+  }
+  
+  
+   
