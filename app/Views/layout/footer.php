@@ -30,7 +30,7 @@
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6 class="fw-bold mb-5">Address</h6>
                             <p><i class="fas fa-location-dot me-2"></i>Seminyak Office: Jalan Kunti Seminyak-Badung</p>
-                            <p><i class="fas fa-location-dot me-2"></i>Denpasar Office: Indonesia Cargo Indah Residence, Jalan Pondok Indah I No. 15, Ds. Batur Denpasar Utara-Bali</p>
+                            <p><i class="fas fa-location-dot me-2"></i>Denpasar Office: Indonesia Cargo Indah Residence, Jalan Pondok Indah I No. 15, Ds. BaturDenpasar Utara-Bali</p>
                         </div>
     
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">

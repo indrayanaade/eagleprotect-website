@@ -59,20 +59,70 @@ body, html, main, section, div {
     transition: background-color 0.3s ease; /* Menambahkan efek transisi pada warna latar belakang */
 }
 
+/* .hero-section {
+    height: 100vh;
+    overflow: hidden;
+  } */
+  
+  .bg-hero,
+  .bg-hero-back,
+  .bg-hero-front {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .bg-hero {
+    background-image: url('/assets/img/bg-hero.png');
+    /* z-index: 2; */
+    opacity: 0;
+  }
+  
+  .bg-hero-back {
+    background-image: url('/assets/img/bg-hero-back.png');
+    /* z-index: 1; */
+    opacity: 0;
+  }
+  
+  .bg-hero-front {
+    background-image: url('/assets/img/bg-hero-front.png');
+    /* z-index: 3; */
+    opacity: 1;
+  }
+  
 .hero-section{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/bg-hero.png'); 
     background-size: cover; 
     background-position: center; 
-    height: 100%; 
+    height: 100vh;
+    overflow: hidden;
 }
 
-.hero-left-image {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px; /* Sesuaikan ukuran gambar */
-    z-index: 5; /* Agar gambar berada di atas konten */
+.img-hero{
+    margin-top: 225px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.eagle-logo{
+    width: 99.794px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.slogan{
+    font-size: 53px;
+    font-weight: 900;
+    line-height: 130%;
+    color: #E63822;
+}
+
+.btn-style-hero{
+    display: flex;
+    padding: 15px 20px;
+    gap: 10px;
 }
 
 .contact-btn:hover {
@@ -123,17 +173,8 @@ body, html, main, section, div {
     height: 100%;  */
 }
 
-/* .footer-bg-image {
-    background-image: url('/assets/img/footer-bg.png');
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    width: 100%;
-    overflow: hidden;
-} */
-
 .footer-bg-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/footer-bg.png'); /* Gambar utama */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/footer-bg.png'); /* Gambar utama */
     background-position: center center; /* Posisi gambar pertama di tengah */
     background-size: cover; /* Agar gambar pertama menutupi seluruh area */
     background-repeat: no-repeat; /* Tidak mengulang gambar utama */
@@ -245,6 +286,43 @@ body, html, main, section, div {
     left: 0;
     filter: brightness(0) invert(1);
     height: 62px;
+  }
+
+  .p-custom {
+    /* padding: 50px !important; */
+    padding-top: 120px !important;
+    padding-bottom: 50px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  
+  .txt_about{
+    font-size: 18px;
+    font-weight: 700;
+    color: #E63822;
+  }
+  
+  .box {
+    background-color: #F0F0F0;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+
+  }
+
+  .box-light-1 {
+    background-color: #F5F5F5;
+  }
+  
+  .box-light-2 {
+    background-color: #F0F0F0;
+  }
+
+  .box-img {
+    background: transparent;
+    margin-top: 50px;
+    /* margin-bottom: 20px; */
   }
   
   
