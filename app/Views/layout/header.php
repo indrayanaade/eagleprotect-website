@@ -22,7 +22,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark w-100 top-20 z-3" style="background-color: rgba(0, 0, 0, 0.6); position: fixed;">
   <div class="container-fluid">
-    <a class="navbar-brand ps-5" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>"> EAGLE PROTECT</a>
+    <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>"> EAGLE PROTECT</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

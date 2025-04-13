@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div style="border-bottom: 1px solid #B82020;">
         <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
-            <div class="container text-left footer-txt p-4">
+            <div class="container text-left footer-txt p-4 fw-bold">
                 <p>CONTACT US FOR COMPREHENSIVE</p>
                 <p class="mb-5">SECURITY SOLUTIONS!</p>
                 <a href="#contact-form" class="btn btn-light">Contact Us</a>

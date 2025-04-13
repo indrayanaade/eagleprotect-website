@@ -20,8 +20,8 @@
             <h2 class="fw-bold slogan">FEEL SAFE, FEEL FREE</h2>
             <p class="lead">Live, Work, and Enjoy Life without the constant worry of what could go wrong.</p>
             <div class="btn-style-hero mt-5">
-                <button class="btn btn-outline-danger btn-style-hero" onclick="location.href='<?= base_url('/our_team') ?>'">Our Team</button>
-                <button class="btn btn btn-danger contact-btn" onclick="location.href='<?= base_url('/contact_us') ?>'">Contact Us</button>
+                <button class="btn btn-outline-danger btn-xl btn-style-hero" onclick="location.href='<?= base_url('/our_team') ?>'">Our Team</button>
+                <button class="btn btn btn-danger btn-xl contact-btn" onclick="location.href='<?= base_url('/contact_us') ?>'">Contact Us</button>
             </div>
         </div>
         </div>
@@ -71,29 +71,58 @@
       </div>
     </div>
   </div>
-</section>
 
-<!-- Testimonials Section -->
-<section class="testimonials-section py-5">
-    <div class="container-fluid text-center">
-        <h2 class="fw-bold mb-4">What Our Clients Say</h2>
+  <div class="container-fluid py-5">
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-box p-4 border">
-                    <p>"Eagle Protect has been a game changer for our security needs. Their monitoring service gives us peace of mind."</p>
-                    <small>- John Doe, CEO of Company X</small>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <img src="<?= base_url('assets/img/whos-1.png') ?>" class="img-fluid" alt="First Image">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <img src="<?= base_url('assets/img/whos-2.png') ?>" class="img-fluid mt-5" alt="Second Image">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-box p-4 border">
-                    <p>"The consulting services they provided helped us improve our security systems and respond better to emergencies."</p>
-                    <small>- Jane Smith, Director of Operations</small>
+
+            <div class="col-md-6 d-flex align-items-start pl-3">
+                <div>
+                    <span class="txt_about">Who We Are</span>
+                    <h2 class="fw-bold mt-1 mb-5">Eagle Protect Works with Professionals to Provide a Sense of Security and Trust</h2>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-4"><i class="fas fa-check-circle custom-icon me-3"></i><p class="mt-0"><b>24/7 Operational Excellence:</b> Our team is available around the clock, offering rapid response services supported by advanced technology and trained professionals.</p></li>
+                        <li class="d-flex align-items-center mb-4"><i class="fas fa-check-circle custom-icon me-3"></i><p class="mt-0"><b>Advanced Technology Integration:</b> We utilize body cameras, drones, and modern supervision systems to enhance monitoring, ensure accountability, and provide reliable evidence when required.</p></li>
+                        <li class="d-flex align-items-center mb-4"><i class="fas fa-check-circle custom-icon me-3"></i><p class="mt-0"><b>Commitment to Trust and Safety:</b> We focus on building lasting relationships by delivering transparent, effective, and client-focused security solutions that prioritize safety and peace of mind.</p></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="testimonial-box p-4 border">
-                    <p>"Their team is always professional and quick to respond. Highly recommend their services!"</p>
-                    <small>- Mark Johnson, Business Owner</small>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="stat-card p-4">
+                    <h3><span class="counter" data-target="100">0</span>+</h3>
+                    <p class="mb-0">Client is Satisfied</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="stat-card p-4">
+                    <h3><span class="counter" data-target="100">0</span>+</h3>
+                    <p class="mb-0">Certified Active Member</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="stat-card p-4">
+                    <h3><span class="counter" data-target="5">0</span> Years</h3>
+                    <p class="mb-0">Company is already operating</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <div class="stat-card p-4">
+                    <h3><span class="counter" data-target="5">0</span>+</h3>
+                    <p class="mb-0">Locations in Bali Covered</p>
                 </div>
             </div>
         </div>
@@ -110,60 +139,127 @@
     </div>
 </section>
 
-<!-- Services Section -->
-<section id="services" class="services-section py-5">
-    <div class="container-fluid text-center">
-        <h2 class="fw-bold mb-4">Our Services</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">Security Consulting</h4>
-                    <p>Our expert consultants provide comprehensive assessments and strategies to enhance your security systems.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">24/7 Monitoring</h4>
-                    <p>We offer around-the-clock monitoring to ensure the safety and security of your property at all times.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">Emergency Response</h4>
-                    <p>In case of an emergency, our team is ready to respond quickly and efficiently to handle any situation.</p>
-                </div>
-            </div>
-        </div>
+<section class="map-coverage-section position-relative">
+  <div class="container-fluid p-50">
+  <span class="txt_about">Our Coverage Area</span>
+  <h2 class="fw-bold mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
+    <div class="map-wrapper position-relative">
+      <img src="<?= base_url('assets/img/bali-map.svg') ?>" alt="Map Bali" class="img-fluid w-100 img-bali">
+
+      <!-- Titik Lokasi -->
+      <!-- <div class="map-pin" style="top: 38%; left: 28%;">
+        <span class="pin-icon"></span>
+        <div class="pin-label">Canggu</div>
+      </div>
+      <div class="map-pin" style="top: 41%; left: 30%;">
+        <span class="pin-icon"></span>
+        <div class="pin-label">Berawa</div>
+      </div>
+      <div class="map-pin" style="top: 36%; left: 26%;">
+        <span class="pin-icon"></span>
+        <div class="pin-label">Pererenan</div>
+      </div>
+      <div class="map-pin" style="top: 70%; left: 50%;">
+        <span class="pin-icon"></span>
+        <div class="pin-label">Pecatu</div>
+      </div> -->
     </div>
+  </div>
 </section>
 
-<!-- Services Section -->
-<section id="services" class="services-section py-5">
-    <div class="container-fluid text-center">
-        <h2 class="fw-bold mb-4">Our Services</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">Security Consulting</h4>
-                    <p>Our expert consultants provide comprehensive assessments and strategies to enhance your security systems.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">24/7 Monitoring</h4>
-                    <p>We offer around-the-clock monitoring to ensure the safety and security of your property at all times.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="service-box p-4 border">
-                    <h4 class="fw-bold mb-3">Emergency Response</h4>
-                    <p>In case of an emergency, our team is ready to respond quickly and efficiently to handle any situation.</p>
-                </div>
-            </div>
-        </div>
+<section class="service-list-section py-5">
+  <div class="container-fluid p-50 text-white">
+    <span class="txt_about">Services</span>
+    <h2 class="fw-bold mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
+
+    <div class="row border-bottom py-3 align-items-center">
+      <div class="col-md-2 font-color-number">01</div>
+      <div class="col-md-5 fs-3">The Services We Offer are Varied</div>
+      <div class="col-md-5 font-color">We offer our clients various types of subscription packages ranging from basic to premium, as well as additional options such as SOS buttons, advanced supervision equipment, and online support applications.</div>
     </div>
+
+    <div class="row border-bottom py-3 align-items-center">
+      <div class="col-md-2 font-color-number">02</div>
+      <div class="col-md-5 fs-3">Our Customer Service is Always Ready</div>
+      <div class="col-md-5 font-color">All packages ensure a 24/7 hotline in both Indonesian and English, along with guaranteed response times.</div>
+    </div>
+
+    <div class="row border-bottom py-3 align-items-center">
+      <div class="col-md-2 font-color-number">03</div>
+      <div class="col-md-5 fs-3">Our Technicians are Full of Dedication</div>
+      <div class="col-md-5 font-color">24/7 technicians are available for supervision equipment maintenance.</div>
+    </div>
+
+    <div class="row border-bottom py-3 align-items-center">
+      <div class="col-md-2 font-color-number">04</div>
+      <div class="col-md-5 fs-3">We Can Be Relied On Even In An Emergency</div>
+      <div class="col-md-5 font-color">We coordinate with authorities and emergency responders in emergency situations.</div>
+    </div>
+
+    <div class="row border-bottom py-3 align-items-center">
+      <div class="col-md-2 font-color-number">05</div>
+      <div class="col-md-5 fs-3">All Services Provided Can be Adjusted</div>
+      <div class="col-md-5 font-color">Additional services available include security officers, translation, legal assistance, ambulance services, first aid, and other services that work in cooperation with the authorities.</div>
+    </div>
+  </div>
 </section>
+
+<section class="our-vision-section pt-3 position-relative">
+  <div class="container-fluid position-relative">
+  <div class="overlay position-absolute w-100 h-100"></div>
+    <div class="row align-items-center">
+      <!-- Kolom Kiri: Gambar -->
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+        <img src="<?= base_url('assets/img/bg-hero-2.png') ?>" alt="Our Vision" class="img-fluid justify-content-end">
+      </div>
+
+      <!-- Kolom Kanan: Deskripsi -->
+      <div class="col-md-6">
+        <span class="txt_about">We are Confident</span>
+        <h2 class="txt-lh-52 lh-base text-white mb-5">At Eagle Protect, We Stand Apart Through Our Unparalleled Blend of Expertise</h2>
+        <p class="lead text-white">Our elite team—comprising security experts, former law enforcement officers, investigative professionals, legal scholars, and military veterans—works to secure and develop smart city ecosystems. Partnering with police forces, government entities, and top healthcare institutions like Kasih Ibu and Siloam Hospitals, we create a cohesive safety network. As the only all-in-one security provider in Bali, we collaborate with Visvasitha Legal Team and Polres Badung to offer seamless legal and safety support, ensuring top-tier protection and peace of mind.</p>
+        <button class="btn btn-outline-light btn-xl mt-5">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="running-text">
+  <div class="scrolling-wrapper">
+    <div class="scrolling-text">
+      <span>Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+      <span>Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+    </div>
+  </div>
+</section>
+
 
 <section>
     <div><?= $this->include('layout/footer') ?></div>
 </section>
+
+<script src="<?= base_url('assets/adminlte/plugins/jquery/jquery-3.7.1.min.js') ?>"></script>
+<!-- Script Animasi -->
+<script>
+  $(document).ready(function () {
+    $('.counter').each(function () {
+      var $this = $(this),
+          countTo = $this.attr('data-target');
+
+      $({ countNum: 0 }).animate(
+        { countNum: countTo },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          }
+        }
+      );
+    });
+  });
+</script>
