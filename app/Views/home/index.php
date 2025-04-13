@@ -1,3 +1,4 @@
+<link rel="icon" href="<?=base_url()?>/assets/img/eagle-logo-desc.png" type="image/png">
 <section>
     <div><?= $this->include('layout/header') ?></div>
 </section>
@@ -143,27 +144,55 @@
   <div class="container-fluid p-50">
   <span class="txt_about">Our Coverage Area</span>
   <h2 class="fw-bold mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
-    <div class="map-wrapper position-relative">
-      <img src="<?= base_url('assets/img/bali-map.svg') ?>" alt="Map Bali" class="img-fluid w-100 img-bali">
+  <div class="map-wrapper position-relative p-50">
+    <img src="<?= base_url('assets/img/bali-map.svg') ?>" alt="Bali Map" class="img-fluid w-100">
 
-      <!-- Titik Lokasi -->
-      <!-- <div class="map-pin" style="top: 38%; left: 28%;">
-        <span class="pin-icon"></span>
-        <div class="pin-label">Canggu</div>
+    <div class="location-point" style="top: 57%; left: 45%;">
+      <div class="custom-tooltip">
+        <div class="tooltip-icon-title">
+          <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
+          <h5>Pererenan Zone</h5>
+        </div>
+        <p class="tooltip-desc">
+          In Perenan we have many clients who already trust our services.
+        </p>
       </div>
-      <div class="map-pin" style="top: 41%; left: 30%;">
-        <span class="pin-icon"></span>
-        <div class="pin-label">Berawa</div>
-      </div>
-      <div class="map-pin" style="top: 36%; left: 26%;">
-        <span class="pin-icon"></span>
-        <div class="pin-label">Pererenan</div>
-      </div>
-      <div class="map-pin" style="top: 70%; left: 50%;">
-        <span class="pin-icon"></span>
-        <div class="pin-label">Pecatu</div>
-      </div> -->
     </div>
+    <div class="location-point" style="top: 62%; left: 49%;">
+      <div class="custom-tooltip">
+          <div class="tooltip-icon-title">
+            <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
+            <h5>Canggu Zone</h5>
+          </div>
+          <p class="tooltip-desc">
+          We have many partners in the Canggu area.
+          </p>
+      </div>
+    </div>
+    <div class="location-point" style="top: 68%; left: 52%;">
+      <div class="custom-tooltip">
+        <div class="tooltip-icon-title">
+          <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
+          <h5>Berawa Zone</h5>
+        </div>
+        <p class="tooltip-desc">
+          Berawa is also our coverage area.
+        </p>
+      </div>
+    </div>
+    <div class="location-point" style="top: 90%; left: 53%;">
+      <div class="custom-tooltip">
+        <div class="tooltip-icon-title">
+          <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
+          <h5>Pecatu Zone</h5>
+        </div>
+        <p class="tooltip-desc">
+          We Eagle Protect have covered the Uluwatu area, we help work together with local and international parties.
+        </p>
+      </div>
+    </div>
+  </div>
+
   </div>
 </section>
 
