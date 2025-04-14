@@ -3,6 +3,51 @@ body, html, main, section, div {
     margin: 0 !important;
     padding: 0 !important;
 }
+/* Default: tampilkan desktop, sembunyikan mobile */
+.only-mobile {
+  display: none;
+}
+.only-desktop {
+  display: block;
+}
+.mt-7{
+  margin-top: 7rem !important;
+}
+
+/* Saat layar <= 430px, tampilkan mobile, sembunyikan desktop */
+@media (max-width: 430px) {
+  .only-mobile {
+    display: block;
+  }
+  .only-desktop {
+    display: none;
+  }
+  .footer-bg-image {
+      padding: 20px 10px; /* Memberikan padding lebih kecil untuk menghindari elemen terlalu mepet di layar kecil */
+      background-size: cover; /* Pastikan gambar latar belakang tetap menutupi area */
+  }
+
+  .footer-txt {
+      text-align: center; /* Menjaga teks berada di tengah layar */
+      padding: 10px; /* Mengurangi padding di dalam kontainer */
+  }
+
+  .footer-txt p {
+      font-size: 1rem; /* Menurunkan ukuran font untuk tampilan kecil */
+  }
+
+  .footer-txt .btn {
+      font-size: 1rem; /* Mengurangi ukuran tombol */
+      padding: 8px 25px; /* Memberikan ruang yang lebih sedikit di sekitar tombol */
+      width: 100%; /* Membuat tombol penuh lebar pada layar kecil */
+      margin-top: 15px; /* Memberikan jarak antar tombol dan teks */
+  }
+  .cta-section {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 @font-face {
   font-family: 'Inter-bold';
   src: url('../adminlte/plugins/font-awesome-free/webfonts/Inter_24pt-Bold.ttf') format('truetype');
@@ -69,10 +114,26 @@ body, html, main, section, div {
   font-weight: 600;
   line-height: 18.2px;
 }
+.inter-mobile{
+  font-family: 'Inter-regular', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+}
 .lato-light{
   font-family: 'Lato-light', sans-serif;
   font-size: 16px;
   line-height: 20.8px;
+}
+.lato-light-mobile{
+  font-family: 'Lato-light', sans-serif;
+  font-size: 13px;
+  line-height: 19.8px;
+  text-align: justify;
+}
+.lato-light-mobile strong {
+  font-family: 'Lato-bold', sans-serif;
+  font-weight: 700;
 }
 .lato-regular{
   font-family: 'Lato-regular', sans-serif;
@@ -84,25 +145,55 @@ body, html, main, section, div {
   font-size: 16px;
   line-height: 20.8px;
 }
+.lato-bold-mobile{
+  font-family: 'Lato-bold', sans-serif;
+  font-size: 14px;
+  line-height: 20.8px;
+}
 .roboto-h2{
   font-family: 'Roboto-bold',sans-serif;
   font-size: 40px;
   line-height: 52px;
+}
+.roboto-h2-mobile{
+  font-family: 'Roboto-bold',sans-serif;
+  font-size: 20px;
+  line-height: 24px;
 }
 .cta-txt{
   font-family: 'Roboto-bold',sans-serif;
   font-size: 38px;
   line-height: 44.2px;
 }
+.cta-txt-mobile{
+  font-family: 'Roboto-bold',sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+}
 .roboto-p{
   font-family: 'Roboto-regular',sans-serif;
   font-size: 18px;
   line-height: 23.4px;
 }
+.roboto-p-mobile{
+  font-family: 'Roboto-regular',sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+.roboto-p-mobile strong {
+  font-family: 'Roboto-bold', sans-serif;
+  font-weight: 700;
+}
 .roboto-h4{
   font-family: 'Robot-bold', sans-serif;
   font-size: 22px;
   line-height: 28.6px;
+}
+.roboto-h4-mobile{
+  font-family: 'Robot-bold', sans-serif;
+  font-size: 12px;
+  line-height: 18.7px;
 }
 .roboto-h5{
   font-family: 'Robot-bold', sans-serif;
@@ -122,44 +213,17 @@ body, html, main, section, div {
 .w-90{
   width: 90%;
 }
-.fade-up {
+
+.fade-in {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+  transition-delay: var(--delay, 0s);
 }
 
-.fade-up.visible {
+.fade-in.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Responsif untuk ukuran layar kecil (430px x 932px) */
-@media (max-width: 430px) {
-    /* .footer-mod {
-        background: linear-gradient(90deg, #D00001 0%, #6A0000 100%); 
-        color: #fff; 
-        width: 100%;
-    } */
-    .footer-bg-image {
-        padding: 20px 10px; /* Memberikan padding lebih kecil untuk menghindari elemen terlalu mepet di layar kecil */
-        background-size: cover; /* Pastikan gambar latar belakang tetap menutupi area */
-    }
-
-    .footer-txt {
-        text-align: center; /* Menjaga teks berada di tengah layar */
-        padding: 10px; /* Mengurangi padding di dalam kontainer */
-    }
-
-    .footer-txt p {
-        font-size: 1rem; /* Menurunkan ukuran font untuk tampilan kecil */
-    }
-
-    .footer-txt .btn {
-        font-size: 1rem; /* Mengurangi ukuran tombol */
-        padding: 8px 25px; /* Memberikan ruang yang lebih sedikit di sekitar tombol */
-        width: 100%; /* Membuat tombol penuh lebar pada layar kecil */
-        margin-top: 15px; /* Memberikan jarak antar tombol dan teks */
-    }
 }
 
 /* Untuk ukuran layar sangat kecil seperti mobile portrait */
@@ -232,6 +296,19 @@ body, html, main, section, div {
     width: 100%;
     height: 100%;
     position: relative;
+} 
+.img-hero-mobile{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.custom-button-mobile{
+  width: 157px;
+  padding: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .eagle-logo{
@@ -239,6 +316,13 @@ body, html, main, section, div {
     height: 80px;
     position: relative;
     margin-bottom: 30px;
+}
+.slogan-mobile{
+  font-family: 'Roboto-bold', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 130%;
+  color: #E63822;
 }
 
 .slogan{
@@ -376,12 +460,18 @@ body, html, main, section, div {
 }
 
 .cta-section {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(141deg, #DF0001 -3.88%, #000 62.65%);
-    overflow: hidden;
-  }
+  position: relative;
+  /* width: 100%; */
+  /* max-height: 400px; */
+  background: linear-gradient(141deg, #DF0001 -3.88%, #000 62.65%);
+  overflow: hidden;
+}
+.cta-section-mobile {
+  position: relative;
+  height: 475px;
+  background: linear-gradient(141deg, #DF0001 -3.88%, #000 62.65%);
+  overflow: hidden;
+}
   
   .quote-bg {
     background-image: url('/assets/img/quote-bg.png');
@@ -417,6 +507,10 @@ body, html, main, section, div {
     position: relative;
     z-index: 2;
   }
+  .cta-section-mobile .container{
+    position: relative;
+    z-index: 2;
+  }
 
   .icon-eagle{
     background-image: url('/assets/img/eagle-logo.png');
@@ -427,12 +521,39 @@ body, html, main, section, div {
     filter: brightness(0) invert(1);
     height: 62px;
   }
+  .icon-eagle-mobile{
+    background-image: url('/assets/img/eagle-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    filter: brightness(0) invert(1);
+    height: 52px;
+    width: 52px;
+  }
 
   .p-custom {
     padding-top: 120px !important;
     padding-bottom: 50px !important;
     padding-left: 50px !important;
     padding-right: 50px !important;
+  }
+  .p-custom-mobile{
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important; 
+  }
+  .p-custom-mobile-section{
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .p-custom-mobile-section-cta{
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .p-50{
@@ -443,6 +564,12 @@ body, html, main, section, div {
     font-family: 'Roboto-Bold',sans-serif;
     font-size: 18px;
     font-weight: 700;
+    color: #E63822;
+  }
+  .txt_about-mobile{
+    font-family: 'Roboto-Bold',sans-serif;
+    font-size: 10px;
+    line-height: 13px;
     color: #E63822;
   }
   
@@ -484,6 +611,21 @@ body, html, main, section, div {
       text-align: center;
       font-weight: 500;
       color: #030303;
+  }
+
+  .stat-card-mobile h3 {
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+    color: #030303;
+  }
+
+  .stat-card-mobile p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
   }
 
   .stat-card p {
@@ -650,4 +792,9 @@ body, html, main, section, div {
   .location-point:hover .custom-tooltip {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  span.justify-text {
+    display: block; /* atau inline-block */
+    text-align: justify;
   }

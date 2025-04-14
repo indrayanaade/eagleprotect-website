@@ -1,4 +1,4 @@
-<footer class="footer-mod">
+<footer class="footer-mod fade-in" style="--delay: 0.28s">
     <div class="container-fluid">
         <div style="border-bottom: 1px solid #B82020;">
         <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
