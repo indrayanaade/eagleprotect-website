@@ -79,7 +79,7 @@ body, html, main, section, div {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato-reguler';
+  font-family: 'Lato-regular';
   src: url('../adminlte/plugins/font-awesome-free/webfonts/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -139,6 +139,13 @@ body, html, main, section, div {
   font-family: 'Lato-regular', sans-serif;
   font-size: 16px;
   line-height: 20.8px;
+}
+.lato-regular-mobile{
+  font-family: 'Lato-regular', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  /* text-align: justify; */
 }
 .lato-bold{
   font-family: 'Lato-bold', sans-serif;
@@ -200,6 +207,12 @@ body, html, main, section, div {
   font-size: 28px;
   font-weight: 700;
   line-height: 36.4px;
+}
+.roboto-h5-mobile{
+  font-family: 'Robot-bold', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19.5px;
 }
 .manrope-bold{
   font-family: 'Manrope-bold', sans-serif;
@@ -555,6 +568,58 @@ body, html, main, section, div {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+  .p-custom-mobile-section-service-head{
+    padding-bottom: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .p-custom-mobile-section-service{
+    display: inline-flex;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .p-custom-mobile-our-vision{
+    padding-top: 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .custom-outline-btn {
+    width: 157px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff; /* outline-light */
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-outline-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .custom-outline-btn-mobile {
+    width: 157px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff; /* outline-light */
+    color: #ffffff;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-outline-btn-mobile:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
 
   .p-50{
     padding: 50px !important;
@@ -641,14 +706,30 @@ body, html, main, section, div {
     padding: 20px 0;
     position: relative;
   }
+  .running-text-mobile {
+    color: linear-gradient(90deg, #535353 0%, #030000 100%);
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
   
   .scrolling-wrapper {
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
   }
+  .scrolling-wrapper-mobile {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+  }
   
   .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+  .scrolling-text-mobile {
     display: inline-block;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
@@ -661,6 +742,21 @@ body, html, main, section, div {
     font-weight: 900;
     padding: 20px;
     text-transform: uppercase;
+  }
+
+  .scrolling-text-mobile span {
+    display: inline-block;
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+
+  .scrolling-text-mobile img {
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 1/1;
   }
 
   .gradient-text {
@@ -697,6 +793,13 @@ body, html, main, section, div {
     font-size: 73.727px;
     font-weight: 900;
   }
+  .font-color-number-mobile{
+    font-family: 'Roboto-bold', sans-serif;
+    color: rgba(224, 224, 224, 0.40);
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+  }
   .our-vision-section {
     background-image: url('/assets/img/bg-police-office.png');
     filter: brightness(90%);
@@ -704,16 +807,55 @@ body, html, main, section, div {
     background-position: center;
     background-repeat: no-repeat;
   }
+  .our-vision-section-mobile {
+    position: relative;
+    background-image: url('/assets/img/bg-police-office.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  /* Overlay gelap di atas background, tapi di bawah konten */
+  .our-vision-section-mobile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* atur tingkat kegelapan */
+    z-index: 1;
+  }
+  
+  .our-vision-section-mobile .container-fluid {
+    position: relative;
+    z-index: 2; /* konten berada di atas overlay */
+    padding: 20px;
+    color: #fff; /* pastikan tulisan tetap putih/terang */
+  }
+  
   .txt-lh-52{
     font-family: 'Roboto-bold',sans-serif;
     font-size: 40px;
     font-weight: 900;
     line-height: 52px;
   }
+  .txt-lh-52-mobile{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 26px;
+  }
   .txt-desc{
     font-family: 'Lato-ligth', sans-serif;
     font-size: 16px;
     line-height: 20.8px;
+  }
+  .txt-desc-mobile{
+    font-family: 'Lato-ligth', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
   }
   
   .btn-xl {
@@ -793,6 +935,53 @@ body, html, main, section, div {
     opacity: 1;
     pointer-events: auto;
   }
+
+  .location-tooltip-mobile {
+    border: 1px solid #E63822;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 13px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  }
+  
+  .location-header-mobile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  
+  .location-number-mobile {
+    background-color: #E63822;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 11px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-icon-mobile {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .location-title-mobile {
+    font-family: 'Roboto-bold', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  
+  .location-desc-mobile {
+    font-family: 'Inter-regular', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    /* text-align: justify; */
+  }  
 
   span.justify-text {
     display: block; /* atau inline-block */

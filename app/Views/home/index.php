@@ -190,9 +190,9 @@
   </section>
 
   <section class="service-list-section py-5 fade-in" style="--delay: 0.16s">
-    <div class="container-fluid p-50 text-white">
+    <div class="container-fluid p-custom-mobile-section-cta text-white">
       <span class="txt_about">Services</span>
-      <h2 class="roboto-h2 mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
+      <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
 
       <div class="row border-bottom py-3 align-items-center">
         <div class="col-md-2 font-color-number">01</div>
@@ -395,119 +395,179 @@
   </section>
 
   <section class="map-coverage-section position-relative fade-in" style="--delay: 0.12s">
-    <div class="container-fluid p-50">
+    <div class="container-fluid p-custom-mobile-section-cta">
     <span class="txt_about">Our Coverage Area</span>
-    <h2 class="roboto-h2 mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
-      <div class="map-wrapper position-relative p-50">
-        <img src="<?= base_url('assets/img/bali-map.svg') ?>" alt="Bali Map" class="img-fluid w-100">
-        <div class="location-point" style="top: 57%; left: 45%;">
-          <div class="custom-tooltip">
-            <div class="tooltip-icon-title">
-              <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
-              <h5 class="roboto-h5">Pererenan Zone</h5>
-            </div>
-            <p class="tooltip-desc">
-              In Perenan we have many clients who already trust our services.
-            </p>
-          </div>
-        </div>
-        <div class="location-point" style="top: 62%; left: 49%;">
-          <div class="custom-tooltip">
-              <div class="tooltip-icon-title">
-                <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
-                <h5 class="roboto-h5">Canggu Zone</h5>
+    <h2 class="roboto-h2-mobile mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
+      <div class="map-wrapper">
+        <img src="<?= base_url('assets/img/bali-map-mobile.png') ?>" alt="Bali Map" class="img-fluid">
+        <div class="container-fluid mt-5 mb-5">
+          <div class="row text-start justify-content-center">
+            
+            <div class="col-6 mb-3 px-2">
+              <div class="location-tooltip-mobile h-100 p-2">
+                <div class="location-header-mobile d-flex align-items-center mb-2">
+                  <div class="location-number-mobile me-2">1</div>
+                  <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
+                  <span class="location-title-mobile fw-bold">Pererenan Zone</span>
+                </div>
+                <p class="location-desc-mobile mb-0">
+                  In Pererenan we have many clients who already trust our services.
+                </p>
               </div>
-              <p class="tooltip-desc">
-              We have many partners in the Canggu area.
-              </p>
-          </div>
-        </div>
-        <div class="location-point" style="top: 68%; left: 52%;">
-          <div class="custom-tooltip">
-            <div class="tooltip-icon-title">
-              <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
-              <h5 class="roboto-h5">Berawa Zone</h5>
             </div>
-            <p class="tooltip-desc">
-              Berawa is also our coverage area.
-            </p>
-          </div>
-        </div>
-        <div class="location-point" style="top: 90%; left: 53%;">
-          <div class="custom-tooltip">
-            <div class="tooltip-icon-title">
-              <img src="<?= base_url('assets/img/officer.png') ?>" alt="Icon" />
-              <h5 class="roboto-h5">Pecatu Zone</h5>
+
+            <div class="col-6 mb-3 px-2">
+              <div class="location-tooltip-mobile h-100 p-2">
+                <div class="location-header-mobile d-flex align-items-center mb-2">
+                  <div class="location-number-mobile me-2">2</div>
+                  <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
+                  <span class="location-title-mobile fw-bold">Canggu Zone</span>
+                </div>
+                <p class="location-desc-mobile mb-0">
+                  We have many partners in the Canggu area.
+                </p>
+              </div>
             </div>
-            <p class="tooltip-desc">
-              We Eagle Protect have covered the Uluwatu area, we help work together with local and international parties.
-            </p>
+
+            <div class="col-6 mb-3 px-2">
+              <div class="location-tooltip-mobile h-100 p-2">
+                <div class="location-header-mobile d-flex align-items-center mb-2">
+                  <div class="location-number-mobile me-2">3</div>
+                  <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
+                  <span class="location-title-mobile fw-bold">Berawa Zone</span>
+                </div>
+                <p class="location-desc-mobile mb-0">
+                  Berawa is also our coverage area.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 mb-3 px-2">
+              <div class="location-tooltip-mobile h-100 p-2">
+                <div class="location-header-mobile d-flex align-items-center mb-2">
+                  <div class="location-number-mobile me-2">4</div>
+                  <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
+                  <span class="location-title-mobile fw-bold">Pecatu Zone</span>
+                </div>
+                <p class="location-desc-mobile mb-0">
+                  We Eagle Protect have covered the Uluwatu area, we help work together with local and international parties.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
+
+
       </div>
     </div>
   </section>
 
   <section class="service-list-section py-5 fade-in" style="--delay: 0.16s">
-    <div class="container-fluid p-50 text-white">
-      <span class="txt_about">Services</span>
-      <h2 class="roboto-h2 mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
-
-      <div class="row border-bottom py-3 align-items-center">
-        <div class="col-md-2 font-color-number">01</div>
-        <div class="col-md-5 fs-3 roboto-h5">The Services We Offer are Varied</div>
-        <div class="col-md-5 font-color lato-regular">We offer our clients various types of subscription packages ranging from basic to premium, as well as additional options such as SOS buttons, advanced supervision equipment, and online support applications.</div>
+    <div class="container-fluid text-white">
+      <div class="p-custom-mobile-section-service-head">
+        <span class="txt_about">Services</span>
+        <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
+      </div>
+      
+      <!-- Item 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="row border-bottom py-2 align-items-center">
+          <div class="p-custom-mobile-section-service">
+            <div class="col-2 font-color-number-mobile me-3">01</div>
+            <div class="col-10">
+              <div class="roboto-h5-mobile mb-1">The Services We Offer are Varied</div>
+              <div class="font-color lato-regular-mobile me-3">
+                We offer our clients various types of subscription packages ranging from basic to premium, as well as additional options such as SOS buttons, advanced supervision equipment, and online support applications.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
-        <div class="col-md-2 font-color-number">02</div>
-        <div class="col-md-5 fs-3 roboto-h5">Our Customer Service is Always Ready</div>
-        <div class="col-md-5 font-color lato-regular">All packages ensure a 24/7 hotline in both Indonesian and English, along with guaranteed response times.</div>
+      <!-- Item 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="row border-bottom py-2 align-items-center">
+          <div class="p-custom-mobile-section-service">
+            <div class="col-2 font-color-number-mobile me-3">02</div>
+            <div class="col-10">
+              <div class="roboto-h5-mobile mb-2">Our Customer Service is Always Ready</div>
+              <div class="font-color lato-regular-mobile me-3">
+                All packages ensure a 24/7 hotline in both Indonesian and English, along with guaranteed response times.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
-        <div class="col-md-2 font-color-number">03</div>
-        <div class="col-md-5 fs-3 roboto-h5">Our Technicians are Full of Dedication</div>
-        <div class="col-md-5 font-color lato-regular">24/7 technicians are available for supervision equipment maintenance.</div>
+      <!-- Item 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="row border-bottom py-2 align-items-center">
+          <div class="p-custom-mobile-section-service">
+            <div class="col-2 font-color-number-mobile me-3">03</div>
+            <div class="col-10">
+              <div class="roboto-h5-mobile mb-2">Our Technicians are Full of Dedication</div>
+              <div class="font-color lato-regular-mobile me-3">
+                24/7 technicians are available for supervision equipment maintenance.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
-        <div class="col-md-2 font-color-number">04</div>
-        <div class="col-md-5 fs-3 roboto-h5">We Can Be Relied On Even In An Emergency</div>
-        <div class="col-md-5 font-color lato-regular">We coordinate with authorities and emergency responders in emergency situations.</div>
+      <!-- Item 4 -->
+      <div class="col-md-6 mb-4">
+        <div class="row border-bottom py-2 align-items-center">
+          <div class="p-custom-mobile-section-service">
+            <div class="col-2 font-color-number-mobile me-3">04</div>
+            <div class="col-10">
+              <div class="roboto-h5-mobile mb-2">We Can Be Relied On Even In An Emergency</div>
+              <div class="font-color lato-regular-mobile me-3">
+                We coordinate with authorities and emergency responders in emergency situations.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
-        <div class="col-md-2 font-color-number">05</div>
-        <div class="col-md-5 fs-3 roboto-h5">All Services Provided Can be Adjusted</div>
-        <div class="col-md-5 font-color lato-regular">Additional services available include security officers, translation, legal assistance, ambulance services, first aid, and other services that work in cooperation with the authorities.</div>
+      <!-- Item 5 -->
+      <div class="col-md-6 mb-4">
+        <div class="row border-bottom py-2 align-items-center">
+          <div class="p-custom-mobile-section-service">
+            <div class="col-2 font-color-number-mobile me-3">05</div>
+            <div class="col-10">
+              <div class="roboto-h5-mobile mb-2">All Services Provided Can be Adjusted</div>
+              <div class="font-color lato-regular-mobile me-3">
+                Additional services available include security officers, translation, legal assistance, ambulance services, first aid, and other services that work in cooperation with the authorities.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="our-vision-section pt-3 position-relative fade-in" style="--delay: 0.20s">
-    <div class="container-fluid position-relative">
-    <div class="overlay position-absolute w-100 h-100"></div>
+  <section class="our-vision-section-mobile fade-in" style="--delay: 0.20s">
+    <div class="container-fluid p-custom-mobile-our-vision">
       <div class="row align-items-center">
-        <div class="col-md-6 text-center mb-4 mb-md-0">
-          <img src="<?= base_url('assets/img/bg-hero-2.png') ?>" alt="Our Vision" class="img-fluid justify-content-end">
-        </div>
-
         <div class="col-md-6">
           <span class="txt_about">We are Confident</span>
-          <h2 class="txt-lh-52 text-white mb-5">At Eagle Protect, We Stand Apart Through Our Unparalleled Blend of Expertise</h2>
-          <p class="text-white txt-desc w-90">Our elite team—comprising security experts, former law enforcement officers, investigative professionals, legal scholars, and military veterans—works to secure and develop smart city ecosystems. Partnering with police forces, government entities, and top healthcare institutions like Kasih Ibu and Siloam Hospitals, we create a cohesive safety network. As the only all-in-one security provider in Bali, we collaborate with Visvasitha Legal Team and Polres Badung to offer seamless legal and safety support, ensuring top-tier protection and peace of mind.</p>
-          <button class="btn btn-outline-light btn-xl mt-5">Contact Us</button>
+          <h2 class="txt-lh-52-mobile text-white mb-5">At Eagle Protect, We Stand Apart Through Our Unparalleled Blend of Expertise</h2>
+          <p class="text-white txt-desc-mobile">Our elite team—comprising security experts, former law enforcement officers, investigative professionals, legal scholars, and military veterans—works to secure and develop smart city ecosystems. Partnering with police forces, government entities, and top healthcare institutions like Kasih Ibu and Siloam Hospitals, we create a cohesive safety network. As the only all-in-one security provider in Bali, we collaborate with Visvasitha Legal Team and Polres Badung to offer seamless legal and safety support, ensuring top-tier protection and peace of mind.</p>
+          <button class="btn custom-outline-btn-mobile mt-4">Contact Us</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="<?= base_url('assets/img/bg-hero-2.png') ?>" alt="Our Vision" class="img-fluid justify-content-end">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="running-text fade-in" style="--delay: 0.24s">
-    <div class="scrolling-wrapper">
-      <div class="scrolling-text">
-        <span class="gradient-text">Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
-        <span class="gradient-text">Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+  <section class="running-text-mobile fade-in" style="--delay: 0.24s">
+    <div class="scrolling-wrapper-mobile">
+      <div class="scrolling-text-mobile">
+        <span class="gradient-text">Feel Safe &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp&nbsp Feel Free  &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp&nbsp Feel Free &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
       </div>
     </div>
   </section>
