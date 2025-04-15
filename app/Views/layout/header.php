@@ -13,15 +13,15 @@
 </html>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark w-100 top-20 z-3" style="background-color: rgba(0, 0, 0, 0.6); position: fixed;">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark w-100 top-20 z-3" style="background-color: rgba(0, 0, 0, 0.6);"> -->
   <div class="container-fluid">
-    <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>"><span class="txt_nav fs-5">EAGLE PROTECT</span></a>
+    <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>"><span class="txt_nav_bold fs-5"> EAGLE PROTECT</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto text-end">
         <li class="nav-item px-2">
           <a class="nav-link hover-overlay" href="<?= base_url('about_us') ?>"><span class="txt_nav">ABOUT US</span></a>
         </li>
@@ -46,4 +46,4 @@
       </ul>
     </div>
   </div>
-</nav>
+<!-- </nav> -->

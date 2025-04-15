@@ -1,31 +1,29 @@
 <link rel="icon" href="<?=base_url()?>/assets/img/eagle-logo-desc.png" type="image/png">
 <div class="only-desktop">
-  <section>
-      <div><?= $this->include('layout/header') ?></div>
-  </section>
-
   <section class="hero-section d-flex align-items-center justify-content-center text-white">
-      <div class="bg-hero position-absolute w-100 h-100"></div>
-      <div class="bg-hero-back position-absolute w-100 h-100"></div>
-      <div class="bg-hero-front position-absolute w-100 h-100"></div>
-      <div class="container-fluid">
-          <div class="row align-items-center">          
-          <div class="col-md-6 mt-5 mb-md-0">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar">
+      <?= $this->include('layout/header') ?>
+    </nav>
+      <div class="bg-hero"></div>
+      <div class="bg-hero-back"></div>
+      <div class="bg-hero-front"></div>
+      <div class="container-fluid position-relative">
+        <div class="row align-items-center">          
+          <div class="col-md-6 mt-5 mb-md-0 order-md-first">
               <img src="<?= base_url('assets/img/hero-group.png') ?>" alt="hero-img" class="img-hero">
           </div>
 
-          <div class="col-md-6 offset-md-3 mt-5 text-md-start text-center">
+          <div class="col-md-6 mt-5 text-md-start text-center order-md-last" style="margin-top: 180px !important;">
               <img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo" class="eagle-logo">
               <h2 class="slogan position-relative">FEEL SAFE, FEEL FREE</h2>
               <p class="lato-regular position-relative">Live, Work, and Enjoy Life without the constant worry of what could go wrong.</p>
               <div class="btn-style-hero mt-5">
-                  <button class="btn btn-outline-danger btn-xl btn-style-hero" onclick="location.href='<?= base_url('/our_team') ?>'">OUR TEAM</button>
+                  <button class="btn btn-outline-danger btn-xl-outline btn-style-hero" onclick="location.href='<?= base_url('/our_team') ?>'">OUR TEAM</button>
                   <button class="btn btn btn-danger btn-xl contact-btn" onclick="location.href='<?= base_url('/contact_us') ?>'">CONTACT US</button>
               </div>
           </div>
-          </div>
+        </div>
     </div>
-
   </section>
 
   <section class="about-us-section py-3 p-custom fade-in" style="--delay: 0.4s">
@@ -247,8 +245,8 @@
   <section class="running-text fade-in" style="--delay: 0.24s">
     <div class="scrolling-wrapper">
       <div class="scrolling-text">
-        <span class="gradient-text">Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
-        <span class="gradient-text">Feel Safe <img src="<?= base_url('assets/img/dot.png') ?>"> Feel Free <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
       </div>
     </div>
   </section>
@@ -259,21 +257,50 @@
 </div>
 
 <div class="only-mobile">
-  <section>
-      <div><?= $this->include('layout/header') ?></div>
-  </section>
-
   <section class="hero-section align-items-center justify-content-center text-white">
-      <div class="bg-hero position-absolute w-100 h-100"></div>
-      <div class="bg-hero-back position-absolute w-100 h-100"></div>
-      <div class="bg-hero-front position-absolute w-100 h-100"></div>
-      <div class="container-fluid mt-7">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo-nav" class="eagle-logo-nav"><span class="txt_nav_bold fs-5"> EAGLE PROTECT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto text-end">
+            <li class="nav-item">
+              <a class="nav-link hover-overlay" href="<?= base_url('about_us') ?>"><span class="txt_nav">ABOUT US</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link hover-overlay" href="<?= base_url('/pricelist') ?>"><span class="txt_nav">PRICELIST</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-overlay" href="<?= base_url('/services') ?>"><span class="txt_nav">SERVICES</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-overlay" href="<?= base_url('/projects') ?>"><span class="txt_nav">PROJECTS</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-overlay" href="<?= base_url('/news_room') ?>"><span class="txt_nav">NEWS ROOM</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-overlay" href="<?= base_url('/careers') ?>"><span class="txt_nav">CAREERS</span></a>
+            </li>
+            <li class="nav-item">
+                <button class="btn contact-btn" onclick="location.href='<?= base_url('/contact_us') ?>'"><span class="txt_nav">CONTACT US</span></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div class="bg-hero-mobile"></div>
+      <div class="bg-hero-back-mobile"></div>
+      <div class="bg-hero-front-mobile"></div>
+      <div class="container-fluid mt-4">
         <div class="row align-items-center">
           <div class="col-md-6 p-4 text-center">
-              <img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo" class="eagle-logo">
+              <img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo-mobile" class="eagle-logo-mobile">
               <h2 class="slogan-mobile position-relative">FEEL SAFE, FEEL FREE</h2>
               <p class="inter-mobile position-relative">Live, Work, and Enjoy Life without the constant worry of what could go wrong.</p>
-              <div class="btn-style-hero align-items-center justify-content-center mt-5">
+              <div class="btn-style-hero align-items-center justify-content-center mt-2">
                   <button class="btn btn-outline-danger custom-button-mobile" onclick="location.href='<?= base_url('/our_team') ?>'">OUR TEAM</button>
                   <button class="btn btn btn-danger custom-button-mobile" onclick="location.href='<?= base_url('/contact_us') ?>'">CONTACT US</button>
               </div>
@@ -566,14 +593,94 @@
   <section class="running-text-mobile fade-in" style="--delay: 0.24s">
     <div class="scrolling-wrapper-mobile">
       <div class="scrolling-text-mobile">
-        <span class="gradient-text">Feel Safe &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp&nbsp Feel Free  &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
-        <span class="gradient-text">Feel Safe &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp&nbsp Feel Free &nbsp&nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free  &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
       </div>
     </div>
   </section>
 
-  <section>
-      <div><?= $this->include('layout/footer') ?></div>
+  <section class="footer-mod fade-in" style="--delay: 0.28s">
+    <div class="container-fluid">
+        <div class="border-bottom">
+          <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">
+            <div class="container text-center footer-txt-mobile p-4">
+              <p>CONTACT US FOR COMPREHENSIVE SECURITY SOLUTIONS!</p>
+              <a href="#contact-form" class="btn btn-light-custom">Contact Us</a>
+            </div>
+            <div class="container text-center mt-2">
+              <img src="<?= base_url('assets/img/footer-img-right-mobile.png') ?>" alt="img-footer-mobile" class="footer-img-right-mobile">
+            </div>
+          </section>
+
+          <section class="justify-content-center justify-content-lg-between p-4">
+              <div class="container-fluid text-center text-md-start mt-5">
+                  <div class="row mt-3">
+                      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+                          <h6 class="text-uppercase fw-bold mb-5">
+                              <img style="filter: brightness(0) invert(1);" src="<?= base_url('assets/img/eagle-logo.png') ?>"> EAGLE PROTECT
+                          </h6>
+                      </div>
+
+                      <div class="col-md-1 col-lg-1 col-xl-1 mb-4">
+                          <h6 class="fw-bold mb-5">Page</h6>
+                          <div class="footer-info">
+                              <p><a href="#!" class="text-reset text-decoration-none">Home</a></p>
+                              <p><a href="#!" class="text-reset text-decoration-none">Packages</a></p>
+                              <p><a href="#!" class="text-reset text-decoration-none">Services</a></p>
+                              <p><a href="#!" class="text-reset text-decoration-none">Projects</a></p>
+                              <p><a href="#!" class="text-reset text-decoration-none">Teams</a></p>
+                              <p><a href="#!" class="text-reset text-decoration-none">Contacts</a></p>
+                          </div>
+                      </div>
+
+                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                          <h6 class="fw-bold mb-5">Address</h6>
+                          <div class="d-flex align-items-start mb-3 Denpasar Office:">
+                              <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                              <span>
+                                  <span class="manrope-bold ">Seminyak Office:</span> Jalan Kunti Seminyak-Badung
+                              </span>
+                          </div>
+                          <div class="d-flex align-items-start mb-3">
+                              <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                              <span>
+                                  <span class="manrope-bold ">Denpasar Office:</span> Indonesia Cargo Indah Residence, Jalan Pondok Indah I No. 15, Ds. Batur, Denpasar Utara-Bali
+                              </span>
+                          </div>
+                      </div>
+
+                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+                          <h6 class="fw-bold mb-5">Contact</h6>
+                          <div class="footer-info">
+                              <span class="mb-2">Sales Inquiries:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>sales@eagleprotect.id</p>
+                              <span class="mb-2">HRD Department:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>hrd@eagleprotect.id</p>
+                          </div>
+                      </div>
+
+                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0">
+                          <h6 class="fw-bold mb-5 invisible">Contact</h6>
+                          <div class="footer-info">
+                              <span class="mb-2">General Inquiries:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>info@eagleprotect.id</p>
+                              <span class="mb-2">Instagram:</span><p class="mt-3 footer-border"><i class="fab fa-instagram me-2"></i>@eagleprotect.bali</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        </div>
+
+        <div class="container-fluid px-4 py-3">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 text-start">
+                    <small class="text-reset">Copyright @ <?=date('Y')?> Eagle Protect. All rights reserved.</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-reset text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
   </section>
 </div>
 
@@ -581,6 +688,18 @@
 <!-- Script Animasi -->
 <script>
   $(document).ready(function () {
+    var navbar = $('#navbar');
+    var spacer = $('#navbar-spacer');
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        navbar.addClass('sticky');
+        spacer.show();
+      } else {
+        navbar.removeClass('sticky');
+        spacer.hide();
+      }
+    });
     $('.counter').each(function () {
       var $this = $(this),
           countTo = $this.attr('data-target');
