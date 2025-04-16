@@ -258,14 +258,14 @@
 </div>
 
 <div class="only-mobile">
-  <section class="hero-section align-items-center justify-content-center text-white">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
+  <section class="hero-section align-items-center justify-content-center">
+    <nav id="navbar-mobile" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="<?= base_url('/') ?>"><img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo-nav" class="eagle-logo-nav"><span class="txt_nav_bold fs-5"> EAGLE PROTECT</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo-mobile" src="<?= base_url('assets/img/eagle-logo-img-black.svg') ?>" alt="eagle-logo-nav" class="eagle-logo-nav"></a>
+        <button class="navbar-toggler-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon-mobile"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
+        <div class="collapse navbar-collapse" id="mainNavbar" style="stroke-width: 2px; stroke: #000;">
           <ul class="navbar-nav ms-auto text-end">
             <li class="nav-item">
               <a class="nav-link hover-overlay" href="<?= base_url('about_us') ?>"><span class="txt_nav">ABOUT US</span></a>
@@ -703,17 +703,34 @@
         duration: 1000, // opsional, atur durasi animasi
         once: false,     // animasi hanya muncul sekali
     });
-    var navbar = $('#navbar');
-    var spacer = $('#navbar-spacer');
+    const navbar = $('#navbar');
+    const spacer = $('#navbar-spacer');
+    const logo = $('#navbar-logo');
 
     $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
+        $('#navbar').addClass('sticky');
+        $('#navbar-logo').attr('src', '<?= base_url('assets/img/eagle-logo-img-black.svg') ?>');
         navbar.addClass('sticky');
         spacer.show();
       } else {
+        $('#navbar').removeClass('sticky');
+        $('#navbar-logo').attr('src', '<?= base_url('assets/img/eagle-logo-img-white.svg') ?>');
         navbar.removeClass('sticky');
         spacer.hide();
       }
+      
+       // Sticky untuk mobile
+      if ($('#navbar-mobile').is(':visible')) {
+        if ($(this).scrollTop() > 50) {
+          $('#navbar-mobile').addClass('sticky');
+          $('#navbar-logo-mobile').attr('src', '<?= base_url('assets/img/eagle-logo-img-black.svg') ?>');
+        } else {
+          $('#navbar-mobile').removeClass('sticky');
+          $('#navbar-logo-mobile').attr('src', '<?= base_url('assets/img/eagle-logo-img-black.svg') ?>');
+        }
+      }
+      
     });
     function animateCounter($el) {
     const countTo = $el.attr('data-target');
