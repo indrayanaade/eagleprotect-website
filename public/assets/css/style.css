@@ -314,6 +314,21 @@ body, html, main, section, div {
   font-size: 14px;
   font-weight: 400;
 }
+.manrope-regular{
+  font-family: 'Manrope-regular', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+.manrope-bold-mobile{
+  font-family: 'Manrope-bold', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
+.manrope-regular-mobile{
+  font-family: 'Manrope-regular', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
 
 .w-58{
   width: 58%;
@@ -603,7 +618,7 @@ body, html, main, section, div {
     color: #D00001; /* Ubah warna teks menjadi merah saat hover */
     border-color: #D00001; /* Ubah warna border menjadi merah saat hover */
 }
-.border-bottom{
+.border-bottom-custom{
   border-bottom: 1px solid #B82020;;
 }
 .footer-bg-image-mobile {
@@ -671,6 +686,12 @@ body, html, main, section, div {
   font-size: 14px;
   font-weight: 400;
   line-height: 18.2px;
+}
+.footer-info-mobile{
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
 }
 .footer-location{
   font-family: 'Manrope-regular', sans-serif;

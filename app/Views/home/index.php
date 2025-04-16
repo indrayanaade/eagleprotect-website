@@ -1,4 +1,5 @@
 <link rel="icon" href="<?=base_url()?>/assets/img/eagle-logo-desc.png" type="image/png">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <div class="only-desktop">
   <section class="hero-section d-flex align-items-center justify-content-center text-white">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar">
@@ -26,7 +27,7 @@
     </div>
   </section>
 
-  <section class="about-us-section py-3 p-custom fade-in" style="--delay: 0.4s">
+  <section class="about-us-section py-3 p-custom" data-aos="fade-up">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
@@ -124,7 +125,7 @@
       </div>
   </section>
 
-  <section class="cta-section text-center py-5 fade-in" style="--delay: 0.8s">
+  <section class="cta-section text-center py-5" data-aos="fade-up">
       <div class="quote-bg"></div>
       <div class="quote-front-bg"></div>
       <div class="container-fluid position-relative text-white">
@@ -133,7 +134,7 @@
       </div>
   </section>
 
-  <section class="map-coverage-section position-relative fade-in" style="--delay: 0.12s">
+  <section class="map-coverage-section position-relative" sdata-aos="fade-up">
     <div class="container-fluid p-50">
     <span class="txt_about">Our Coverage Area</span>
     <h2 class="roboto-h2 mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
@@ -187,7 +188,7 @@
     </div>
   </section>
 
-  <section class="service-list-section py-5 fade-in" style="--delay: 0.16s">
+  <section class="service-list-section py-5" sdata-aos="fade-up">
     <div class="container-fluid p-custom-mobile-section-cta text-white">
       <span class="txt_about">Services</span>
       <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
@@ -224,7 +225,7 @@
     </div>
   </section>
 
-  <section class="our-vision-section pt-3 position-relative fade-in" style="--delay: 0.20s">
+  <section class="our-vision-section pt-3 position-relative" sdata-aos="fade-up">
     <div class="container-fluid position-relative">
     <div class="overlay position-absolute w-100 h-100"></div>
       <div class="row align-items-center">
@@ -242,7 +243,7 @@
     </div>
   </section>
 
-  <section class="running-text fade-in" style="--delay: 0.24s">
+  <section class="running-text" sdata-aos="fade-up">
     <div class="scrolling-wrapper">
       <div class="scrolling-text">
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
@@ -313,7 +314,7 @@
 
   </section>
 
-  <section class="about-us-section py-3 p-custom-mobile fade-in" style="--delay: 0.4s">
+  <section class="about-us-section py-3 p-custom-mobile" data-aos="fade-up">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
@@ -412,7 +413,7 @@
 
   </section>
 
-  <section class="cta-section-mobile text-center py-5 fade-in" style="--delay: 0.8s">
+  <section class="cta-section-mobile text-center py-5" data-aos="fade-up">
       <div class="quote-bg"></div>
       <div class="quote-front-bg"></div>
       <div class="container-fluid position-relative p-custom-mobile-section-cta text-white">
@@ -421,7 +422,7 @@
       </div>
   </section>
 
-  <section class="map-coverage-section position-relative fade-in" style="--delay: 0.12s">
+  <section class="map-coverage-section position-relative" data-aos="fade-up">
     <div class="container-fluid p-custom-mobile-section-cta">
     <span class="txt_about">Our Coverage Area</span>
     <h2 class="roboto-h2-mobile mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
@@ -490,7 +491,7 @@
     </div>
   </section>
 
-  <section class="service-list-section py-5 fade-in" style="--delay: 0.16s">
+  <section class="service-list-section py-5" data-aos="fade-up">
     <div class="container-fluid text-white">
       <div class="p-custom-mobile-section-service-head">
         <span class="txt_about">Services</span>
@@ -574,7 +575,7 @@
     </div>
   </section>
 
-  <section class="our-vision-section-mobile fade-in" style="--delay: 0.20s">
+  <section class="our-vision-section-mobile" data-aos="fade-up">
     <div class="container-fluid p-custom-mobile-our-vision">
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -590,7 +591,7 @@
     </div>
   </section>
 
-  <section class="running-text-mobile fade-in" style="--delay: 0.24s">
+  <section class="running-text-mobile" data-aos="fade-up">
     <div class="scrolling-wrapper-mobile">
       <div class="scrolling-text-mobile">
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free  &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
@@ -599,9 +600,9 @@
     </div>
   </section>
 
-  <section class="footer-mod fade-in" style="--delay: 0.28s">
+  <section class="footer-mod" data-aos="fade-up">
     <div class="container-fluid">
-        <div class="border-bottom">
+        <div class="border-bottom-custom">
           <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">
             <div class="container text-center footer-txt-mobile p-4">
               <p>CONTACT US FOR COMPREHENSIVE SECURITY SOLUTIONS!</p>
@@ -612,82 +613,96 @@
             </div>
           </section>
 
-          <section class="justify-content-center justify-content-lg-between p-4">
-              <div class="container-fluid text-center text-md-start mt-5">
-                  <div class="row mt-3">
-                      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
-                          <h6 class="text-uppercase fw-bold mb-5">
-                              <img style="filter: brightness(0) invert(1);" src="<?= base_url('assets/img/eagle-logo.png') ?>"> EAGLE PROTECT
-                          </h6>
-                      </div>
-
-                      <div class="col-md-1 col-lg-1 col-xl-1 mb-4">
-                          <h6 class="fw-bold mb-5">Page</h6>
-                          <div class="footer-info">
-                              <p><a href="#!" class="text-reset text-decoration-none">Home</a></p>
-                              <p><a href="#!" class="text-reset text-decoration-none">Packages</a></p>
-                              <p><a href="#!" class="text-reset text-decoration-none">Services</a></p>
-                              <p><a href="#!" class="text-reset text-decoration-none">Projects</a></p>
-                              <p><a href="#!" class="text-reset text-decoration-none">Teams</a></p>
-                              <p><a href="#!" class="text-reset text-decoration-none">Contacts</a></p>
-                          </div>
-                      </div>
-
-                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                          <h6 class="fw-bold mb-5">Address</h6>
-                          <div class="d-flex align-items-start mb-3 Denpasar Office:">
-                              <i class="fas fa-map-marker-alt me-2 mt-1"></i>
-                              <span>
-                                  <span class="manrope-bold ">Seminyak Office:</span> Jalan Kunti Seminyak-Badung
-                              </span>
-                          </div>
-                          <div class="d-flex align-items-start mb-3">
-                              <i class="fas fa-map-marker-alt me-2 mt-1"></i>
-                              <span>
-                                  <span class="manrope-bold ">Denpasar Office:</span> Indonesia Cargo Indah Residence, Jalan Pondok Indah I No. 15, Ds. Batur, Denpasar Utara-Bali
-                              </span>
-                          </div>
-                      </div>
-
-                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
-                          <h6 class="fw-bold mb-5">Contact</h6>
-                          <div class="footer-info">
-                              <span class="mb-2">Sales Inquiries:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>sales@eagleprotect.id</p>
-                              <span class="mb-2">HRD Department:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>hrd@eagleprotect.id</p>
-                          </div>
-                      </div>
-
-                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0">
-                          <h6 class="fw-bold mb-5 invisible">Contact</h6>
-                          <div class="footer-info">
-                              <span class="mb-2">General Inquiries:</span><p class="mt-3 footer-border"><i class="fas fa-envelope me-2"></i>info@eagleprotect.id</p>
-                              <span class="mb-2">Instagram:</span><p class="mt-3 footer-border"><i class="fab fa-instagram me-2"></i>@eagleprotect.bali</p>
-                          </div>
-                      </div>
+          <section class="justify-content-center justify-content-lg-between p-custom-mobile-section">
+              <div class="container-fluid text-left text-md-start">
+                <div class="row mt-5">
+                  
+                  <div class="col-12 text-left mb-5">
+                    <img src="<?= base_url('assets/img/eagle-logo-img.png') ?>" alt="Logo">
                   </div>
+
+                  <div class="col-4 mb-4">
+                    <h6 class="fw-bold mb-4">Page</h6>
+                    <div class="footer-info-mobile">
+                        <p><a href="#!" class="text-reset text-decoration-none">Home</a></p>
+                        <p><a href="#!" class="text-reset text-decoration-none">Packages</a></p>
+                        <p><a href="#!" class="text-reset text-decoration-none">Services</a></p>
+                        <p><a href="#!" class="text-reset text-decoration-none">Projects</a></p>
+                        <p><a href="#!" class="text-reset text-decoration-none">Teams</a></p>
+                        <p><a href="#!" class="text-reset text-decoration-none">Contacts</a></p>
+                    </div>
+                  </div>
+
+                  <div class="col-6 mb-4">
+                    <h6 class="fw-bold mb-4">Address</h6>
+                    <div class="d-flex align-items-start mb-3 Denpasar Office:">
+                        <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                        <span>
+                            <span class="manrope-bold-mobile">Seminyak Office:</span> <span class="manrope-regular-mobile">Jalan Kunti Seminyak-Badung</span>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fas fa-map-marker-alt me-2 mt-1"></i>
+                        <span>
+                            <span class="manrope-bold-mobile">Denpasar Office:</span> <span class="manrope-regular-mobile">Indonesia Cargo Indah Residence, Jalan Pondok Indah I No. 15, Ds. Batur, Denpasar Utara-Bali</span>
+                        </span>
+                    </div>
+                  </div>
+
+                  <div class="col-6 mb-4 mt-3">
+                    <!-- <h6 class="fw-bold mb-5">Contact</h6> -->
+                    <div class="footer-info-mobile">
+                        <span class="mb-2">Sales Inquiries:</span><p class="mt-3 me-3 footer-border"><i class="fas fa-envelope me-2"></i>sales@eagleprotect.id</p>
+                        <span class="mb-2">HRD Department:</span><p class="mt-3 me-3 footer-border"><i class="fas fa-envelope me-2"></i>hrd@eagleprotect.id</p>
+                    </div>
+                  </div>
+
+                  <div class="col-6 mb-4 mt-3">
+                    <!-- <h6 class="fw-bold mb-5 invisible">Contact</h6> -->
+                    <div class="footer-info-mobile">
+                        <span class="mb-2">General Inquiries:</span><p class="mt-3 me-3 footer-border"><i class="fas fa-envelope me-2"></i>info@eagleprotect.id</p>
+                        <span class="mb-2">Instagram:</span><p class="mt-3 me-3 footer-border"><i class="fab fa-instagram me-2"></i>@eagleprotect.bali</p>
+                    </div>
+                  </div>
+                </div>
               </div>
           </section>
         </div>
 
-        <div class="container-fluid px-4 py-3">
+        <!-- <div class="container-fluid px-4 py-3">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 text-start">
-                    <small class="text-reset">Copyright @ <?=date('Y')?> Eagle Protect. All rights reserved.</small>
+                    <small class="text-reset">Copyright @ <?=date('Y')?></small>
                 </div>
                 <div class="col-md-6 text-end">
                     <a href="#" class="text-reset text-decoration-none me-3">Privacy Policy</a>
                     <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
                 </div>
             </div>
+        </div> -->
+        <div class="container-fluid px-4 py-3">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap footer-bar">
+              <small class="text-reset">Copyright @ <?= date('Y') ?></small>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="#" class="text-reset manrope-regular-mobile text-decoration-none">Privacy Policy</a>
+                <a href="#" class="text-reset manrope-regular-mobile text-decoration-none">Terms & Conditions</a>
+              </div>
+            </div>
+          </div>
         </div>
+
     </div>
   </section>
 </div>
 
-<script src="<?= base_url('assets/adminlte/plugins/jquery/jquery-3.7.1.min.js') ?>"></script>
-<!-- Script Animasi -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   $(document).ready(function () {
+    AOS.init({
+        duration: 1000, // opsional, atur durasi animasi
+        once: false,     // animasi hanya muncul sekali
+    });
     var navbar = $('#navbar');
     var spacer = $('#navbar-spacer');
 
@@ -700,24 +715,48 @@
         spacer.hide();
       }
     });
-    $('.counter').each(function () {
-      var $this = $(this),
-          countTo = $this.attr('data-target');
-
+    function animateCounter($el) {
+    const countTo = $el.attr('data-target');
       $({ countNum: 0 }).animate(
         { countNum: countTo },
         {
           duration: 2000,
           easing: 'swing',
           step: function () {
-            $this.text(Math.floor(this.countNum));
+            $el.text(Math.floor(this.countNum));
           },
           complete: function () {
-            $this.text(this.countNum);
+            $el.text(this.countNum);
           }
         }
       );
+    }
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+    $(window).on('scroll resize', function () {
+      $('.counter').each(function () {
+        const $this = $(this);
+
+        if (isInViewport(this) && !$this.hasClass('counted')) {
+          animateCounter($this);
+          $this.addClass('counted');
+        }
+
+        // reset jika ingin animasi muncul ulang setelah scroll keluar-masuk
+        if (!isInViewport(this)) {
+          $this.removeClass('counted').text('0');
+        }
+      });
     });
+
+    // Trigger awal kalau langsung kelihatan di atas
+    $(window).trigger('scroll');
 
     function revealOnScroll() {
       $('.fade-in').each(function (i) {
