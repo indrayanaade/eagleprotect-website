@@ -1,6 +1,6 @@
 <footer class="footer-mod fade-in" style="--delay: 0.28s">
     <div class="container-fluid">
-        <div style="border-bottom: 1px solid #B82020;">
+        <div class="border-bottom-custom">
         <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
             <div class="container text-left footer-txt p-4">
                 <p>CONTACT US FOR COMPREHENSIVE</p>
@@ -68,7 +68,7 @@
         <div class="container-fluid px-4 py-3">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 text-start">
-                    <small class="text-reset">Copyright @ <?=date('Y')?> Eagle Protect. All rights reserved.</small>
+                    <small class="text-reset">Copyright @ <?=date('Y')?></small>
                 </div>
                 <div class="col-md-6 text-end">
                     <a href="#" class="text-reset text-decoration-none me-3">Privacy Policy</a>

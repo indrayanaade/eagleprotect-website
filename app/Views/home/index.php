@@ -188,7 +188,7 @@
     </div>
   </section>
 
-  <section class="service-list-section py-5" sdata-aos="fade-up">
+  <section class="service-list-section py-5" data-aos="fade-up">
     <div class="container-fluid p-custom-mobile-section-cta text-white">
       <span class="txt_about">Services</span>
       <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
@@ -225,7 +225,7 @@
     </div>
   </section>
 
-  <section class="our-vision-section pt-3 position-relative" sdata-aos="fade-up">
+  <section class="our-vision-section pt-3 position-relative" data-aos="fade-up">
     <div class="container-fluid position-relative">
     <div class="overlay position-absolute w-100 h-100"></div>
       <div class="row align-items-center">
