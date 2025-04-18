@@ -1,0 +1,95 @@
+.pricelist{
+  padding: 50px !important;
+}
+.pricelist-title {
+    color: #E63822;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .package-tabs {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .package-tabs .btn {
+    border-radius: 30px;
+    margin: 0 10px;
+    font-weight: 600;
+  }
+
+  .package-tabs .btn.active {
+    background-color: #E63822;
+    color: white;
+  }
+
+  .pricing-card {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .pricing-title {
+    color: #E63822;
+    font-weight: bold;
+  }
+
+  .pricing-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .pricing-list {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .pricing-list li {
+    margin-bottom: 10px;
+  }
+
+  .pricing-list i {
+    color: #E63822;
+    margin-right: 8px;
+  }
+
+  .btn-contact {
+    background-color: #fff;
+    border: 2px solid #E63822;
+    color: #E63822;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s;
+  }
+
+  .btn-contact:hover {
+    background-color: #E63822;
+    color: #fff;
+  }
+  .package-item .card-content {
+    min-width: 326px;
+    min-height: 750px; /* Sesuaikan dengan isi maksimum yang kamu punya */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    padding: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px;
+}

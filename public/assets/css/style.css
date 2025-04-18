@@ -13,6 +13,19 @@ body, html, main, section, div {
 .mt-4{
   margin-top: 4rem !important;
 }
+.custom-navbar2 {
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* backdrop-filter: blur(10px); */
+  background: linear-gradient(278deg, #505050 -0.07%, #000 81.6%);
+  padding: 15px 50px;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .custom-navbar {
   /* background-color: rgba(0, 0, 0, 0.6); */
   /* backdrop-filter: blur(10px); */
@@ -37,9 +50,7 @@ body, html, main, section, div {
   background-color: #F0F0F0;
 }
 .navbar-toggler-mobile {
-  /* border: 2px solid #000; */
   border: none;
-  /* border-radius: 6px; */
   padding: 8px 10px;
 }
 .navbar-toggler-icon-mobile {
@@ -631,6 +642,9 @@ body, html, main, section, div {
 .nav-link.hover-overlay:not(:last-child)::after {
     /* nonaktifkan efek hover di item lain */
     display: none;
+}
+.nav-link.hover-overlay.active .txt_nav {
+  color: #E63822;
 }
 
 .footer-mod {

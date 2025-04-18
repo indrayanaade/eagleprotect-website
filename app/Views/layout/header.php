@@ -23,25 +23,25 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto text-end">
         <li class="nav-item px-2">
-          <a class="nav-link hover-overlay" href="<?= base_url('/about_us') ?>"><span class="txt_nav">ABOUT US</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('about_us') ?>"><span class="txt_nav">ABOUT US</span></a>
         </li>
         <li class="nav-item px-2 ">
-          <a class="nav-link hover-overlay" href="<?= base_url('/pricelist') ?>"><span class="txt_nav">PRICELIST</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('pricelist') ?>"><span class="txt_nav">PRICELIST</span></a>
         </li>
         <li class="nav-item px-2">
-          <a class="nav-link hover-overlay" href="<?= base_url('/services') ?>"><span class="txt_nav">SERVICES</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('services') ?>"><span class="txt_nav">SERVICES</span></a>
         </li>
         <li class="nav-item px-2">
-          <a class="nav-link hover-overlay" href="<?= base_url('/projects') ?>"><span class="txt_nav">PROJECTS</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('projects') ?>"><span class="txt_nav">PROJECTS</span></a>
         </li>
         <li class="nav-item px-2">
-          <a class="nav-link hover-overlay" href="<?= base_url('/news_room') ?>"><span class="txt_nav">NEWS ROOM</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('news_room') ?>"><span class="txt_nav">NEWS ROOM</span></a>
         </li>
         <li class="nav-item px-2">
-          <a class="nav-link hover-overlay" href="<?= base_url('/careers') ?>"><span class="txt_nav">CAREERS</span></a>
+          <a class="nav-link hover-overlay" href="<?= base_url('careers') ?>"><span class="txt_nav">CAREERS</span></a>
         </li>
         <li class="nav-item px-2">
-            <button class="btn contact-btn" onclick="location.href='<?= base_url('/contact_us') ?>'"><p class="txt_nav m-0">CONTACT US</p></button>
+            <button class="btn contact-btn" onclick="location.href='<?= base_url('contact_us') ?>'"><p class="txt_nav m-0">CONTACT US</p></button>
         </li>
       </ul>
     </div>
