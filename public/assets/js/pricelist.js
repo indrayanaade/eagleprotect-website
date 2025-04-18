@@ -1,13 +1,30 @@
 $(document).ready(function () {
     
     const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    });
+    });    
+
+    function filterSlides(category) {
+        $('.swiper-slide').each(function () {
+            if ($(this).data('category') === category) {
+                $(this).css({ visibility: 'visible', position: 'relative' });
+            } else {
+                $(this).css({ visibility: 'hidden', position: 'absolute' });
+            }
+        });
+    
+        swiper.update();
+        swiper.slideTo(0);
+    }
+    
+    
+    // Saat page load, default tampilkan kategori 'private'
+    filterSlides('private');
     
     // Sembunyikan semua slide di awal
     $('.package-item').hide();
@@ -31,10 +48,7 @@ $(document).ready(function () {
         // Ubah style tombol aktif
         $('.filter-btn').removeClass('btn-danger').addClass('btn-outline-secondary');
         $(this).removeClass('btn-outline-secondary').addClass('btn-danger');
-    
-        // Update Swiper
-        swiper.update();
-        swiper.slideTo(0); // balik ke slide pertama
+        filterSlides(category);
     });
     
     

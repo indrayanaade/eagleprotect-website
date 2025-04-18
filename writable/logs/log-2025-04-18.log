@@ -162,3 +162,197 @@ in APPPATH/Views/pricelist/index.php on line 65.
  9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:03:54 --> ParseError: syntax error, unexpected token "foreach"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 84.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Pricelists.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:04:03 --> ParseError: syntax error, unexpected token "foreach"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 84.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Pricelists.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:04:44 --> ErrorException: Undefined variable $chunked
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 79.
+ 1 APPPATH/Views/pricelist/index.php(79): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:05:07 --> ParseError: syntax error, unexpected token "foreach"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 84.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Pricelists.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:05:19 --> ParseError: syntax error, unexpected token "foreach"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 84.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Pricelists.php(9): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:16:46 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 61.
+ 1 APPPATH/Views/pricelist/index.php(61): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:17:31 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 61.
+ 1 APPPATH/Views/pricelist/index.php(61): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:17:45 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 61.
+ 1 APPPATH/Views/pricelist/index.php(61): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:18:04 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 61.
+ 1 APPPATH/Views/pricelist/index.php(61): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:26:20 --> ErrorException: Array to string conversion
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 89.
+ 1 APPPATH/Views/pricelist/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:27:04 --> ErrorException: Array to string conversion
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 89.
+ 1 APPPATH/Views/pricelist/index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pricelists.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:35:53 --> ErrorException: Undefined array key "category"
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 82.
+ 1 APPPATH/Views/pricelist/index.php(82): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 [internal function]: CodeIgniter\View\View->{closure}()
+ 3 APPPATH/Views/pricelist/index.php(82): array_filter()
+ 4 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Pricelists.php(9): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:36:03 --> ErrorException: Undefined variable $selectedCategories
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 82.
+ 1 APPPATH/Views/pricelist/index.php(82): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 [internal function]: CodeIgniter\View\View->{closure}()
+ 3 APPPATH/Views/pricelist/index.php(82): array_filter()
+ 4 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Pricelists.php(9): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-18 06:36:11 --> TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given
+[Method: GET, Route: pricelist]
+in APPPATH/Views/pricelist/index.php on line 82.
+ 1 APPPATH/Views/pricelist/index.php(82): in_array()
+ 2 [internal function]: CodeIgniter\View\View->{closure}()
+ 3 APPPATH/Views/pricelist/index.php(82): array_filter()
+ 4 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/pricelist/index.php')
+ 5 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Pricelists.php(9): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Pricelists->index()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

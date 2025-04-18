@@ -52,31 +52,52 @@
                 <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="comp_asset">COMPREHENSIVE ASSET AND PERSONAL PROTECTION</button>
                 <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="by_request">BY REQUEST</button>
             </div>
-
+            
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <?php foreach ($packages as $pkg) : ?>
-                        <div class="swiper-slide package-item p-2" data-category="<?= esc($pkg['category']) ?>">
-                            <div class="border rounded-4 p-4 d-flex flex-column justify-content-between text-center card-content">
-                                <div>
-                                    <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
-                                    <h4 class="fw-bold"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
-                                    <ul class="text-start list-unstyled mt-3">
-                                        <?php foreach ($pkg['features'] as $feature) : ?>
-                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> <?= esc($feature) ?></li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </div>
-                                <button class="btn btn-outline-danger mt-4 rounded-pill fw-semibold">CONTACT US</button>
+                    <?php
+                    // Ambil semua kategori unik dari $packages
+                    $all_categories = array_unique(array_column($packages, 'category'));
+
+                    foreach ($all_categories as $category) :
+                        // Filter berdasarkan kategori
+                        $filtered = array_filter($packages, fn($pkg) => $pkg['category'] === $category);
+                        // Bagi per 3 item
+                        $chunked = array_chunk($filtered, 3);
+                        foreach ($chunked as $group) :
+                    ?>
+                        <div class="swiper-slide package-item" data-category="<?= esc($category) ?>">
+                            <div class="d-flex gap-3 flex-wrap justify-content-center px-2">
+                                <?php foreach ($group as $pkg) : ?>
+                                    <div class="p-2" style="flex: 0 0 30%;">
+                                        <div class="border rounded-4 p-4 d-flex flex-column justify-content-between text-center card-content h-100">
+                                            <div>
+                                                <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
+                                                <h4 class="fw-bold"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
+                                                <ul class="text-start list-unstyled mt-3">
+                                                    <?php foreach ($pkg['features'] as $feature) : ?>
+                                                        <li class="mb-2">
+                                                            <i class="fas fa-check-circle text-danger me-2"></i>
+                                                            <?= esc($feature) ?>
+                                                        </li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+                                            <button class="btn btn-outline-danger mt-4 rounded-pill fw-semibold">CONTACT US</button>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php
+                        endforeach;
+                    endforeach;
+                    ?>
                 </div>
-
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <!-- Navigasi -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
 
         </div>
     </section>
