@@ -44,64 +44,33 @@
             </div>
         </div>
     </section>
-    <section class="our-service">
-        <h2 class="roboto-h2-title mt-5 text-center">SECURITY SERVICES</h2>
-        <div class="swiper mySwiper mt-4">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-01.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">01</h1>
-                    <h5>24/7 Emergency Number</h5>
-                    </div>
+    <section class="security-service">
+        <div class="container-fluid">
+            <h2 class="roboto-h2-title mt-5 text-center">SECURITY SERVICES</h2>
+            <div class="swiper mySwiper mt-4">
+                <div class="swiper-wrapper">
+                    <?php foreach ($security_slides as $index => $slide): ?>
+                        <div class="swiper-slide position-relative text-white" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
+                            <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
+                                <h5><?= esc($slide['title']) ?></h5>
+                                <p class="mt-5" ><?= esc($slide['desc']) ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-02.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">02</h1>
-                    <h5>Surveillance Equipment Maintenance and 24/7 Service</h5>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-03.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">03</h1>
-                    <h5>Advanced Alarm System</h5>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-04.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">04</h1>
-                    <h5>EAGLE PROTECT Escort</h5>
-                    </div>
-                </div>
-
-                <!-- Slide 5 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-05.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">05</h1>
-                    <h5>Private Security</h5>
-                    </div>
-                </div>
-
-                <!-- Slide 6 -->
-                <div class="swiper-slide position-relative text-white" style="background-image: url('/assets/img/security-06.png');">
-                    <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                    <h1 class="fw-bold">06</h1>
-                    <h5>Private Security</h5>
-                    </div>
+    
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <!-- Kontrol navigasi dan pagination -->
-            <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+        </div>
+    </section>
+    <section class="legal-service">
+        <div class="container-fluid">
+            <h2 class="roboto-h2-title mt-5 text-center">LEGAL SERVICES</h2>
         </div>
     </section>
 
