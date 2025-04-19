@@ -1,0 +1,59 @@
+.service{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/quote-bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 40vh;
+    overflow: hidden;
+}
+.roboto-h2-red{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 53px;
+    font-weight: 900;
+    line-height: 69px;
+    color: #E63822;
+}
+.roboto-h2-title{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 69px;
+    color: #E63822;
+}
+.lato-regular-desc{
+    font-family: 'Lato-regular', sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    text-align: justify;
+  }
+.swiper-slide{
+    width: 243px;
+    height: 425px;
+    background-size: cover;
+    background-position: center;
+}
+.swiper-controls {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+  
+.swiper-button-prev,
+.swiper-button-next {
+    width: 24px;
+    height: 24px;
+    background: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+}
+  
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px;
+}
+  
+.our-service{
+    padding: 50px !important;
+}

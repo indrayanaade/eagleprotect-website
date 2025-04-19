@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
 <?php $uri = service('uri'); ?>
-<div class="only-desktop">
+<!-- <div class="only-desktop"> -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar2">
         <div class="container-fluid">
             <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo" src="<?= base_url('assets/img/eagle-logo-img-white.svg') ?>"></a>
@@ -52,7 +52,7 @@
                 <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="comp_asset">COMPREHENSIVE ASSET AND PERSONAL PROTECTION</button>
                 <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="by_request">BY REQUEST</button>
             </div>
-            
+
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <?php
@@ -105,6 +105,6 @@
     <section>
       <div><?= $this->include('layout/footer') ?></div>
     </section>
-</div>
+<!-- </div> -->
 
 <?= $this->endSection() ?>
