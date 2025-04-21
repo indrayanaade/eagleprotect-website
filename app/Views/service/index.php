@@ -47,16 +47,20 @@
     <section class="security-service">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">SECURITY SERVICES</h2>
-            <div class="swiper mySwiper mt-4">
+            <div class="swiper mySwiper mt-4" id="swiper-security">
                 <div class="swiper-wrapper">
                     <?php foreach ($security_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
-                            <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
-                                <h5><?= esc($slide['title']) ?></h5>
-                                <p class="mt-5" ><?= esc($slide['desc']) ?></p>
-                            </div>
+                        <div class="swiper-slide position-relative text-white img-security" 
+                            style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
+                            <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link">
+                                <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                    <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
+                                    <h5><?= esc($slide['title']) ?></h5>
+                                    <p class="mt-5"><?= esc($slide['desc']) ?></p>
+                                </div>
+                            </a>
                         </div>
+
                     <?php endforeach; ?>
                 </div>
     
@@ -71,6 +75,46 @@
     <section class="legal-service">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">LEGAL SERVICES</h2>
+            <div class="swiper mySwiper mt-4" id="swiper-legal">
+                <div class="swiper-wrapper">
+                    <?php foreach ($legal_slides as $index => $slide): ?>
+                        <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                            <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link">
+                            <div class="overlay p-3">
+                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
+                                <h5><?= esc($slide['title']) ?></h5>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="healthcare-service">
+        <div class="container-fluid">
+            <h2 class="roboto-h2-title mt-5 text-center">HEALTHCARE SERVICES</h2>
+            <div class="swiper mySwiper mt-4" id="swiper-healthcare">
+                <div class="swiper-wrapper">
+                    <?php foreach ($healthcare_slides as $index => $slide): ?>
+                        <div class="swiper-slide position-relative text-white img-healthcare" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                            <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
+                                <h5><?= esc($slide['title']) ?></h5>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </div>
     </section>
 
