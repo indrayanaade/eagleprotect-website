@@ -14,21 +14,10 @@ $(document).ready(function () {
         spacer.hide();
       }
     });
-    // const swiper = new Swiper(".mySwiper", {
-    //     slidesPerView: 3,
-    //     spaceBetween: 20,
-    //     navigation: {
-    //       nextEl: ".swiper-button-next",
-    //       prevEl: ".swiper-button-prev",
-    //     },
-    //     pagination: {
-    //       el: ".swiper-pagination",
-    //       type: "fraction", 
-    //     },
-    // });
+  
     const swiper_security = new Swiper('#swiper-security', {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 200,
       pagination: {
         el: '#swiper-security .swiper-pagination',
         clickable: true,
@@ -62,4 +51,29 @@ $(document).ready(function () {
         prevEl: '#swiper-healthcare .swiper-button-prev',
       }
     });
+    
+    $(".slide-link").on('click', function(e){
+      e.preventDefault(); 
+      const id = $(this).data('id');
+      const type = $(this).data('type');
+
+      $.ajax({
+        type: "POST",
+        url: base_url + "services/detail",
+        data:{
+            'id':id,
+            'type':type,
+            '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
+        },
+        headers: {
+          'X-CSRF-TOKEN': '<?= csrf_hash() ?>' 
+        },
+        //dataType: 'JSON',
+        success:function(data)
+        {
+            console.log(data);
+        }
+      });
+  });
+  
 });

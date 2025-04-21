@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Services extends BaseController
 {
-    public function index(): string
-    {
+    public function index(): string{
         return view('service/index', [
             'title'       => 'Services',
             'activeMenu'  => 'Services',
@@ -96,6 +95,55 @@ class Services extends BaseController
             ]
             
         ]);        
+    }
+
+    public function detail(){
+        $request = service('request');
+        
+        $id = $request->getPost('id');
+        $type = $request->getPost('type');
+
+        // Tes debug
+        if (!$id || !$type) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => 'Missing ID or type'
+            ]);
+        }
+
+        // Coba return dummy dulu
+        return $this->response->setJSON([
+            'status' => 'success',
+            'id' => $id,
+            'type' => $type
+        ]);
+
+        $paket = [];
+
+        switch ($type) {
+            case 'security':
+                $paket = [
+                    'nama_paket' => 'Private Class',
+                    'deskripsi' => 'Khusus 1 peserta',
+                    'harga' => 200000
+                ];
+                break;
+            case 'legal':
+                $paket = [
+                    'nama_paket' => 'Private Class',
+                    'deskripsi' => 'Khusus 1 peserta',
+                    'harga' => 200000
+                ];
+                break;
+            case 'healthcare':
+                $paket = [
+                    'nama_paket' => 'Group Class',
+                    'deskripsi' => 'Untuk 5-10 orang',
+                    'harga' => 500000
+                ];
+                break;
+            default:
+                return $this->response->setStatusCode(404)->setBody('Unknown type');
+        }
     }
 
 }

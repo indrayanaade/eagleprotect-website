@@ -52,6 +52,9 @@
     text-decoration: none;
     transition: background 0.3s;
 }
+/* .slide-link:hover{
+    background: linear-gradient(160deg, rgba(223, 0, 1, 0.80) 3.33%, rgba(0, 0, 0, 0.80) 87.7%);
+} */
 
 .slide-link:hover .overlay {
     background: rgba(0, 0, 0, 0.6);
@@ -91,6 +94,14 @@
 .swiper-button-next::after {
     font-size: 18px;
 }
+.swiper-controls {
+    transition: opacity 0.3s ease;
+  }
+  .swiper-controls.d-none {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
   
 .security-service{
     padding: 50px !important;

@@ -52,11 +52,17 @@
                     <?php foreach ($security_slides as $index => $slide): ?>
                         <div class="swiper-slide position-relative text-white img-security" 
                             style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
-                            <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link">
-                                <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
-                                    <h5><?= esc($slide['title']) ?></h5>
-                                    <p class="mt-5"><?= esc($slide['desc']) ?></p>
+                            <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
+                                <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                    <!-- Nomor urut -->
+                                    <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
+                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+                                    </h1>
+                                    <!-- Judul -->
+                                    <div>
+                                        <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                        <p class="mt-2"><?= esc($slide['desc']) ?></p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -64,7 +70,8 @@
                     <?php endforeach; ?>
                 </div>
     
-                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
+                <?php $show_controls = count($security_slides) > 3; ?>
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3 <?= $show_controls ? '' : 'd-none' ?>">
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -76,23 +83,33 @@
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">LEGAL SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-legal">
-                <div class="swiper-wrapper">
-                    <?php foreach ($legal_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link">
-                            <div class="overlay p-3">
-                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
-                                <h5><?= esc($slide['title']) ?></h5>
+            <div class="swiper-wrapper">
+                <?php foreach ($legal_slides as $index => $slide): ?>
+                    <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                        <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
+                            <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                <!-- Nomor urut -->
+                                <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
+                                    <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+                                </h1>
+                                <!-- Judul -->
+                                <div>
+                                    <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
             </div>
+
+            <?php $show_controls = count($legal_slides) > 3; ?>
+            <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 <?= $show_controls ? '' : 'd-none' ?>">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
         </div>
     </section>
     <section class="healthcare-service">
@@ -101,19 +118,30 @@
             <div class="swiper mySwiper mt-4" id="swiper-healthcare">
                 <div class="swiper-wrapper">
                     <?php foreach ($healthcare_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-healthcare" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <div class="overlay p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                <h1 class="fw-bold mb-5"><?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?></h1>
-                                <h5><?= esc($slide['title']) ?></h5>
-                            </div>
+                        <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                            <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
+                                <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                    <!-- Nomor urut -->
+                                    <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
+                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+                                    </h1>
+                                    <!-- Judul -->
+                                    <div>
+                                        <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3">
+                <?php $show_controls = count($healthcare_slides) > 3; ?>
+
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3 <?= $show_controls ? '' : 'd-none' ?>">
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
+
             </div>
         </div>
     </section>
