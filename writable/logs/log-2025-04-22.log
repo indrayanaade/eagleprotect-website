@@ -1,0 +1,92 @@
+CRITICAL - 2025-04-22 01:19:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "service/service_detail.php"
+[Method: POST, Route: services/detail]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Services.php(157): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->detail()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 01:24:45 --> ErrorException: Undefined variable $data
+[Method: POST, Route: services/detail]
+in APPPATH/Views/service/service_detail.php on line 3.
+ 1 APPPATH/Views/service/service_detail.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/service/service_detail.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Services.php(148): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->detail()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 01:27:27 --> ErrorException: Undefined property: CodeIgniter\View\View::$response
+[Method: POST, Route: services/detail]
+in APPPATH/Views/service/service_detail.php on line 2.
+ 1 APPPATH/Views/service/service_detail.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/service/service_detail.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Services.php(148): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->detail()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 01:34:21 --> ErrorException: Undefined property: CodeIgniter\View\View::$response
+[Method: POST, Route: services/detail]
+in APPPATH/Views/service/service_detail.php on line 2.
+ 1 APPPATH/Views/service/service_detail.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/service/service_detail.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Services.php(149): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->detail()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 02:22:51 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: services]
+in APPPATH/Controllers/Services.php on line 103.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 03:57:47 --> CodeIgniter\Encryption\Exceptions\EncryptionException: Encrypter needs a starter key.
+[Method: GET, Route: services/detail/4/security]
+in SYSTEMPATH/Encryption/Encryption.php on line 128.
+ 1 SYSTEMPATH/Encryption/Encryption.php(128): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH/Config/Services.php(256): CodeIgniter\Encryption\Encryption->initialize()
+ 3 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::encrypter()
+ 4 APPPATH/Controllers/Services.php(122): CodeIgniter\Config\BaseService::__callStatic()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->showDetail()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-22 03:59:28 --> CodeIgniter\Encryption\Exceptions\EncryptionException: Encrypter needs a starter key.
+[Method: POST, Route: services/detail]
+in SYSTEMPATH/Encryption/Encryption.php on line 128.
+ 1 SYSTEMPATH/Encryption/Encryption.php(128): CodeIgniter\Encryption\Exceptions\EncryptionException::forNeedsStarterKey()
+ 2 SYSTEMPATH/Config/Services.php(256): CodeIgniter\Encryption\Encryption->initialize()
+ 3 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::encrypter()
+ 4 APPPATH/Controllers/Services.php(103): CodeIgniter\Config\BaseService::__callStatic()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Services->detail()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

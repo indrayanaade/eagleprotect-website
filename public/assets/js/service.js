@@ -53,27 +53,27 @@ $(document).ready(function () {
     });
     
     $(".slide-link").on('click', function(e){
-      e.preventDefault(); 
+      e.preventDefault();
+  
       const id = $(this).data('id');
       const type = $(this).data('type');
-
-      $.ajax({
-        type: "POST",
-        url: base_url + "services/detail",
-        data:{
-            'id':id,
-            'type':type,
-            '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
-        },
-        headers: {
-          'X-CSRF-TOKEN': '<?= csrf_hash() ?>' 
-        },
-        //dataType: 'JSON',
-        success:function(data)
-        {
-            console.log(data);
-        }
-      });
-  });
   
+      $.ajax({
+          type: "POST",
+          url: base_url + "services/detail",
+          data: {
+              'id': id,
+              'type': type,
+              '<?= csrf_token() ?>': '<?= csrf_hash() ?>'
+          },
+          success: function(response) {
+              if (response.redirect) {
+                  window.location.href = response.redirect;
+              }
+          },
+          error: function(xhr) {
+              console.error("Error:", xhr.status, xhr.responseText);
+          }
+      });
+    });
 });

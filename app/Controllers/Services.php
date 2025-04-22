@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use CodeIgniter\Encryption\Encryption;
 
 class Services extends BaseController
 {
@@ -97,53 +98,124 @@ class Services extends BaseController
         ]);        
     }
 
-    public function detail(){
+    /*public function detail(){
         $request = service('request');
-        
+        $encrypter = \Config\Services::encrypter();
         $id = $request->getPost('id');
         $type = $request->getPost('type');
 
-        // Tes debug
         if (!$id || !$type) {
             return $this->response->setStatusCode(400)->setJSON([
                 'error' => 'Missing ID or type'
             ]);
         }
 
-        // Coba return dummy dulu
+        $encryptedID = bin2hex($encrypter->encrypt($id));
+        // Arahkan ke URL detail dengan parameter
         return $this->response->setJSON([
-            'status' => 'success',
-            'id' => $id,
-            'type' => $type
+            'redirect' => base_url("services/detail/{$encryptedID}/{$type}")
         ]);
+    }
 
-        $paket = [];
+    // Untuk handle halaman detail yang sebenarnya
+    public function showDetail($encryptedID = null, $type = null){
+        $encrypter = \Config\Services::encrypter();
+        $type = strtolower($type);
+
+        try {
+            $id = $encrypter->decrypt(hex2bin($encryptedID));
+        } catch (\Exception $e) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Invalid ID.");
+        }
+
+        if (!$id || !$type) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("ID atau Type kosong.");
+        }
 
         switch ($type) {
             case 'security':
-                $paket = [
-                    'nama_paket' => 'Private Class',
-                    'deskripsi' => 'Khusus 1 peserta',
-                    'harga' => 200000
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Private Class',
+                    'description' => 'Khusus 1 peserta',
                 ];
                 break;
             case 'legal':
-                $paket = [
-                    'nama_paket' => 'Private Class',
-                    'deskripsi' => 'Khusus 1 peserta',
-                    'harga' => 200000
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Private Class',
+                    'description' => 'Khusus 1 peserta',
                 ];
                 break;
             case 'healthcare':
-                $paket = [
-                    'nama_paket' => 'Group Class',
-                    'deskripsi' => 'Untuk 5-10 orang',
-                    'harga' => 500000
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Group Class',
+                    'description' => 'Untuk 5-10 orang',
                 ];
                 break;
             default:
-                return $this->response->setStatusCode(404)->setBody('Unknown type');
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Unknown service type.");
         }
+
+        return view('service/service_detail', $packages);
+    }*/
+    public function detail(){
+        $request = service('request');
+        $id = $request->getPost('id');
+        $type = $request->getPost('type');
+
+        if (!$id || !$type) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => 'Missing ID or type'
+            ]);
+        }
+
+        // Arahkan ke URL detail dengan parameter
+        return $this->response->setJSON([
+            'redirect' => base_url("services/detail/{$id}/{$type}")
+        ]);
+    }
+
+    // Untuk handle halaman detail yang sebenarnya
+    public function showDetail($id = null, $type = null){
+        if (!$id || !$type) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("ID atau Type kosong.");
+        }
+
+        switch ($type) {
+            case 'security':
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Private Class',
+                    'description' => 'Khusus 1 peserta',
+                ];
+                break;
+            case 'legal':
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Private Class',
+                    'description' => 'Khusus 1 peserta',
+                ];
+                break;
+            case 'healthcare':
+                $packages = [
+                    'id' => $id,
+                    'type' => $type,
+                    'packages_name' => 'Group Class',
+                    'description' => 'Untuk 5-10 orang',
+                ];
+                break;
+            default:
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Unknown service type.");
+        }
+
+        return view('service/service_detail', $packages);
     }
 
 }
