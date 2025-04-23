@@ -16,6 +16,26 @@ body, html, main, section, div {
 .mt-4{
   margin-top: 4rem !important;
 }
+
+.experience{
+  margin-top: 10px;
+}
+.experience .big {
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 80px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 65px;
+  color: #030303;
+}
+.experience .small {
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: baseline;
+  color: #030303;
+}
 .custom-navbar2 {
   /* background-color: rgba(0, 0, 0, 0.6); */
   /* backdrop-filter: blur(10px); */

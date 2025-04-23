@@ -111,7 +111,10 @@
               </div>
               <div class="col-lg-3 col-md-6 col-12 mb-4">
                   <div class="stat-card p-4">
-                      <h3><span class="counter" data-target="5">0</span> Years</h3>
+                      <!-- <h3><span class="counter" data-target="5">0</span> Years</h3> -->
+                      <p class="experience">
+                        <span class="big counter" data-target="5">0</span> <span class="small mb-2">Years</span>
+                      </p>
                       <p class="mb-0 lato-bold">Company is already operating</p>
                   </div>
               </div>
