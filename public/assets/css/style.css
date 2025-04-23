@@ -678,29 +678,34 @@ body, html, main, section, div {
 }
 
 .footer-bg-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/footer-bg.png'); /* Gambar utama */
-  background-position: center center; /* Posisi gambar pertama di tengah */
-  background-size: cover; /* Agar gambar pertama menutupi seluruh area */
-  background-repeat: no-repeat; /* Tidak mengulang gambar utama */
-  
-  /* Gambar kedua, akan di-overlay di atas gambar utama */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/footer-bg.png');
+  background-position: center center; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
   position: relative;
-  height: 300px;
-  width: 100%;
-  overflow: hidden;
+  overflow: visible; 
+  z-index: 1;
 }
 
 .footer-bg-image::after {
   content: "";
-  background-image: url('/assets/img/footer-img-right.png'); /* Gambar kedua */
-  background-position: right center; /* Posisi gambar kedua di kanan */
-  background-size: contain; /* Ukuran gambar kedua agar tetap proporsional */
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%; /* Sesuaikan lebar gambar kedua */
-  height: 100%; /* Sesuaikan tinggi gambar dengan area */
+  background-image: url('/assets/img/footer-img-right.png'); 
+  background-position: right center; 
+  background-size: contain; 
   background-repeat: no-repeat;
+  position: absolute;
+  top: -60px; 
+  right: 0;
+  width: 100%; 
+  height: 300px; 
+  z-index: 2;
+  pointer-events: none; 
+}
+.p-1rem{
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 .footer-txt {
@@ -713,8 +718,12 @@ body, html, main, section, div {
 }
 
 .footer-txt p {
-    font-size: 1.5rem; /* Ukuran font deskripsi */
-    margin-bottom: 5px; /* Jarak bawah antara paragraf dan tombol */
+  font-family: 'Roboto-bold',sans-serif;
+  font-size: 34px;
+  line-height: 24px;
+  text-align: left;
+  line-height: 44.2px;
+  margin-bottom: 5px;
 }
 
 .footer-txt .btn {
@@ -728,20 +737,19 @@ body, html, main, section, div {
 }
 
 .footer-txt .btn:hover {
-    background-color: white; /* Warna latar belakang menjadi putih saat hover */
-    color: #D00001; /* Ubah warna teks menjadi merah saat hover */
-    border-color: #D00001; /* Ubah warna border menjadi merah saat hover */
+    background-color: white;
+    color: #D00001;
+    border-color: #D00001;
 }
 .border-bottom-custom{
   border-bottom: 1px solid #B82020;;
 }
 .footer-bg-image-mobile {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/footer-bg.png'); /* Gambar utama */
-  background-position: center center; /* Posisi gambar pertama di tengah */
-  background-size: cover; /* Agar gambar pertama menutupi seluruh area */
-  background-repeat: no-repeat; /* Tidak mengulang gambar utama */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/footer-bg.png');
+  background-position: center center; 
+  background-size: cover;
+  background-repeat: no-repeat;
   
-  /* Gambar kedua, akan di-overlay di atas gambar utama */
   position: relative;
   height: 55%;
   width: 100%;

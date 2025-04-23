@@ -196,31 +196,31 @@
       <span class="txt_about">Services</span>
       <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
 
-      <div class="row border-bottom py-3 align-items-center">
+      <div class="row border-bottom p-1rem align-items-center">
         <div class="col-md-2 font-color-number">01</div>
         <div class="col-md-5 fs-3 roboto-h5">The Services We Offer are Varied</div>
         <div class="col-md-5 font-color lato-regular">We offer our clients various types of subscription packages ranging from basic to premium, as well as additional options such as SOS buttons, advanced supervision equipment, and online support applications.</div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
+      <div class="row border-bottom p-1rem align-items-center">
         <div class="col-md-2 font-color-number">02</div>
         <div class="col-md-5 fs-3 roboto-h5">Our Customer Service is Always Ready</div>
         <div class="col-md-5 font-color lato-regular">All packages ensure a 24/7 hotline in both Indonesian and English, along with guaranteed response times.</div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
+      <div class="row border-bottom p-1rem align-items-center">
         <div class="col-md-2 font-color-number">03</div>
         <div class="col-md-5 fs-3 roboto-h5">Our Technicians are Full of Dedication</div>
         <div class="col-md-5 font-color lato-regular">24/7 technicians are available for supervision equipment maintenance.</div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
+      <div class="row border-bottom p-1rem align-items-center">
         <div class="col-md-2 font-color-number">04</div>
         <div class="col-md-5 fs-3 roboto-h5">We Can Be Relied On Even In An Emergency</div>
         <div class="col-md-5 font-color lato-regular">We coordinate with authorities and emergency responders in emergency situations.</div>
       </div>
 
-      <div class="row border-bottom py-3 align-items-center">
+      <div class="row border-bottom p-1rem align-items-center">
         <div class="col-md-2 font-color-number">05</div>
         <div class="col-md-5 fs-3 roboto-h5">All Services Provided Can be Adjusted</div>
         <div class="col-md-5 font-color lato-regular">Additional services available include security officers, translation, legal assistance, ambulance services, first aid, and other services that work in cooperation with the authorities.</div>

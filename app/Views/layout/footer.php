@@ -1,13 +1,13 @@
 <footer class="footer-mod">
     <div class="container-fluid">
         <div class="border-bottom-custom">
-        <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
-            <div class="container text-left footer-txt p-4">
-                <p>CONTACT US FOR COMPREHENSIVE</p>
-                <p class="mb-5">SECURITY SOLUTIONS!</p>
-                <a href="#contact-form" class="btn btn-light">Contact Us</a>
-            </div>
-        </section>
+            <section class="footer-bg-image d-flex align-items-center justify-content-center text-white">
+                <div class="container text-left footer-txt p-4">
+                    <p>CONTACT US FOR COMPREHENSIVE</p>
+                    <p class="mb-5">SECURITY SOLUTIONS!</p>
+                    <a href="#contact-form" class="btn btn-light">Contact Us</a>
+                </div>
+            </section>
             <section class="justify-content-center justify-content-lg-between p-4">
                 <div class="container-fluid text-center text-md-start mt-5">
                     <div class="row mt-3">
