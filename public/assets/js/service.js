@@ -76,4 +76,17 @@ $(document).ready(function () {
           }
       });
     });
+
+    $(function() {
+      $('.faq-item').on('click', function(e) {
+        console.log('FAQ clicked');
+        e.preventDefault();
+  
+        // Tutup semua
+        $('.faq-item').not(this).removeClass('active');
+  
+        // Toggle yang ini
+        $(this).toggleClass('active');
+      });
+    });
 });

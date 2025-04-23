@@ -3,6 +3,9 @@ body, html, main, section, div {
     margin: 0 !important;
     padding: 0 !important;
 }
+.pl-important{
+  padding-left: 50px !important;
+}
 /* Default: tampilkan desktop, sembunyikan mobile */
 .only-mobile {
   display: none;
@@ -135,7 +138,7 @@ body, html, main, section, div {
   transition: all 0.3s ease-in-out;
 }
 #navbar-logo{
-  width: 100%;
+  /* width: 100% !important; */
   height: 40px;
 }
 .sticky-navbar {
@@ -157,7 +160,7 @@ body, html, main, section, div {
 }
 .custom-navbar .navbar-brand img {
   /* filter: brightness(0);  */
-  width: 70px;
+  /* width: 70px; */
   height: 50px;
 }
 
@@ -352,6 +355,8 @@ body, html, main, section, div {
   font-family: 'Roboto-bold',sans-serif;
   font-size: 38px;
   line-height: 44.2px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .cta-txt-mobile{
   font-family: 'Roboto-bold',sans-serif;
@@ -537,13 +542,13 @@ body, html, main, section, div {
 .img-hero{
     margin-top: 160px;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     position: relative;
 } 
 .img-hero-mobile{
   /* margin-top: 20px; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
 }
 .custom-button{
@@ -888,6 +893,18 @@ body, html, main, section, div {
     padding-bottom: 20px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+  .p-custom-section-services{
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+  .p-custom-about-us{
+    padding-top: 120px !important;
+    padding-bottom: 50px !important;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
   }
   .p-custom-mobile-section-service-head{
     padding-bottom: 20px !important;

@@ -27,7 +27,7 @@
     </div>
   </section>
 
-  <section class="about-us-section py-3 p-custom" data-aos="fade-up">
+  <section class="about-us-section py-3 p-custom-about-us" data-aos="fade-up">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
@@ -81,7 +81,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-md-6 d-flex align-items-start pl-3">
+              <div class="col-md-6 d-flex align-items-start pl-important">
                   <div>
                       <span class="txt_about">Who We Are</span>
                       <h2 class="roboto-h2 mt-1 mb-5">Eagle Protect Works with Professionals to Provide a Sense of Security and Trust</h2>
@@ -135,7 +135,7 @@
   </section>
 
   <section class="map-coverage-section position-relative" sdata-aos="fade-up">
-    <div class="container-fluid p-50">
+    <div class="container-fluid p-custom-section-services">
     <span class="txt_about">Our Coverage Area</span>
     <h2 class="roboto-h2 mt-2 mb-5">We Currently Have Many Clients Spread Across Several Cities in Bali.</h2>
       <div class="map-wrapper position-relative p-50">
@@ -189,7 +189,7 @@
   </section>
 
   <section class="service-list-section py-5" data-aos="fade-up">
-    <div class="container-fluid p-custom-mobile-section-cta text-white">
+    <div class="container-fluid p-custom-section-services text-white">
       <span class="txt_about">Services</span>
       <h2 class="roboto-h2-mobile mt-2 mb-5">Eagle Protect Provides the Best Service and What Clients Need Most</h2>
 
@@ -243,7 +243,7 @@
     </div>
   </section>
 
-  <section class="running-text" sdata-aos="fade-up">
+  <section class="running-text" data-aos="fade-up">
     <div class="scrolling-wrapper">
       <div class="scrolling-text">
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
@@ -286,7 +286,7 @@
               <a class="nav-link hover-overlay" href="<?= base_url('careers') ?>"><span class="txt_nav">CAREERS</span></a>
             </li>
             <li class="nav-item">
-                <button class="btn contact-btn" onclick="location.href='<?= base_url('contact_us') ?>'"><span class="txt_nav">CONTACT US</span></button>
+                <button class="btn contact-btn" onclick="location.href='<?= base_url('contact_us') ?>'"><span class="txt_nav text-white">CONTACT US</span></button>
             </li>
           </ul>
         </div>
@@ -300,7 +300,7 @@
           <div class="col-md-6 p-4 text-center">
               <img src="<?= base_url('assets/img/eagle-logo.png') ?>" alt="eagle-logo-mobile" class="eagle-logo-mobile">
               <h2 class="slogan-mobile position-relative">FEEL SAFE, FEEL FREE</h2>
-              <p class="inter-mobile position-relative">Live, Work, and Enjoy Life without the constant worry of what could go wrong.</p>
+              <p class="inter-mobile position-relative text-white">Live, Work, and Enjoy Life without the constant worry of what could go wrong.</p>
               <div class="btn-style-hero align-items-center justify-content-center mt-2">
                   <button class="btn btn-outline-danger custom-button-mobile" onclick="location.href='<?= base_url('/our_team') ?>'">OUR TEAM</button>
                   <button class="btn btn btn-danger custom-button-mobile" onclick="location.href='<?= base_url('/contact_us') ?>'">CONTACT US</button>

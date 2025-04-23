@@ -145,5 +145,8 @@
             </div>
         </div>
     </section>
+    <section>
+      <div><?= $this->include('layout/footer') ?></div>
+    </section>
 
 <?= $this->endSection() ?>
