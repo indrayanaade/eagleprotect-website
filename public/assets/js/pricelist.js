@@ -61,10 +61,18 @@ $(document).ready(function () {
         $('.package-item[data-category="' + category + '"]').show();
     
         // Ubah style tombol aktif
-        $('.filter-btn').removeClass('btn-danger').addClass('btn-outline-secondary');
-        $(this).removeClass('btn-outline-secondary').addClass('btn-danger');
+        $('.filter-btn').removeClass('btn-filter-hover text-white').addClass('btn-outline-secondary');
+        $(this).removeClass('btn-outline-secondary').addClass('btn-filter-hover text-white');
         filterSlides(category);
     });
+    
+    $('.feature ul').each(function() {
+        if ($(this).find('li').length > 10) {
+            $(this).addClass('multi-column');
+            $(this).closest('.stat-card').addClass('wide-card');
+        }
+    });
+    
     
     
     // AUTO SELECT CATEGORY FROM URL

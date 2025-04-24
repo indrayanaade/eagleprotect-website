@@ -62,15 +62,29 @@
 
   .btn-contact {
     background-color: #fff;
-    border: 2px solid #E63822;
+    border-radius: 20px;
+    width: 157px;
+    border: 1px solid  #E63822;
     color: #E63822;
     font-weight: 600;
-    border-radius: 30px;
-    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
     transition: 0.3s;
   }
 
   .btn-contact:hover {
+    background-color: #E63822;
+    color: #fff;
+  }
+  .filter-btn{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 4px;
+  }
+  .filter-btn:hover{
     background-color: #E63822;
     color: #fff;
   }
@@ -84,7 +98,7 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-    padding: 10px;
+    color: #E63822;
     width: 24px;
     height: 24px;
 }
@@ -93,3 +107,85 @@
 .swiper-button-prev::after {
     font-size: 18px;
 }
+.h2-roboto{
+  color: #E63822;
+  text-align: center;
+  font-family: 'Roboto-bold', sans-serif;
+  font-size: 53px;
+  font-weight: 900;
+  line-height:  68.9px;
+  margin-bottom: 20px;
+}
+.p-lato{
+  color: #4D4D4D;
+  text-align: center;
+  font-family: 'Lato-regular', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  margin-bottom: 50px;
+}
+.btn-filter-hover{
+  border-radius: 5px;
+  border: 1px solid #E63822;
+  background:  #E63822;
+}
+.stat-card{
+  display: flex;
+  padding-bottom: 20px !important;
+  flex-direction: column;
+  width: 326px;
+  height: 750px;
+  border: 1px solid  #030303;
+  border-radius: 20px;
+  justify-content: flex-start;; 
+  
+}
+.btn-container {
+  margin-top: auto;
+  text-align: center !important;
+}
+
+.card-price{
+  border-radius: 20px;
+  background: #F2F2F2;
+}
+.price{
+  padding: 20px !important;
+}
+.feature{
+  padding: 20px !important;
+  flex-grow: 1;
+}
+.spacer {
+  flex-grow: 1;
+}
+ul.multi-column {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+ul.multi-column li {
+  break-inside: avoid;
+}
+.stat-card.wide-card {
+  max-width: 40%;
+  height: 750px;
+  border: 1px solid #030303;
+  border-radius: 20px;
+  flex: 0 0 40%;
+}
+.txt_feature{
+  color: #030303;
+  font-family: 'Lato-regular', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+}
+.icon-check {
+  color: #E63822;
+}
+.feature ul {
+  margin-bottom: 2rem;
+}
+

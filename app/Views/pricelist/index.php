@@ -40,17 +40,17 @@
 
     <section class="pricelist">
         <div class="container-fluid my-5">
-            <h2 class="text-center fw-bold text-danger mb-2">PRICELIST</h2>
-            <p class="text-center mb-4">We have several Pricelists that can meet your needs.</p>
+            <h2 class="h2-roboto">PRICELIST</h2>
+            <p class="p-lato">We have several Pricelists that can meet your needs.</p>
 
             <div class="d-flex justify-content-center mb-5 flex-wrap gap-2">
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="private">PRIVATE PACKAGES</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="cctv">CCTV PACKAGES</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="corporate">CORPORATE PACKAGES</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="it_acquisition">IT ACQUISITION PACKAGE</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="tourist_property">TOURIST PROPERTY COVERAGE</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="comp_asset">COMPREHENSIVE ASSET AND PERSONAL PROTECTION</button>
-                <button class="btn btn-outline-secondary rounded-pill fw-semibold filter-btn" data-category="by_request">BY REQUEST</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="private">PRIVATE PACKAGES</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="cctv">CCTV PACKAGES</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="corporate">CORPORATE PACKAGES</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="it_acquisition">IT ACQUISITION PACKAGE</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="tourist_property">TOURIST PROPERTY COVERAGE</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="comp_asset">COMPREHENSIVE ASSET AND PERSONAL PROTECTION</button>
+                <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="by_request">BY REQUEST</button>
             </div>
 
             <div class="swiper mySwiper">
@@ -69,23 +69,28 @@
                         <div class="swiper-slide package-item" data-category="<?= esc($category) ?>">
                             <div class="d-flex gap-3 flex-wrap justify-content-center px-2">
                                 <?php foreach ($group as $pkg) : ?>
-                                    <div class="p-2" style="flex: 0 0 30%;">
-                                        <div class="border rounded-4 p-4 d-flex flex-column justify-content-between text-center card-content h-100">
-                                            <div>
-                                                <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
-                                                <h4 class="fw-bold"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
-                                                <ul class="text-start list-unstyled mt-3">
-                                                    <?php foreach ($pkg['features'] as $feature) : ?>
-                                                        <li class="mb-2">
-                                                            <i class="fas fa-check-circle text-danger me-2"></i>
-                                                            <?= esc($feature) ?>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                </ul>
-                                            </div>
-                                            <button class="btn btn-outline-danger mt-4 rounded-pill fw-semibold">CONTACT US</button>
+                                <div class="stat-card">
+                                    <div class="card-price">
+                                        <div class="price">
+                                            <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
+                                            <h4 class="fw-bold"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
                                         </div>
                                     </div>
+                                    <div class="feature">
+                                        <ul class="text-start list-unstyled mt-3">
+                                            <?php foreach ($pkg['features'] as $feature) : ?>
+                                                <li class="mb-2 d-flex align-items-start">
+                                                    <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
+                                                    <span class="txt_feature"><?= esc($feature) ?></span>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+
+                                    <div class="btn-container">
+                                        <button class="btn btn-contact">CONTACT US</button>
+                                    </div>
+                                </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
