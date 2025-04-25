@@ -435,7 +435,7 @@
           <div class="row text-start justify-content-center">
             
             <div class="col-6 mb-3 px-2">
-              <div class="location-tooltip-mobile h-100 p-2">
+              <div class="location-tooltip-mobile p-2">
                 <div class="location-header-mobile d-flex align-items-center mb-2">
                   <div class="location-number-mobile me-2">1</div>
                   <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
@@ -448,7 +448,7 @@
             </div>
 
             <div class="col-6 mb-3 px-2">
-              <div class="location-tooltip-mobile h-100 p-2">
+              <div class="location-tooltip-mobile p-2">
                 <div class="location-header-mobile d-flex align-items-center mb-2">
                   <div class="location-number-mobile me-2">2</div>
                   <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
@@ -461,7 +461,7 @@
             </div>
 
             <div class="col-6 mb-3 px-2">
-              <div class="location-tooltip-mobile h-100 p-2">
+              <div class="location-tooltip-mobile p-2">
                 <div class="location-header-mobile d-flex align-items-center mb-2">
                   <div class="location-number-mobile me-2">3</div>
                   <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
@@ -474,7 +474,7 @@
             </div>
 
             <div class="col-6 mb-3 px-2">
-              <div class="location-tooltip-mobile h-100 p-2">
+              <div class="location-tooltip-mobile p-2">
                 <div class="location-header-mobile d-flex align-items-center mb-2">
                   <div class="location-number-mobile me-2">4</div>
                   <img src="/assets/img/officer.png" alt="Icon" class="location-icon-mobile me-2">
