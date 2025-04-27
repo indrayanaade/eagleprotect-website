@@ -54,11 +54,9 @@
                             style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
                             <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
                                 <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <!-- Nomor urut -->
                                     <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
                                         <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
                                     </h1>
-                                    <!-- Judul -->
                                     <div>
                                         <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
                                         <p class="mt-2"><?= esc($slide['desc']) ?></p>

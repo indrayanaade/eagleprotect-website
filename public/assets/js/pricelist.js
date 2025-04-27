@@ -13,7 +13,18 @@ $(document).ready(function () {
         navbar.removeClass('sticky');
         spacer.hide();
       }
+
+       // Sticky untuk mobile
+      if ($('#navbar-mobile').is(':visible')) {
+        if ($(this).scrollTop() > 50) {
+          $('#navbar-mobile').addClass('sticky');
+        } else {
+          $('#navbar-mobile').removeClass('sticky');
+        }
+      }
     });
+    adjustTabSticky();
+    $(window).on('resize', adjustTabSticky);
     
     const swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -23,6 +34,14 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });    
+    const swiper_mobile = new Swiper(".mySwiper-mobile", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });   
 
     function filterSlides(category) {
         $('.swiper-slide').each(function () {
@@ -35,6 +54,8 @@ $(document).ready(function () {
     
         swiper.update();
         swiper.slideTo(0);
+        swiper_mobile.update();
+        swiper_mobile.slideTo(0);
     }
     
     
@@ -83,4 +104,24 @@ $(document).ready(function () {
 
     const initialCategory = getQueryParam('category') || 'private';
     $(`.filter-btn[data-category="${initialCategory}"]`).trigger('click');
+
+    $('.filter-btn-mobile').on('click', function () {
+        $('.filter-btn-mobile').removeClass('active');
+        $(this).addClass('active');
+    
+        const selectedCategory = $(this).data('category');
+    
+        $('.package-item-mobile').hide(); 
+        $(`.package-item-mobile[data-category-mobile="${selectedCategory}"]`).show(); 
+    });
+    $(`.filter-btn-mobile[data-category="${initialCategory}"]`).trigger('click');
 });
+
+function adjustTabSticky() {
+    if ($('#navbar-mobile').is(':visible')) {
+        const navbarHeight = $('#navbar-mobile').outerHeight(); 
+        $('.tab-sticky').css('top', navbarHeight + 'px');
+    } else {
+        $('.tab-sticky').css('top', '0');
+    }
+}

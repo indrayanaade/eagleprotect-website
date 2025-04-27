@@ -76,6 +76,20 @@
     background-color: #E63822;
     color: #fff;
   }
+  .btn-contact-mobile {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 101px;
+    border: 1px solid  #E63822;
+    color: #E63822;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-contact-mobile:hover {
+    background-color: #E63822;
+    color: #fff;
+  }
   .filter-btn{
     display: flex;
     width: auto;
@@ -88,13 +102,6 @@
     background-color: #E63822;
     color: #fff;
   }
-  .package-item .card-content {
-    min-width: 326px;
-    min-height: 750px; /* Sesuaikan dengan isi maksimum yang kamu punya */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -130,18 +137,35 @@
   border: 1px solid #E63822;
   background:  #E63822;
 }
-.stat-card{
-  display: flex;
-  padding-bottom: 20px !important;
+.stat-card {
+  position: relative;
+  display: inline-flex;
   flex-direction: column;
   width: 326px;
   height: 750px;
-  border: 1px solid  #030303;
+  padding-bottom: 20px;
+  border: 1px solid #030303;
   border-radius: 20px;
-  justify-content: flex-start;; 
-  
+  justify-content: flex-start;
+  position: relative; /* <== WAJIB */
+  overflow: visible; 
+  background: white;
+}
+.stat-card-mobile{
+  display: flex;
+  padding-bottom: 20px !important;
+  flex-direction: column;
+  width: 190px;
+  height: 744px;
+  border: 1px solid  #030303;
+  border-radius: 10px;
+  justify-content: flex-start;
 }
 .btn-container {
+  margin-top: auto;
+  text-align: center !important;
+}
+.btn-container-mobile {
   margin-top: auto;
   text-align: center !important;
 }
@@ -150,11 +174,44 @@
   border-radius: 20px;
   background: #F2F2F2;
 }
+.card-price-mobile{
+  border-radius: 10px;
+  background: #F2F2F2;
+  height: 100px;
+}
 .price{
   padding: 20px !important;
 }
+.price-mobile{
+  padding: 8px !important;
+}
+.price-mobile h5{
+  color: #E63822;
+  text-align: center;
+  font-family: 'Roboto-bold', sans-serif;
+  text-align: center;
+  font-size: 10px;
+  line-height: 10px;
+}
+.price-mobile h4{
+  color:#030303;
+  font-family: 'Roboto-bold', sans-serif;
+  text-align: center;
+  font-size: 17.5px;
+  line-height: 17.5px;
+}
+.price-mobile{
+  color: #030303;
+  font-family: 'Roboto-bold', sans-serif;
+  font-size: 17.5px;
+  line-height: 17.5px;
+}
 .feature{
   padding: 20px !important;
+  flex-grow: 1;
+}
+.feature-mobile{
+  padding: 10px !important;
   flex-grow: 1;
 }
 .spacer {
@@ -175,6 +232,20 @@ ul.multi-column li {
   border-radius: 20px;
   flex: 0 0 40%;
 }
+.stat-card-mobile.wide-card {
+  max-width: 40%;
+  height: 750px;
+  border: 1px solid #030303;
+  border-radius: 20px;
+  flex: 0 0 40%;
+}
+.txt_feature_mobile{
+  color: #030303;
+  font-family: 'Lato-regular', sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 10px;
+}
 .txt_feature{
   color: #030303;
   font-family: 'Lato-regular', sans-serif;
@@ -189,3 +260,106 @@ ul.multi-column li {
   margin-bottom: 2rem;
 }
 
+
+/* for mobile view */
+.pricelist-mobile{
+  padding-top: 80px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-bottom: 10px !important;
+}
+.h2-roboto-mobile{
+  color: #E63822;
+  text-align: center;
+  font-family: 'Roboto-bold', sans-serif;
+  font-size: 25px;
+  line-height:  32.5px;
+  margin-bottom: 20px;
+}
+.p-lato-mobile{
+  color: #4D4D4D;
+  text-align: center;
+  font-family: 'Lato-regular', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-bottom: 20px;
+}
+.filter-tab-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 kolom */
+  gap: 3px;
+  max-width: 430px;
+  justify-items: center;
+}
+.tab-sticky{
+  height: 270px;
+  position: sticky;
+  top: 65px !important;
+  z-index: 1000;
+  padding: 10px;
+  background-color: #fff; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.filter-btn-mobile {
+  color: #E63822;
+  padding: 10px;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  /* gap: 4px; */
+  width: 170px;
+  border-radius: 5px;
+  transition: all 0.3s ease; 
+}
+.txt_category{
+  text-align: center;
+  font-family: 'Inter-regular','sans-serif';
+  font-size: 10px;
+  font-style: normal;
+  line-height: 13px;
+}
+
+.special-offer-banner {
+  position: absolute;
+  width: 200px;
+  background-color: #E63822;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 20;
+  border-radius: 5px;
+}
+.card-offer{
+  position: relative;
+}
+
+.filter-btn-mobile.active {
+  background-color: #E63822 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+.filter-btn-mobile:hover {
+  background-color: #E63822;
+  color: #fff;
+}
+.txt_contact{
+  color: #E63822;
+  text-align: center;
+  font-family: 'Inter-regular','sans-serif';
+  font-size: 10px;
+  line-height: 13px;
+}
+#navbar-mobile-pricelist {
+  position: sticky;
+  top: 0;
+  z-index: 1040; /* lebih tinggi dari tab-sticky */
+  background-color: #fff; /* atau warna nav kamu */
+}

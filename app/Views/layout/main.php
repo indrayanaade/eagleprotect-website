@@ -8,7 +8,7 @@
     <link href="<?=base_url('assets/adminlte/plugins/font-awesome-free/css/all.min.css')?>" rel="stylesheet">
     <link rel="icon" href="<?=base_url()?>/assets/img/eagle-logo-desc.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- CSS -->
     <?php if (!empty($cssFiles)) : ?>
@@ -29,6 +29,7 @@
         <?php endforeach; ?>
     <?php endif; ?>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>const base_url = "<?= base_url() ?>";</script>
 </body>
 </html>

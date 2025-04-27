@@ -672,17 +672,6 @@
           </section>
         </div>
 
-        <!-- <div class="container-fluid px-4 py-3">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-md-6 text-start">
-                    <small class="text-reset">Copyright @ <?=date('Y')?></small>
-                </div>
-                <div class="col-md-6 text-end">
-                    <a href="#" class="text-reset text-decoration-none me-3">Privacy Policy</a>
-                    <a href="#" class="text-reset text-decoration-none">Terms & Conditions</a>
-                </div>
-            </div>
-        </div> -->
         <div class="container-fluid px-4 py-3">
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center flex-wrap footer-bar">
