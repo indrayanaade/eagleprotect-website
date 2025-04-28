@@ -13,6 +13,15 @@ $(document).ready(function () {
         navbar.removeClass('sticky');
         spacer.hide();
       }
+      
+      // Sticky untuk mobile
+      if ($('#navbar-mobile').is(':visible')) {
+        if ($(this).scrollTop() > 50) {
+          $('#navbar-mobile').addClass('sticky');
+        } else {
+          $('#navbar-mobile').removeClass('sticky');
+        }
+      }
     });
   
     const swiper_security = new Swiper('#swiper-security', {
@@ -27,6 +36,36 @@ $(document).ready(function () {
         prevEl: '#swiper-security .swiper-button-prev',
       }
     });   
+    const swiper_security_mobile = new Swiper('#swiper-security-mobile', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next-mobile",
+        prevEl: ".swiper-button-prev-mobile",
+      },
+      pagination: {
+        el: ".swiper-pagination-mobile",
+        type: "fraction",
+      }
+    });
+    
+    swiper_security_mobile.on('slideChange', function () {
+      const prevButton = document.querySelector('.swiper-button-prev-mobile');
+      const nextButton = document.querySelector('.swiper-button-next-mobile');
+    
+      if (swiper_security_mobile.isBeginning) {
+        prevButton.classList.add('disabled');
+      } else {
+        prevButton.classList.remove('disabled');
+      }
+    
+      if (swiper_security_mobile.isEnd) {
+        nextButton.classList.add('disabled');
+      } else {
+        nextButton.classList.remove('disabled');
+      }
+    });    
+    
     const swiper_legal = new Swiper('#swiper-legal', {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -39,6 +78,66 @@ $(document).ready(function () {
         prevEl: '#swiper-legal .swiper-button-prev',
       }
     });    
+
+    const swiper_legal_mobile = new Swiper('#swiper-legal-mobile', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next-mobile",
+        prevEl: ".swiper-button-prev-mobile",
+      },
+      pagination: {
+        el: ".swiper-pagination-mobile",
+        type: "fraction",
+      }
+    });
+
+    swiper_legal_mobile.on('slideChange', function () {
+      const prevButton = document.querySelector('.swiper-button-prev-mobile');
+      const nextButton = document.querySelector('.swiper-button-next-mobile');
+    
+      if (swiper_legal_mobile.isBeginning) {
+        prevButton.classList.add('disabled');
+      } else {
+        prevButton.classList.remove('disabled');
+      }
+    
+      if (swiper_legal_mobile.isEnd) {
+        nextButton.classList.add('disabled');
+      } else {
+        nextButton.classList.remove('disabled');
+      }
+    });
+
+    const swiper_healthcare_mobile = new Swiper('#swiper-healthcare-mobile', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next-mobile",
+        prevEl: ".swiper-button-prev-mobile",
+      },
+      pagination: {
+        el: ".swiper-pagination-mobile",
+        type: "fraction",
+      }
+    });
+    swiper_healthcare_mobile.on('slideChange', function () {
+      const prevButton = document.querySelector('.swiper-button-prev-mobile');
+      const nextButton = document.querySelector('.swiper-button-next-mobile');
+    
+      if (swiper_healthcare_mobile.isBeginning) {
+        prevButton.classList.add('disabled');
+      } else {
+        prevButton.classList.remove('disabled');
+      }
+    
+      if (swiper_healthcare_mobile.isEnd) {
+        nextButton.classList.add('disabled');
+      } else {
+        nextButton.classList.remove('disabled');
+      }
+    });
+
     const swiper_healthcare = new Swiper('#swiper-healthcare', {
       slidesPerView: 3,
       spaceBetween: 20,

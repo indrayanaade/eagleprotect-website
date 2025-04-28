@@ -5,12 +5,37 @@
     height: 40vh;
     overflow: hidden;
 }
+.service-mobile{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/quote-bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    overflow: hidden;
+    padding: 20px !important;
+    opacity: 0.9;
+}
+.security-service-mobile{
+    padding: 20px !important;
+}
+.legal-service-mobile{
+    padding: 20px !important;
+}
+.healthcare-service-mobile{
+    padding: 20px !important;
+}
 .roboto-h2-red{
     font-family: 'Roboto-bold',sans-serif;
     font-size: 53px;
     font-weight: 900;
     line-height: 69px;
     color: #E63822;
+}
+.roboto-h2-red-mobile{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 32px;
+    color: #E63822;
+    text-align: center;
 }
 .roboto-h2-title{
     font-family: 'Roboto-bold',sans-serif;
@@ -19,18 +44,26 @@
     line-height: 69px;
     color: #E63822;
 }
+.roboto-h2-title-mobile{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 26px;
+    color: #E63822;
+}
 .lato-regular-desc{
     font-family: 'Lato-regular', sans-serif;
     font-size: 16px;
     line-height: 20.8px;
     text-align: justify;
   }
-/* .swiper-slide{
-    width: 243px;
-    height: 425px;
-    background-size: cover;
-    background-position: center;
-} */
+  .lato-regular-desc-mobile{
+    font-family: 'Lato-regular', sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+  }
+
 .img-security{
     width: 243px;
     height: 425px;
@@ -44,6 +77,27 @@
     z-index: 2;
 }
 
+.img-security-mobile{
+    width: 112px !important;
+    height: 250px !important;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+.img-legal-mobile{
+    width: 112px !important;
+    height: 250px !important;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+.img-healthcare-mobile{
+    width: 112px !important;
+    height: 250px !important;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
 .slide-link {
     height: 100%;
     width: 100%;
@@ -77,6 +131,37 @@
     font-weight: bold;
     color: #000;
 }
+.swiper-controls-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antar prev, pagination, next */
+  }
+  
+  .swiper-button-prev-mobile,
+  .swiper-button-next-mobile {
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .swiper-pagination-mobile {
+    font-size: 13px;
+    font-weight: bold;
+    min-width: 50px; /* supaya pagination tetap stabil */
+    text-align: center;
+  }
+.swiper-button-prev-mobile.disabled,
+.swiper-button-next-mobile.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+  
   
 .swiper-button-prev,
 .swiper-button-next {
@@ -206,4 +291,22 @@
 
   .faq-item.active .faq-answer {
     display: block;
+  }
+
+  .our-service{
+    padding: 50px !important;
+  }
+  .h1-mobile{
+    font-size: 25px;
+    width: 62px;
+    line-height: 32.5px;
+    font-family: 'Manrope-bold', sans-serif;
+    color: #fff;
+  }
+  .h5-mobile{
+    font-size: 10px;
+    width: 93px;
+    font-family: 'Roboto-bold',sans-serif;
+    line-height: 13px;
+    color: #fff;
   }

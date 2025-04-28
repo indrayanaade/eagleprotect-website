@@ -94,7 +94,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="btn-container">
+                                    <div class="btn-container mb-3">
                                         <button class="btn btn-contact">CONTACT US</button>
                                     </div>
                                 </div>
@@ -188,11 +188,11 @@
                         <div class="d-flex gap-2 flex-wrap justify-content-start px-2">
                             <?php foreach ($group as $pkg) : ?>
                             <div class="stat-card-mobile">
-                                <?php if (!empty($pkg['special_offer'])) : ?>
+                                <!-- <?php if (!empty($pkg['special_offer'])) : ?>
                                     <div class="special-offer-banner">
                                         <?= esc($pkg['special_offer']) ?>
                                     </div>
-                                <?php endif; ?>
+                                <?php endif; ?> -->
                                 <div class="card-price-mobile">
                                     <div class="price-mobile">
                                         <h5 class="text-danger"><?= esc($pkg['title']) ?></h5>
