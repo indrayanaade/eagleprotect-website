@@ -1010,7 +1010,7 @@ body, html, main, section, div {
   .box {
     background-color: #F0F0F0;
     height: 100%;
-    /* border: 1px solid #ddd; */
+    border: 1px solid #ddd;
     border-radius: 0;
     box-shadow: none;
 

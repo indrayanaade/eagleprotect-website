@@ -231,7 +231,7 @@
   font-family: 'Lato-regular', sans-serif;
   font-size: 10px;
   line-height: 13px;
-  font-weight: 400;
+  /* font-weight: 400; */
   color: #6B7280;
   text-align: justify;
 }
@@ -246,14 +246,14 @@
   font-family: 'Roboto-bold',sans-serif;
   font-size: 10px;
   line-height: 13px;
-  font-weight: 600;
+  /* font-weight: 600; */
   text-transform: uppercase;
   color: #E63822;
 }
 .roboto-h2-black-mobile{
   font-family: 'Roboto-bold',sans-serif;
   font-size: 20px;
-  font-weight: 900;
+  /* font-weight: 900; */
   line-height: 26px;
   color: #030303;
 }
@@ -314,7 +314,7 @@
   .faq-question-mobile {
     font-family: 'Roboto-bold',sans-serif;
     font-size: 12px;
-    font-weight: 700;
+    /* font-weight: 700; */
     line-height: 15.6px;
     color: #030303;
   }
