@@ -25,8 +25,8 @@ $(document).ready(function () {
     });
   
     const swiper_security = new Swiper('#swiper-security', {
-      slidesPerView: 3,
-      spaceBetween: 200,
+      slidesPerView: 1,
+      // spaceBetween: 200,
       pagination: {
         el: '#swiper-security .swiper-pagination',
         clickable: true,
@@ -34,11 +34,11 @@ $(document).ready(function () {
       navigation: {
         nextEl: '#swiper-security .swiper-button-next',
         prevEl: '#swiper-security .swiper-button-prev',
-      }
+      },
     });   
     const swiper_security_mobile = new Swiper('#swiper-security-mobile', {
       slidesPerView: 1,
-      spaceBetween: 10,
+      // spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next-mobile",
         prevEl: ".swiper-button-prev-mobile",
@@ -67,8 +67,8 @@ $(document).ready(function () {
     });    
     
     const swiper_legal = new Swiper('#swiper-legal', {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      // spaceBetween: 20,
       pagination: {
         el: '#swiper-legal .swiper-pagination',
         clickable: true,
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
     const swiper_legal_mobile = new Swiper('#swiper-legal-mobile', {
       slidesPerView: 1,
-      spaceBetween: 10,
+      // spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next-mobile",
         prevEl: ".swiper-button-prev-mobile",
@@ -109,9 +109,22 @@ $(document).ready(function () {
       }
     });
 
+    const swiper_healthcare = new Swiper('#swiper-healthcare', {
+      slidesPerView: 1,
+      // spaceBetween: 20,
+      pagination: {
+        el: '#swiper-healthcare .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '#swiper-healthcare .swiper-button-next',
+        prevEl: '#swiper-healthcare .swiper-button-prev',
+      }
+    });
+
     const swiper_healthcare_mobile = new Swiper('#swiper-healthcare-mobile', {
       slidesPerView: 1,
-      spaceBetween: 10,
+      // spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next-mobile",
         prevEl: ".swiper-button-prev-mobile",
@@ -121,6 +134,7 @@ $(document).ready(function () {
         type: "fraction",
       }
     });
+
     swiper_healthcare_mobile.on('slideChange', function () {
       const prevButton = document.querySelector('.swiper-button-prev-mobile');
       const nextButton = document.querySelector('.swiper-button-next-mobile');
@@ -135,19 +149,6 @@ $(document).ready(function () {
         nextButton.classList.add('disabled');
       } else {
         nextButton.classList.remove('disabled');
-      }
-    });
-
-    const swiper_healthcare = new Swiper('#swiper-healthcare', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      pagination: {
-        el: '#swiper-healthcare .swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '#swiper-healthcare .swiper-button-next',
-        prevEl: '#swiper-healthcare .swiper-button-prev',
       }
     });
     

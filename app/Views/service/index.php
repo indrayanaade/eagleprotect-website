@@ -45,27 +45,37 @@
             </div>
         </div>
     </section>
+    <?php
+        $chunked_slides_security = array_chunk($security_slides, 5);
+        $globalIndex = 0; // <<< Tambah counter global 
+    ?>
     <section class="security-service">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">SECURITY SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-security">
                 <div class="swiper-wrapper">
-                    <?php foreach ($security_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-security" 
-                            style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>'); background-size: cover; background-position: center;">
-                            <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
-                                <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
-                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
-                                    </h1>
-                                    <div>
-                                        <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
-                                        <p class="mt-2"><?= esc($slide['desc']) ?></p>
+                    <?php foreach ($chunked_slides_security as $group): ?>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <?php foreach ($group as $slide): ?>
+                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <div class="position-relative text-white img-security" 
+                                        style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                        <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
+                                            <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                                <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;">
+                                                    <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                                </h1>
+                                                <div>
+                                                    <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                                    <p class="mt-2"><?= esc($slide['desc']) ?></p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </div>
-                            </a>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-
                     <?php endforeach; ?>
                 </div>
     
@@ -78,27 +88,37 @@
             </div>
         </div>
     </section>
+    <?php
+        $chunked_slides_legal = array_chunk($legal_slides, 4);
+        $globalIndex = 0; // <<< Tambah counter global  
+    ?>
     <section class="legal-service">
         <div class="container-fluid">
-            <h2 class="roboto-h2-title mt-5 text-center">LEGAL SERVICES</h2>
+            <h2 class="roboto-h2-title text-center">LEGAL SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-legal">
             <div class="swiper-wrapper">
-                <?php foreach ($legal_slides as $index => $slide): ?>
-                    <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                        <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
-                            <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                <!-- Nomor urut -->
-                                <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
-                                    <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
-                                </h1>
-                                <!-- Judul -->
-                                <div>
-                                    <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
-                                </div>
+            <?php foreach ($chunked_slides_legal as $group): ?>
+                <div class="swiper-slide">
+                    <div class="d-flex justify-content-center">
+                        <?php foreach ($group as $slide): ?>
+                            <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                            <div class="position-relative text-white img-legal" 
+                                style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
+                                    <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                        <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;">
+                                            <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                        </h1>
+                                        <div>
+                                            <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
             </div>
 
             <?php $show_controls = count($legal_slides) > 3; ?>
@@ -111,31 +131,40 @@
 
         </div>
     </section>
+    <?php
+        $chunked_slides_healthcare = array_chunk($healthcare_slides, 4); 
+        $globalIndex = 0; // <<< Tambah counter global
+    ?>
     <section class="healthcare-service">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">HEALTHCARE SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-healthcare">
                 <div class="swiper-wrapper">
-                    <?php foreach ($healthcare_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-legal" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <a href="<?= base_url('healthcare/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
-                                <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <!-- Nomor urut -->
-                                    <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;"> 
-                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
-                                    </h1>
-                                    <!-- Judul -->
-                                    <div>
-                                        <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
-                                    </div>
+                <?php foreach ($chunked_slides_healthcare as $group): ?>
+                    <div class="swiper-slide">
+                        <div class="d-flex justify-content-center">
+                            <?php foreach ($group as $slide): ?>
+                                <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                <div class="position-relative text-white img-healthcare" 
+                                    style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                    <a href="<?= base_url('healthcare/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
+                                        <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                            <h1 class="fw-bold m-0" style="font-size: 2rem; line-height: 1;">
+                                                <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                            </h1>
+                                            <div>
+                                                <h5 class="mb-0"><?= esc($slide['title']) ?></h5>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            <?php endforeach; ?>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
+                <?php endforeach; ?>
                 </div>
-                <?php $show_controls = count($healthcare_slides) > 3; ?>
-
-                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 mt-3 <?= $show_controls ? '' : 'd-none' ?>">
+                <?php $show_controls = count($healthcare_slides) > 4; ?>
+                <div class="swiper-controls d-flex justify-content-end align-items-center gap-2 <?= $show_controls ? '' : 'd-none' ?>">
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -190,26 +219,37 @@
             </div>
         </div>
     </section>
+    <?php
+        $chunked_slides_security = array_chunk($security_slides, 3); 
+        $globalIndex = 0; // <<< Tambah counter global
+    ?>
     <section class="security-service-mobile">
         <div class="container-fluid">
             <h2 class="roboto-h2-title-mobile mt-5 text-center">SECURITY SERVICES</h2>
             <div class="swiper mySwiper mt-3" id="swiper-security-mobile">
                 <div class="swiper-wrapper">
-                    <?php foreach ($security_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-security-mobile" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
-                                <div class="overlay d-flex flex-column justify-content-between" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <div class="h1-mobile">
-                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+                    <?php foreach ($chunked_slides_security as $group): ?>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center">
+                                <?php foreach ($group as $slide): ?>
+                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <div class="position-relative text-white img-security-mobile" 
+                                        style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                        <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
+                                            <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                                <h1 class="h1-mobile" style="font-size: 2rem; line-height: 1;">
+                                                    <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                                </h1>
+                                                <div>
+                                                    <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
+                                                    <!-- <p class="mt-2"><?= esc($slide['desc']) ?></p> -->
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div>
-                                        <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
-                                        <!-- <p class="mt-2"><?= esc($slide['desc']) ?></p> -->
-                                    </div>
-                                </div>
-                            </a>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-
                     <?php endforeach; ?>
                 </div>
 
@@ -229,25 +269,36 @@
             </div>
         </div>
     </section>
+    <?php
+        $chunked_slides_legal = array_chunk($legal_slides, 3); 
+        $globalIndex = 0; // <<< Tambah counter global
+    ?>
     <section class="legal-service-mobile">
         <div class="container-fluid">
             <h2 class="roboto-h2-title-mobile mt-5 text-center">LEGAL SERVICES</h2>
             <div class="swiper mySwiper mt-3" id="swiper-legal-mobile">
                 <div class="swiper-wrapper">
-                    <?php foreach ($legal_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-legal-mobile" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
-                                <div class="overlay d-flex flex-column justify-content-between" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <div class="h1-mobile">
-                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+                    <?php foreach ($chunked_slides_legal as $group): ?>
+                        <div class="swiper-slide">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <?php foreach ($group as $slide): ?>
+                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <div class="position-relative text-white img-legal-mobile" 
+                                        style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                        <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
+                                            <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                                <h1 class="h1-mobile" style="font-size: 2rem; line-height: 1;">
+                                                    <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                                </h1>
+                                                <div>
+                                                    <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div>
-                                        <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
-                                    </div>
-                                </div>
-                            </a>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
-
                     <?php endforeach; ?>
                 </div>
 
@@ -267,45 +318,57 @@
             </div>
         </div>
     </section>
-
+    <?php
+        $chunked_slides_legal = array_chunk($healthcare_slides, 4); 
+        $globalIndex = 0; // <<< Tambah counter global
+    ?>
     <section class="healthcare-service-mobile">
-        <div class="container-fluid">
-            <h2 class="roboto-h2-title-mobile mt-5 text-center">HEALTHCARE SERVICES</h2>
-            <div class="swiper mySwiper mt-3" id="swiper-healthcare-mobile">
-                <div class="swiper-wrapper">
-                    <?php foreach ($healthcare_slides as $index => $slide): ?>
-                        <div class="swiper-slide position-relative text-white img-healthcare-mobile" style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                            <a href="<?= base_url('healthcare/detail/' . $slide['id']) ?>" class="d-block text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
-                                <div class="overlay d-flex flex-column justify-content-between" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                    <div class="h1-mobile">
-                                        <?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>
+    <div class="container-fluid">
+        <h2 class="roboto-h2-title-mobile mt-5 text-center">HEALTHCARE SERVICES</h2>
+        <div class="swiper mySwiper mt-3" id="swiper-healthcare-mobile">
+        <div class="swiper-wrapper">
+            <?php foreach ($chunked_slides_legal as $group): ?>
+                <div class="swiper-slide">
+                    <div class="d-flex flex-wrap justify-content-center align-items-start">
+                        <?php foreach ($group as $slide): ?>
+                            <?php $globalIndex++; ?>
+                            <div class="position-relative text-white img-healthcare-mobile" 
+                                style="width: 50%; height: 180px; background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
+                                    <div class="overlay d-flex flex-column justify-content-between p-2" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                        <h1 class="h1-mobile" style="font-size: 1.5rem; line-height: 1;">
+                                            <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                        </h1>
+                                        <div>
+                                            <h5 class="h5-mobile"><?= esc($slide['title']) ?></h5>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    <?php endforeach; ?>
-                </div>
-
-                <?php $show_controls = count($healthcare_slides) > 3; ?>
-                <div class="swiper-controls-mobile mt-2 <?= $show_controls ? '' : 'd-none' ?>">
-                    <div class="navigation-wrapper">
-                        <div class="swiper-button-prev-mobile">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="swiper-pagination-mobile"></div>
-                        <div class="swiper-button-next-mobile">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-
-            </div>
+            <?php endforeach; ?>
         </div>
-    </section>
+
+
+            <?php $show_controls = count($healthcare_slides) > 3; ?>
+            <div class="swiper-controls-mobile mt-2 <?= $show_controls ? '' : 'd-none' ?>">
+                <div class="navigation-wrapper d-flex justify-content-center align-items-center gap-2">
+                    <div class="swiper-button-prev-mobile">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination-mobile"></div>
+                    <div class="swiper-button-next-mobile">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <section class="footer-mod">
         <div class="container-fluid">

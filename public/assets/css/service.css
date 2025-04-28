@@ -92,10 +92,11 @@
     transition: transform 0.3s ease-in-out;
 }
 .img-healthcare-mobile{
-    width: 112px !important;
-    height: 250px !important;
+    width: 168px !important;
+    height: 169px !important;
     background-size: cover;
     background-position: center;
+    margin-bottom: 5px !important;
     transition: transform 0.3s ease-in-out;
 }
 .slide-link {
@@ -310,3 +311,4 @@
     line-height: 13px;
     color: #fff;
   }
+  
