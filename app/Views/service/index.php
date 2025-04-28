@@ -58,7 +58,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <?php foreach ($group as $slide): ?>
-                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <?php $globalIndex++; ?> 
                                     <div class="position-relative text-white img-security" 
                                         style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
                                         <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
@@ -101,7 +101,7 @@
                 <div class="swiper-slide">
                     <div class="d-flex justify-content-center">
                         <?php foreach ($group as $slide): ?>
-                            <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                            <?php $globalIndex++; ?> 
                             <div class="position-relative text-white img-legal" 
                                 style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
                                 <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
@@ -144,7 +144,7 @@
                     <div class="swiper-slide">
                         <div class="d-flex justify-content-center">
                             <?php foreach ($group as $slide): ?>
-                                <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                <?php $globalIndex++; ?> 
                                 <div class="position-relative text-white img-healthcare" 
                                     style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
                                     <a href="<?= base_url('healthcare/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
@@ -178,7 +178,7 @@
     </section>
 </div>
 <div class="only-mobile">
-    <nav id="navbar-mobile-pricelist" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
+    <nav id="navbar-mobile" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
         <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo-mobile" src="<?= base_url('assets/img/eagle-logo-img-black.svg') ?>" alt="eagle-logo-nav" class="eagle-logo-nav"></a>
         <button class="navbar-toggler-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -232,7 +232,7 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center">
                                 <?php foreach ($group as $slide): ?>
-                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <?php $globalIndex++; ?> 
                                     <div class="position-relative text-white img-security-mobile" 
                                         style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
                                         <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="security">
@@ -241,7 +241,7 @@
                                                     <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
                                                 </h1>
                                                 <div>
-                                                    <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
+                                                    <h5 class="h5-mobile"><?= esc($slide['title']) ?></h5>
                                                     <!-- <p class="mt-2"><?= esc($slide['desc']) ?></p> -->
                                                 </div>
                                             </div>
@@ -282,16 +282,16 @@
                         <div class="swiper-slide">
                             <div class="d-flex justify-content-center align-items-center">
                                 <?php foreach ($group as $slide): ?>
-                                    <?php $globalIndex++; ?> <!-- <<< Tambah 1 setiap item -->
+                                    <?php $globalIndex++; ?> 
                                     <div class="position-relative text-white img-legal-mobile" 
                                         style="background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                                        <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
+                                        <a href="<?= base_url('legal/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="legal">
                                             <div class="overlay d-flex flex-column justify-content-between p-3" style="background: rgba(0,0,0,0.5); height: 100%;">
                                                 <h1 class="h1-mobile" style="font-size: 2rem; line-height: 1;">
                                                     <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
                                                 </h1>
                                                 <div>
-                                                    <h5 class="h5-mobile p-3"><?= esc($slide['title']) ?></h5>
+                                                    <h5 class="h5-mobile"><?= esc($slide['title']) ?></h5>
                                                 </div>
                                             </div>
                                         </a>
@@ -323,51 +323,48 @@
         $globalIndex = 0; // <<< Tambah counter global
     ?>
     <section class="healthcare-service-mobile">
-    <div class="container-fluid">
-        <h2 class="roboto-h2-title-mobile mt-5 text-center">HEALTHCARE SERVICES</h2>
-        <div class="swiper mySwiper mt-3" id="swiper-healthcare-mobile">
-        <div class="swiper-wrapper">
-            <?php foreach ($chunked_slides_legal as $group): ?>
-                <div class="swiper-slide">
-                    <div class="d-flex flex-wrap justify-content-center align-items-start">
-                        <?php foreach ($group as $slide): ?>
-                            <?php $globalIndex++; ?>
-                            <div class="position-relative text-white img-healthcare-mobile" 
-                                style="width: 50%; height: 180px; background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
-                                <a href="<?= base_url('security/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
-                                    <div class="overlay d-flex flex-column justify-content-between p-2" style="background: rgba(0,0,0,0.5); height: 100%;">
-                                        <h1 class="h1-mobile" style="font-size: 1.5rem; line-height: 1;">
-                                            <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
-                                        </h1>
-                                        <div>
-                                            <h5 class="h5-mobile"><?= esc($slide['title']) ?></h5>
-                                        </div>
+        <div class="container-fluid">
+            <h2 class="roboto-h2-title-mobile mt-5 text-center">HEALTHCARE SERVICES</h2>
+            <div class="swiper mySwiper mt-3" id="swiper-healthcare-mobile">
+                <div class="swiper-wrapper">
+                    <?php foreach ($chunked_slides_legal as $group): ?>
+                        <div class="swiper-slide">
+                            <div class="d-flex flex-wrap justify-content-center align-items-start">
+                                <?php foreach ($group as $slide): ?>
+                                    <?php $globalIndex++; ?>
+                                    <div class="position-relative text-white img-healthcare-mobile" 
+                                        style="width: 50%; height: 180px; background-image: url('<?= base_url('assets/img/' . $slide['img']) ?>');">
+                                        <a href="<?= base_url('healthcare/detail/' . $slide['id']) ?>" class="d-block w-100 h-100 text-white text-decoration-none slide-link" data-id="<?= $slide['id'] ?>" data-type="healthcare">
+                                            <div class="overlay d-flex flex-column justify-content-between p-2" style="background: rgba(0,0,0,0.5); height: 100%;">
+                                                <h1 class="h1-mobile" style="font-size: 1.5rem; line-height: 1;">
+                                                    <?= str_pad($globalIndex, 2, '0', STR_PAD_LEFT) ?>
+                                                </h1>
+                                                <div>
+                                                    <h5 class="h5-mobile"><?= esc($slide['title']) ?></h5>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
+                                <?php endforeach; ?>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
-        </div>
-
-
-            <?php $show_controls = count($healthcare_slides) > 3; ?>
-            <div class="swiper-controls-mobile mt-2 <?= $show_controls ? '' : 'd-none' ?>">
-                <div class="navigation-wrapper d-flex justify-content-center align-items-center gap-2">
-                    <div class="swiper-button-prev-mobile">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="swiper-pagination-mobile"></div>
-                    <div class="swiper-button-next-mobile">
-                        <i class="fas fa-chevron-right"></i>
+                <?php $show_controls = count($healthcare_slides) > 3; ?>
+                <div class="swiper-controls-mobile mt-2 <?= $show_controls ? '' : 'd-none' ?>">
+                    <div class="navigation-wrapper d-flex justify-content-center align-items-center gap-2">
+                        <div class="swiper-button-prev-mobile">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="swiper-pagination-mobile"></div>
+                        <div class="swiper-button-next-mobile">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
 
     <section class="footer-mod">
