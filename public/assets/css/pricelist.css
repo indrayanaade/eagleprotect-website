@@ -147,9 +147,9 @@
   border: 1px solid #030303;
   border-radius: 20px;
   justify-content: flex-start;
-  position: relative; /* <== WAJIB */
   overflow: visible; 
   background: white;
+  flex-direction: column;
 }
 .stat-card-mobile{
   display: flex;
@@ -225,8 +225,16 @@ ul.multi-column {
 ul.multi-column li {
   break-inside: avoid;
 }
+.stat-card-wrapper{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.stat-card-wrapper-wide {
+  padding-top: 40px !important; 
+}
 .stat-card.wide-card {
-  max-width: 40%;
+  /* max-width: 40%; */
+  width: 498px;
   height: 750px;
   border: 1px solid #030303;
   border-radius: 20px;
@@ -322,6 +330,13 @@ ul.multi-column li {
   font-style: normal;
   line-height: 13px;
 }
+.txt_utilities{
+  text-align: center;
+  font-family: 'Roboto-bold','sans-serif';
+  font-size: 30px;
+  font-style: normal;
+  line-height: 25px;
+}
 
 .special-offer-banner {
   position: absolute;
@@ -330,15 +345,20 @@ ul.multi-column li {
   color: white;
   font-weight: bold;
   font-size: 12px;
-  top: -20px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 20;
-  border-radius: 5px;
+  z-index: 10;
+  /* border-radius: 5px; */
 }
 .card-offer{
   position: relative;
+  z-index: 1;
+}
+.filter-button-group{
+    position: relative;
+    z-index: 1;
 }
 
 .filter-btn-mobile.active {
@@ -362,4 +382,7 @@ ul.multi-column li {
   top: 0;
   z-index: 1040; /* lebih tinggi dari tab-sticky */
   background-color: #fff; /* atau warna nav kamu */
+}
+.small, small {
+  font-size: 10px;
 }

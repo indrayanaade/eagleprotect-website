@@ -191,7 +191,7 @@ class Pricelists extends BaseController
                 [
                     'title' => 'ADVANCE PACKAGE 3',
                     'special_offer' => '',
-                    'price' => 'IDR 546.000',
+                    'price' => 'IDR 2.448.000',
                     'category' => 'cctv',
                     'features' => [
                         '9 Total Camera',
@@ -496,7 +496,7 @@ class Pricelists extends BaseController
                     ]
                 ],
                 [
-                    'title' => '',
+                    'title' => 'TOURIST PROPERTY COUVERAGE',
                     'special_offer' => '',
                     'price' => 'CUSTOMIZED PACKET',
                     'category' => 'tourist_property',

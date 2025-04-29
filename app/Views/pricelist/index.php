@@ -43,7 +43,7 @@
             <h2 class="h2-roboto">PRICELIST</h2>
             <p class="p-lato">We have several Pricelists that can meet your needs.</p>
 
-            <div class="d-flex justify-content-center mb-5 flex-wrap gap-2">
+            <div class="filter-button-group d-flex justify-content-center mb-5 flex-wrap gap-2">
                 <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="private">PRIVATE PACKAGES</button>
                 <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="cctv">CCTV PACKAGES</button>
                 <button class="btn btn-outline-secondary fw-semibold filter-btn" data-category="corporate">CORPORATE PACKAGES</button>
@@ -69,35 +69,42 @@
                         <div class="swiper-slide package-item" data-category="<?= esc($category) ?>">
                             <div class="d-flex gap-3 flex-wrap justify-content-center px-2">
                                 <?php foreach ($group as $pkg) : ?>
-                                <div class="stat-card">
-                                    <?php if (!empty($pkg['special_offer'])) : ?>
-                                        <div class="card-offer">
-                                            <div class="special-offer-banner">
-                                                <?= esc($pkg['special_offer']) ?>
+                                    <div class="stat-card-wrapper">
+                                        <div class="stat-card mt-3">
+                                            <?php if (!empty($pkg['special_offer'])) : ?>
+                                                <div class="card-offer">
+                                                    <div class="special-offer-banner">
+                                                        <?= esc($pkg['special_offer']) ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                            <div class="card-price">
+                                                <div class="price">
+                                                    <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
+                                                    <?php if (!empty($pkg['utilities'])) : ?>
+                                                        <h4 class="txt_utilities"><?= esc($pkg['utilities']) ?></h5>
+                                                    <?php endif; ?>
+                                                    <?php if (!empty($pkg['price'])) : ?>
+                                                        <h4 class="fw-bold idr"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                            <div class="feature">
+                                                <ul class="text-start list-unstyled mt-3">
+                                                    <?php foreach ($pkg['features'] as $feature) : ?>
+                                                        <li class="mb-2 d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
+                                                            <span class="txt_feature"><?= esc($feature) ?></span>
+                                                        </li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+        
+                                            <div class="btn-container mb-3">
+                                                <button class="btn btn-contact">CONTACT US</button>
                                             </div>
                                         </div>
-                                    <?php endif; ?>
-                                    <div class="card-price">
-                                        <div class="price">
-                                            <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
-                                            <h4 class="fw-bold"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
-                                        </div>
                                     </div>
-                                    <div class="feature">
-                                        <ul class="text-start list-unstyled mt-3">
-                                            <?php foreach ($pkg['features'] as $feature) : ?>
-                                                <li class="mb-2 d-flex align-items-start">
-                                                    <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
-                                                    <span class="txt_feature"><?= esc($feature) ?></span>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
-
-                                    <div class="btn-container mb-3">
-                                        <button class="btn btn-contact">CONTACT US</button>
-                                    </div>
-                                </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
