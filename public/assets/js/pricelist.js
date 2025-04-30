@@ -139,22 +139,31 @@ $(document).ready(function () {
     $('.package-item[data-category="by_request"] .txt_utilities').each(function() {
         if ($(this).text().trim() === 'PERSON OF INTEREST PACKET') {
             $('.txt_utilities').css({
-                'font-size': '25px'
+                'font-size': '25px',
             });
         }
     });  
     $('.package-item[data-category="by_request"] .idr').each(function() {
         if ($(this).text().trim() !== '') {
-            $('.idr').css({
+            $(this).css({
                 'font-size': '20px'
             });
         }
     });
+    $('.package-item[data-category="by_request"] .txt_feature').each(function() {
+        $(this).css({
+            'text-align':'center'
+        })
+    });
     $('.package-item[data-category="by_request"] i.fas.fa-check-circle').remove();
 
-    
-    
-    
+    // $('.package-item[data-category="corporate"] .card-price').each(function() {
+    //     const utilities = $(this).find('.txt_utilities').text().trim();
+    //     if (utilities === 'BY REQUEST ADD-ONS') {
+    //         $(this).find('small.text-muted').remove();
+    //     }
+    // });
+     
     
     // AUTO SELECT CATEGORY FROM URL
     function getQueryParam(param) {

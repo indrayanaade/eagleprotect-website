@@ -87,8 +87,14 @@
                                                     <?php if (!empty($pkg['price'])) : ?>
                                                         <h4 class="fw-bold idr"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
                                                     <?php endif; ?>
+                                                    <?php if (!empty($pkg['sub_title'])) : ?>
+                                                        <span class="sub-title"><?= esc($pkg['sub_title']) ?></span>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
+                                            <?php if (!empty($pkg['feature_desc'])) : ?>
+                                                <span class="feature-desc"><b><?= esc($pkg['feature_desc']) ?></b></span>
+                                            <?php endif; ?>
                                             <div class="feature">
                                                 <ul class="text-start list-unstyled mt-3">
                                                     <?php foreach ($pkg['features'] as $feature) : ?>
@@ -98,6 +104,19 @@
                                                         </li>
                                                     <?php endforeach; ?>
                                                 </ul>
+                                                <?php if (!empty($pkg['add_ons_title'])) : ?>
+                                                    <span class="add_ons_title"><b><?= esc($pkg['add_ons_title']) ?>:</b></span>
+                                                <?php endif; ?>
+                                                <?php if (!empty($pkg['add_ons'])) : ?>
+                                                    <ul class="text-start list-unstyled mt-3">
+                                                    <?php foreach ($pkg['add_ons'] as $add_ons) : ?>
+                                                        <li class="mb-2 d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
+                                                            <span class="txt_feature"><?= esc($add_ons) ?></span>
+                                                        </li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                                <?php endif; ?>
                                             </div>
         
                                             <div class="btn-container mb-3">

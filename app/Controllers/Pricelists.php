@@ -117,6 +117,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 381.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '3 Total Camera',
                         '2 Turret Camera - 2MP',
@@ -125,13 +126,15 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'BASIC PACKAGE 2',
                     'special_offer' => '',
                     'price' => 'IDR 424.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '4 Total Camera',
                         '2 Turret Camera - 2MP',
@@ -140,13 +143,15 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'BASIC PACKAGE 3',
                     'special_offer' => '',
                     'price' => 'IDR 546.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '5 Total Camera',
                         '3 Turret Camera - 2MP',
@@ -155,13 +160,15 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'ADVANCE PACKAGE 1',
                     'special_offer' => '',
                     'price' => 'IDR 859.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '3 Total Camera',
                         '2 Turret Camera - 2MP',
@@ -170,13 +177,15 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'ADVANCE PACKAGE 2',
                     'special_offer' => '',
                     'price' => 'IDR 1.548.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '6 Total Camera',
                         '3 Turret Camera - 5MP',
@@ -186,13 +195,15 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'ADVANCE PACKAGE 3',
                     'special_offer' => '',
                     'price' => 'IDR 2.448.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '9 Total Camera',
                         '5 Turret Camera - 5MP',
@@ -202,13 +213,15 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'PRO PACKAGE 1',
                     'special_offer' => '',
                     'price' => 'IDR 2.384.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '6 Total Camera',
                         '4 Turret Camera - 2MP',
@@ -217,13 +230,15 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'PRO PACKAGE 2',
                     'special_offer' => '',
                     'price' => 'IDR 4.626.000',
                     'category' => 'cctv',
+                    'sub_title' => '',
                     'features' => [
                         '12 Total Camera',
                         '7 Turret Camera - 5MP',
@@ -233,26 +248,30 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         '48H Cloud Backup',
                         'Cable 50 M',
-                    ]
+                    ],
+                    'feature_desc' => ''
                 ],
                 [
                     'title' => 'PRO PACKAGE 3',
                     'special_offer' => '',
                     'price' => 'On Demand',
-                    'sub_title' => 'Custom Solution - Tarlored to Your Needs',
                     'category' => 'cctv',
+                    'sub_title' => 'Custom Solution - Tarlored to Your Needs',
                     'features' => [
                         'Fully Customizable Setup',
                         'Number and type of cameras (Turret, Bullet, Dome) customized to your property',
                         'DVR and storage options (HDD size and cloud backup) tailored to meet your specific needs',
                         'Flexible cable lengths and other equipment based on your unique requirements',
-                    ]
+                    ],
+                    'feature_desc' => 'Completely Designed for High-Security Requirements'
                 ],
                 [
                     'title' => 'SMALL OFFICE / HOSPITALITY',
                     'special_offer' => '',
                     'price' => 'IDR 1.200.000',
                     'category' => 'corporate',
+                    'users' => 'UP TO 15 EMPLOYEES',
+                    'wait_list' => '',
                     'features' => [
                         '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -267,6 +286,8 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 2.500.000',
                     'category' => 'corporate',
+                    'users' => 'UP TO 50 EMPLOYEES',
+                    'wait_list' => '',
                     'features' => [
                         '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -281,7 +302,9 @@ class Pricelists extends BaseController
                     'title' => 'LARGE OFFICE / HOSPITALITY',
                     'special_offer' => '',
                     'price' => 'IDR 4.500.000',
+                    'users' => 'UP TO 100 EMPLOYEES',
                     'category' => 'corporate',
+                    'wait_list' => '',
                     'features' => [
                        '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -296,6 +319,8 @@ class Pricelists extends BaseController
                     'title' => 'CUSTOM CORPORATE START FROM',
                     'special_offer' => 'LIMITED AVAILABILITY',
                     'price' => 'IDR 10.000.000',
+                    'users' => 'UP TO +100 EMPLOYEES',
+                    'wait_list' => 'JOIN THE WAITLIST',
                     'category' => 'corporate',
                     'features' => [
                         'Priority Services With Under 6 Minutes  Response Time',
@@ -309,6 +334,8 @@ class Pricelists extends BaseController
                     'title' => '',
                     'special_offer' => '',
                     'price' => 'BY REQUEST ADD-ONS',
+                    'users' => '',
+                    'wait_list' => '',
                     'category' => 'corporate',
                     'features' => [
                         'SOS Button',
@@ -334,6 +361,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 4.112.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '2 Turret Cameras (2MP)',
                         '1 Bullet Camera (Outdoor, 2MP)',
@@ -341,6 +369,7 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).',
@@ -351,6 +380,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 4.575.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '2 Turret Cameras (2MP)',
                         '2 Bullet Camera (Outdoor, 2MP)',
@@ -358,6 +388,7 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -368,6 +399,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 5.892.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '3 Turret Cameras (2MP)',
                         '2 Bullet Camera (Outdoor, 2MP)',
@@ -375,6 +407,7 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -385,6 +418,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 9.278.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '2 Turret Cameras (2MP)',
                         '1 Bullet Camera (Outdoor, 5MP)',
@@ -392,6 +426,7 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).',
@@ -402,6 +437,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 16.720.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '3 Turret Cameras (5MP)',
                         '1 Bullet Camera (Outdoor, 5MP)',
@@ -409,6 +445,7 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -419,6 +456,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 26.435.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '5 Turret Cameras (5MP)',
                         '3 Bullet Camera (Outdoor, 5MP)',
@@ -426,6 +464,7 @@ class Pricelists extends BaseController
                         '1TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -436,6 +475,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 25.750.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '4 Turret Cameras (8.3MP)',
                         '2 Bullet Camera (Outdoor, 8.3MP)',
@@ -443,6 +483,7 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).',
@@ -453,6 +494,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'IDR 25.750.000',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         '7 Turret Cameras (5MP)',
                         '4 Bullet Camera (Outdoor, 8.3MP)',
@@ -461,6 +503,7 @@ class Pricelists extends BaseController
                         '2TB HDD',
                         'Cable 50 M',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -471,12 +514,14 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'CUSTOM SOLUTION',
                     'category' => 'it_acquisition',
+                    'feature_desc' => 'Features:',
                     'features' => [
                         'Fully Customizable Setup',
                         'Number and type of cameras (Turret, Bullet, Dome) customized to your property',
                         'DVR and storage options (HDD size and cloud backup) tailored to meet your specific needs',
                         'Flexible cable lengths and other equipment based on your unique requirements',
                     ],
+                    'add_ons_title'=> 'Add-On Options',
                     'add_ons' => [
                         'Acquisition Option: Ownership transferred, installation included. Any additional material costs excluded.',
                         'Technician Package: IDR 200,000 / month, includes 2 service visits per month for troubleshooting and emergency repairs (additional equipment charges borne by the client).'
@@ -541,16 +586,6 @@ class Pricelists extends BaseController
                     'category' => 'comp_asset',
                     'features' => [
                         'Equipped for arrests and armed duties (available only after comprehensive verification).',
-                        '6 Days a Week, 8h per day',
-                    ]
-                ],
-                [
-                    'title' => 'EAGLE PROTECT OFFICER (STANDARD)',
-                    'special_offer' => '',
-                    'price' => 'IDR 6.500.000',
-                    'category' => 'comp_asset',
-                    'features' => [
-                        'Includes regulations-compliant uniforms.',
                         '6 Days a Week, 8h per day',
                     ]
                 ],
