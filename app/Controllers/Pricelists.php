@@ -271,7 +271,7 @@ class Pricelists extends BaseController
                     'price' => 'IDR 1.200.000',
                     'category' => 'corporate',
                     'users' => 'UP TO 15 EMPLOYEES',
-                    'wait_list' => '',
+                    'waiting_list' => '',
                     'features' => [
                         '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -287,7 +287,7 @@ class Pricelists extends BaseController
                     'price' => 'IDR 2.500.000',
                     'category' => 'corporate',
                     'users' => 'UP TO 50 EMPLOYEES',
-                    'wait_list' => '',
+                    'waiting_list' => '',
                     'features' => [
                         '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -304,7 +304,7 @@ class Pricelists extends BaseController
                     'price' => 'IDR 4.500.000',
                     'users' => 'UP TO 100 EMPLOYEES',
                     'category' => 'corporate',
-                    'wait_list' => '',
+                    'waiting_list' => '',
                     'features' => [
                        '24/7 Customer Service and Emergency Hotline',
                         'Identification Plate and ID',
@@ -320,7 +320,7 @@ class Pricelists extends BaseController
                     'special_offer' => 'LIMITED AVAILABILITY',
                     'price' => 'IDR 10.000.000',
                     'users' => 'UP TO +100 EMPLOYEES',
-                    'wait_list' => 'JOIN THE WAITLIST',
+                    'waiting_list' => 'JOIN THE WAITLIST',
                     'category' => 'corporate',
                     'features' => [
                         'Priority Services With Under 6 Minutes  Response Time',
@@ -335,7 +335,7 @@ class Pricelists extends BaseController
                     'special_offer' => '',
                     'price' => 'BY REQUEST ADD-ONS',
                     'users' => '',
-                    'wait_list' => '',
+                    'waiting_list' => '',
                     'category' => 'corporate',
                     'features' => [
                         'SOS Button',
@@ -599,6 +599,7 @@ class Pricelists extends BaseController
                     // 'image' => [
                     //     'assets/img/cyber-tools.png'
                     // ],
+                    'waiting_list' => 'JOIN THE WAITLIST',
                     'special_offer' => 'LIMITED AVAILABILITY',
                     'price' => '',
                     'category' => 'by_request',
@@ -611,6 +612,7 @@ class Pricelists extends BaseController
                     'title' => 'EAGLE PROTECT',
                     'utilities' => 'SOS BUTTON',
                     'image' => 'assets/img/sos-tools.png',
+                    'waiting_list' => '',
                     'image_apps' => [
                         'assets/img/google-play.png',
                         'assets/img/app-store.png'
@@ -631,6 +633,7 @@ class Pricelists extends BaseController
                     'title' => 'EAGLE PROTECT',
                     'utilities' => 'PERSON OF INTEREST PACKET',
                     'image' => '',
+                    'waiting_list' => '',
                     // 'image_apps' => [
                     //     ''
                     // ],

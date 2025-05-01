@@ -82,7 +82,8 @@
                                                 <div class="price">
                                                     <h5 class="text-danger fw-bold"><?= esc($pkg['title']) ?></h5>
                                                     <?php if (!empty($pkg['utilities'])) : ?>
-                                                        <h4 class="txt_utilities"><?= esc($pkg['utilities']) ?></h5>
+                                                        <h4 class="txt_utilities"><?= esc($pkg['utilities']) ?></h4>
+                                                        <input class="utilities" type="hidden" value="<?= esc($pkg['utilities']) ?>">
                                                     <?php endif; ?>
                                                     <?php if (!empty($pkg['price'])) : ?>
                                                         <h4 class="fw-bold idr"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
@@ -97,7 +98,7 @@
                                             <?php endif; ?>
                                             <div class="feature">
                                                 <?php if (!empty($pkg['image'])) : ?>
-                                                    <img src="<?= esc($pkg['image']) ?>" alt="">
+                                                    <img class="img-feature" src="<?= esc($pkg['image']) ?>" alt="">
                                                 <?php endif; ?>
                                                 <?php if (!empty($pkg['image_apps'])) : ?>
                                                     <div class="d-flex flex-wrap gap-2 align-items-center">
@@ -128,7 +129,13 @@
                                                 </ul>
                                                 <?php endif; ?>
                                             </div>
-        
+
+                                            <?php if (!empty($pkg['waiting_list'])) : ?>
+                                                <div class="btn-wrapper mb-2">
+                                                    <button class="btn-waitlist"><?=esc($pkg['waiting_list'])?></button>
+                                                </div>
+                                            <?php endif; ?>
+
                                             <div class="btn-container mb-3">
                                                 <button class="btn btn-contact">CONTACT US</button>
                                             </div>
@@ -282,6 +289,12 @@
                                             </ul>
                                             <?php endif; ?>
                                         </div>
+
+                                        <?php if (!empty($pkg['waiting_list'])) : ?>
+                                            <div class="btn-wrapper mb-2">
+                                                <button class="btn-waitlist-mobile"><?=esc($pkg['waiting_list'])?></button>
+                                            </div>
+                                        <?php endif; ?>
 
                                         <div class="btn-container-mobile">
                                             <button class="btn btn-contact-mobile"><span class="txt_contact">CONTACT US</span></button>

@@ -117,11 +117,22 @@ $(document).ready(function () {
         var $statCard = $(this).find('.stat-card');
 
         var $specialOffer = $statCard.find('.card-offer');
+        var $imgFeature = $statCard.find('.img-feature');
+        var $btnWaiting = $statCard.find('.btn-wrapper');
         var $cardPrice = $statCard.find('.card-price');
 
         if ($specialOffer.length && $cardPrice.length) {
             // Pindahkan .card-offer setelah .card-price
             $specialOffer.insertAfter($cardPrice);
+        }
+        var titleText = $(this).find('input.utilities').val()?.trim();
+        console.log('Title text:', titleText);
+
+        if (titleText === 'CYBERSECURITY') {
+            if ($imgFeature.length && $btnWaiting.length) {
+                // Pindahkan .btn-wrapper setelah .img-feature
+                $btnWaiting.insertAfter($imgFeature);
+            }
         }
     });
     $('.package-item[data-category="by_request"] .special-offer-banner').css({
