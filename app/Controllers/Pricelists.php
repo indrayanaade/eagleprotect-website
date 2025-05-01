@@ -592,9 +592,13 @@ class Pricelists extends BaseController
                 [
                     'title' => 'EAGLE PROTECT',
                     'utilities' => 'CYBERSECURITY',
-                    'image' => [
-                        'assets/img/cyber-tools.png'
-                    ],
+                    'image' => 'assets/img/cyber-tools.png',
+                    // 'image_apps' => [
+                    //     ''
+                    // ],
+                    // 'image' => [
+                    //     'assets/img/cyber-tools.png'
+                    // ],
                     'special_offer' => 'LIMITED AVAILABILITY',
                     'price' => '',
                     'category' => 'by_request',
@@ -606,11 +610,16 @@ class Pricelists extends BaseController
                 [
                     'title' => 'EAGLE PROTECT',
                     'utilities' => 'SOS BUTTON',
-                    'image' => [
-                        'assets/img/sos-tools.png',
+                    'image' => 'assets/img/sos-tools.png',
+                    'image_apps' => [
                         'assets/img/google-play.png',
-                        'assets/img/app-store.png',
+                        'assets/img/app-store.png'
                     ],
+                    // 'image' => [
+                    //     'assets/img/sos-tools.png',
+                    //     'assets/img/google-play.png',
+                    //     'assets/img/app-store.png',
+                    // ],
                     'special_offer' => '',
                     'price' => 'IDR 300.000',
                     'category' => 'by_request',
@@ -621,17 +630,21 @@ class Pricelists extends BaseController
                 [
                     'title' => 'EAGLE PROTECT',
                     'utilities' => 'PERSON OF INTEREST PACKET',
-                    'image' => [
-                        '',
-                    ],
+                    'image' => '',
+                    // 'image_apps' => [
+                    //     ''
+                    // ],
+                    // 'image' => [
+                    //     '',
+                    // ],
                     'special_offer' => 'LIMITED AVAILABILITY',
                     'price' => '',
                     'category' => 'by_request',
                     'features' => [
-                        'Here’s a refined version of the description for your “Person of Interest Packet”:
-                        For individuals requiring the highest level of protection, our Person of Interest Packet offers unparalleled security services. Designed for both home and external environments, this package provides maximum backup security, incorporating advanced technologies and customizable solutions.
-                        Every service is tailored to the specific needs and locations to be covered. Applications are subject to a thorough verification process to ensure precise customization and effectiveness. Pricing is provided upon request, based on the areas and services required.
-                        With Eagle Protect, safeguard your peace of mind with next- generation protection.'
+                        'Here’s a refined version of the description for your “Person of Interest Packet”: ',
+                        'For individuals requiring the highest level of protection, our Person of Interest Packet offers unparalleled security services. Designed for both home and external environments, this package provides maximum backup security, incorporating advanced technologies and customizable solutions.',
+                        'Every service is tailored to the specific needs and locations to be covered. Applications are subject to a thorough verification process to ensure precise customization and effectiveness. Pricing is provided upon request, based on the areas and services required.',
+                        'With Eagle Protect, safeguard your peace of mind with next- generation protection.'
                     ]
                 ],
             ]

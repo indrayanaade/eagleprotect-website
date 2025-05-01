@@ -155,7 +155,13 @@ $(document).ready(function () {
             'text-align':'center'
         })
     });
+    $('.package-item-mobile[data-category-mobile="by_request"] .txt_feature_mobile').each(function() {
+        $(this).css({
+            'text-align':'center'
+        })
+    });
     $('.package-item[data-category="by_request"] i.fas.fa-check-circle').remove();
+    $('.package-item-mobile[data-category-mobile="by_request"] i.fas.fa-check-circle').remove();
 
     // $('.package-item[data-category="corporate"] .card-price').each(function() {
     //     const utilities = $(this).find('.txt_utilities').text().trim();

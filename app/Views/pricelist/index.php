@@ -96,11 +96,21 @@
                                                 <span class="feature-desc"><b><?= esc($pkg['feature_desc']) ?></b></span>
                                             <?php endif; ?>
                                             <div class="feature">
+                                                <?php if (!empty($pkg['image'])) : ?>
+                                                    <img src="<?= esc($pkg['image']) ?>" alt="">
+                                                <?php endif; ?>
+                                                <?php if (!empty($pkg['image_apps'])) : ?>
+                                                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                                                        <?php foreach ($pkg['image_apps'] as $image_apps) : ?>
+                                                            <img src="<?= esc($image_apps) ?>" alt="" style="height: 40px; width:110px;">
+                                                        <?php endforeach; ?>
+                                                    </div>
+                                                <?php endif; ?>
                                                 <ul class="text-start list-unstyled mt-3">
                                                     <?php foreach ($pkg['features'] as $feature) : ?>
                                                         <li class="mb-2 d-flex align-items-start">
                                                             <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
-                                                            <span class="txt_feature"><?= esc($feature) ?></span>
+                                                            <span class="txt_feature"><?= nl2br(esc($feature)) ?></span>
                                                         </li>
                                                     <?php endforeach; ?>
                                                 </ul>
@@ -207,39 +217,77 @@
 
                     $filtered = array_filter($packages, fn($pkg) => $pkg['category'] === $category);
                     // Bagi per 3 item
-                    $chunked = array_chunk($filtered, 3);
+                    $chunked = array_chunk($filtered, 5);
                     foreach ($chunked as $group) :
                 ?>
                     <div class="swiper-slide-mobile package-item-mobile" data-category-mobile="<?= esc($category) ?>">
                         <div class="d-flex gap-2 flex-wrap justify-content-start px-2">
                             <?php foreach ($group as $pkg) : ?>
-                            <div class="stat-card-mobile">
-                                <!-- <?php if (!empty($pkg['special_offer'])) : ?>
-                                    <div class="special-offer-banner">
-                                        <?= esc($pkg['special_offer']) ?>
-                                    </div>
-                                <?php endif; ?> -->
-                                <div class="card-price-mobile">
-                                    <div class="price-mobile">
-                                        <h5 class="text-danger"><?= esc($pkg['title']) ?></h5>
-                                        <h4><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
-                                    </div>
-                                </div>
-                                <div class="feature-mobile">
-                                    <ul class="text-start list-unstyled mt-3">
-                                        <?php foreach ($pkg['features'] as $feature) : ?>
-                                            <li class="mb-2 d-flex align-items-start">
-                                                <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
-                                                <span class="txt_feature_mobile"><?= esc($feature) ?></span>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </div>
+                                <div class="stat-card-wrapper">
+                                    <div class="stat-card-mobile mt-3">
+                                        <?php if (!empty($pkg['special_offer'])) : ?>
+                                            <div class="card-offer">
+                                                <div class="special-offer-banner-mobile">
+                                                    <?= esc($pkg['special_offer']) ?>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <div class="card-price-mobile">
+                                            <div class="price-mobile">
+                                                <h5 class="text-danger fw-bold mt-3"><?= esc($pkg['title']) ?></h5>
+                                                <?php if (!empty($pkg['utilities'])) : ?>
+                                                    <h4 class="txt_utilities_mobile"><?= esc($pkg['utilities']) ?></h5>
+                                                <?php endif; ?>
+                                                <?php if (!empty($pkg['price'])) : ?>
+                                                    <h4 class="fw-bold idr"><?= esc($pkg['price']) ?> <small class="text-muted">/ month</small></h4>
+                                                <?php endif; ?>
+                                                <?php if (!empty($pkg['sub_title'])) : ?>
+                                                    <span class="sub-title-mobile"><?= esc($pkg['sub_title']) ?></span>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                        <?php if (!empty($pkg['feature_desc'])) : ?>
+                                            <span class="feature-desc-mobile"><b><?= esc($pkg['feature_desc']) ?></b></span>
+                                        <?php endif; ?>
+                                        <div class="feature-mobile">
+                                            <?php if (!empty($pkg['image'])) : ?>
+                                                <img src="<?= esc($pkg['image']) ?>" alt="" style="width:150px;">
+                                            <?php endif; ?>
+                                            <?php if (!empty($pkg['image_apps'])) : ?>
+                                                <div class="d-flex flex-wrap gap-2 align-items-center">
+                                                    <?php foreach ($pkg['image_apps'] as $image_apps) : ?>
+                                                        <img src="<?= esc($image_apps) ?>" alt="" style="height: 40px; width:80px;">
+                                                    <?php endforeach; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <ul class="text-start list-unstyled mt-3">
+                                                <?php foreach ($pkg['features'] as $feature) : ?>
+                                                    <li class="mb-2 d-flex align-items-start">
+                                                        <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
+                                                        <span class="txt_feature_mobile"><?= nl2br(esc($feature)) ?></span>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php if (!empty($pkg['add_ons_title'])) : ?>
+                                                <span class="add_ons_title"><b><?= esc($pkg['add_ons_title']) ?>:</b></span>
+                                            <?php endif; ?>
+                                            <?php if (!empty($pkg['add_ons'])) : ?>
+                                                <ul class="text-start list-unstyled mt-3">
+                                                <?php foreach ($pkg['add_ons'] as $add_ons) : ?>
+                                                    <li class="mb-2 d-flex align-items-start">
+                                                        <i class="fas fa-check-circle text-danger me-2 mt-1"></i>
+                                                        <span class="txt_feature_mobile"><?= esc($add_ons) ?></span>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php endif; ?>
+                                        </div>
 
-                                <div class="btn-container-mobile">
-                                    <button class="btn btn-contact-mobile"><span class="txt_contact">CONTACT US</span></button>
+                                        <div class="btn-container-mobile">
+                                            <button class="btn btn-contact-mobile"><span class="txt_contact">CONTACT US</span></button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                             <?php endforeach; ?>
                         </div>
                     </div>

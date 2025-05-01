@@ -277,7 +277,7 @@ ul.multi-column li {
 
 /* for mobile view */
 .pricelist-mobile{
-  padding-top: 80px !important;
+  padding-top: 40px !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
   padding-bottom: 10px !important;
@@ -343,6 +343,13 @@ ul.multi-column li {
   font-style: normal;
   line-height: 25px;
 }
+.txt_utilities_mobile{
+  text-align: center;
+  font-family: 'Roboto-bold','sans-serif';
+  font-size: 30px;
+  font-style: normal;
+  line-height: 25px;
+}
 
 .special-offer-banner {
   position: absolute;
@@ -357,6 +364,20 @@ ul.multi-column li {
   text-align: center;
   z-index: 10;
   /* border-radius: 5px; */
+}
+.special-offer-banner-mobile {
+  position: absolute;
+  width: 192px;
+  background-color: #E63822;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  border-radius: 5px;
 }
 .card-offer{
   position: relative;
@@ -402,6 +423,16 @@ ul.multi-column li {
   font-weight: 400;
   color: #030303;
 }
+.sub-title-mobile{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto-regular', sans-serif;
+  font-size: 9px;
+  text-align: center;
+  line-height: 10px;
+  font-weight: 400;
+  color: #030303;
+}
 .feature-desc{
   /* padding: 20px; */
   padding-top: 20px;
@@ -415,10 +446,28 @@ ul.multi-column li {
   line-height: 14px;
   text-align: start; 
 }
+.feature-desc-mobile{
+  /* padding: 20px; */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #030303;
+  font-family: 'Lato-bold', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: start; 
+}
 .add_ons_title{
   color: #030303;
   font-family: 'Lato-bold', sans-serif;
   font-size: 14px;
   line-height: 18.2px;
   text-align: start;
+}
+@media (max-width: 420px) {
+  .stat-card-mobile {
+    width: 180px;
+    height: auto;
+  }
 }
