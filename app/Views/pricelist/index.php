@@ -136,6 +136,10 @@
                                                 </div>
                                             <?php endif; ?>
 
+                                            <?php if (!empty($pkg['users'])) : ?>
+                                                <span class="total-users mb-2"><?= esc($pkg['users']) ?></span>
+                                            <?php endif; ?>
+
                                             <div class="btn-container mb-3">
                                                 <button class="btn btn-contact">CONTACT US</button>
                                             </div>
@@ -294,6 +298,10 @@
                                             <div class="btn-wrapper mb-2">
                                                 <button class="btn-waitlist-mobile"><?=esc($pkg['waiting_list'])?></button>
                                             </div>
+                                        <?php endif; ?>
+
+                                        <?php if (!empty($pkg['users'])) : ?>
+                                            <span class="total-users-mobile mb-2"><?= esc($pkg['users']) ?></span>
                                         <?php endif; ?>
 
                                         <div class="btn-container-mobile">

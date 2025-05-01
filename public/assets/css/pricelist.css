@@ -516,4 +516,20 @@ ul.multi-column li {
   border-radius: 2px;
   box-shadow: inset 0 0 0 2px #FFD644;
 }
+.total-users-mobile{
+  text-align: center;
+  font-family: 'Roboto-bold', sans-serif;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 15px;
+  color: #030303;
+}
+.total-users{
+  text-align: center;
+  font-family: 'Roboto-bold', sans-serif;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 15px;
+  color: #030303;
+}
 

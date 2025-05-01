@@ -126,7 +126,7 @@ $(document).ready(function () {
             $specialOffer.insertAfter($cardPrice);
         }
         var titleText = $(this).find('input.utilities').val()?.trim();
-        console.log('Title text:', titleText);
+
 
         if (titleText === 'CYBERSECURITY') {
             if ($imgFeature.length && $btnWaiting.length) {
