@@ -118,3 +118,17 @@ in APPPATH/Views/pricelist/index.php on line 132.
  9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-01 08:54:36 --> ErrorException: Undefined variable $uri
+[Method: GET, Route: about_us]
+in APPPATH/Views/about_us/index.php on line 14.
+ 1 APPPATH/Views/about_us/index.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/html/app/Views/about_us/index.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/About_Us.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\About_Us->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

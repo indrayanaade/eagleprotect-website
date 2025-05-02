@@ -221,6 +221,7 @@ class Services extends BaseController
                         "img" => "legal-service.png",
                         "img_mobile" => "legal-02-mobile.png",
                         "type" => $type,
+                        "tagline" => "Legal Service",
                         "packages_name" => "LEGAL ASSISTANCE",
                         "description" => "At Eagle Protect, we understand that security goes beyond physical protection. That’s why we offer Legal Assistance, a comprehensive service integrated into all our security solutions. This service ensures that every aspect of our protection follows legal regulations, providing our clients with peace of mind and full compliance with the law. \n
                                             Our Legal Assistance service supports clients in handling security-related legal matters, including compliance with local regulations, incident documentation, and legal consultation. Whether for event security, private protection, or corporate safety, our team ensures that all operations align with the latest legal requirements. \n

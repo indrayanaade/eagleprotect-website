@@ -1,0 +1,131 @@
+.about-section {
+    position: relative;
+    background: url('/assets/img/bg-about.png') no-repeat center center/cover; 
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .about-title {
+    font-size: 53px;
+    font-weight: bold;
+    color: #e94f35; 
+    margin-top: 60px;
+    margin-bottom: 10px;
+    z-index: 2;
+  }
+
+  .team-image {
+    z-index: 2;
+  }
+
+  .about-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+  }
+  .who-we{
+    padding: 50px;
+  }
+  .who-we-are {
+    padding: 100px !important;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* .container {
+    max-width: 1100px;
+    margin: auto;
+  } */
+  
+  .section-label {
+    color: #cc2a1f;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 40px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .feature-item img {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+  }
+  
+  .feature-item p {
+    font-size: 15px;
+    line-height: 1.6;
+  }  
+
+  .mission-vision-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    position: relative;
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .card-img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .card-content {
+    max-width: 280px;
+  }
+  
+  .card-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
