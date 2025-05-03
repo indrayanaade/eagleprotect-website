@@ -203,9 +203,50 @@
         </div>
     </section>
 
-    <section class="documentation">
+    <section class="documentation-section">
+        <div class="container-fluid p-100">
+            <div class="doc-header">
+            <div class="text-left">
+                <p class="label">Documentation</p>
+                <h1 class="title">We Treat Every Eagle Protect Member as Family</h1>
+            </div>
+            <div class="text-right">
+                <p>
+                At Eagle Protect, we foster a strong sense of belonging by treating every member as family, valuing their dedication, supporting their growth, and prioritizing their well-being. We also document every activity and achievement to recognize their contributions, ensure transparency, and continuously improve our team's performance and unity.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="doc-gallery-wrapper">
+            <div class="doc-gallery-grid">
+                <div class="doc-item" style="grid-column: 1; grid-row: 1 / span 2;">
+                    <img class="img-doc1" src="assets/img/docs/doc-1.png" alt="Doc 1">
+                </div>
+                <div class="doc-item" style="grid-column: 2; grid-row: 1;">
+                    <img class="img-short"src="assets/img/docs/doc-2.png" alt="Doc 2">
+                </div>
+                <div class="doc-item" style="grid-column: 2; grid-row: 2;">
+                    <img class="img-short"src="assets/img/docs/doc-3.png" alt="Doc 3">
+                </div>
+                <div class="doc-item" style="grid-column: 3; grid-row: 1 / span 2;">
+                    <img class="img-tall"src="assets/img/docs/doc-4.png" alt="Doc 4">
+                </div>
+                <div class="doc-item" style="grid-column: 4; grid-row: 1;">
+                    <img class="img-short"src="assets/img/docs/doc-5.png" alt="Doc 5">
+                </div>
+                <div class="doc-item" style="grid-column: 4; grid-row: 2;">
+                    <img class="img-short"src="assets/img/docs/doc-6.png" alt="Doc 6">
+                </div>
+            </div>
+        </div>
+
 
     </section>
+
+
+
+
 
     <section>
       <div><?= $this->include('layout/footer') ?></div>

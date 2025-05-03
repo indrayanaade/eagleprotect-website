@@ -320,6 +320,119 @@
   margin-right: 10px;
 }
 
+.documentation-section {
+  background: #fff;
+  padding-bottom: 100px !important;
+}
+
+.container {
+  padding: 100px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.doc-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.text-left {
+  flex: 1 1 40%;
+}
+
+.text-right {
+  margin-top: 10px !important;
+  flex: 1 1 50%;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.label {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.doc-gallery-wrapper {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Grid dasar */
+.doc-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+}
+
+/* Gambar tetap 100% ukurannya */
+.doc-item img {
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  /* border-radius: 8px; */
+  display: block;
+}
+
+/* Tablet: 2 kolom */
+@media (max-width: 992px) {
+  .doc-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doc-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+/* Mobile: 1 kolom */
+@media (max-width: 576px) {
+  .doc-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+.img-doc1{
+  width: 588px;
+  height: 420px;
+  flex-shrink: 0;
+  aspect-ratio: 7/5;
+}
+.img-doc-short{
+  width: 274px;
+  height: 205px;
+  flex-shrink: 0;
+  aspect-ratio: 274/205;
+}
+.img-doc-tall{
+  width: 274px;
+  height: 420px;
+  flex-shrink: 0;
+  aspect-ratio: 137/210;
+}
+.p-100{
+  padding: 100px !important;
+}
+
+
+
 
 
 
