@@ -492,7 +492,7 @@ class Pricelists extends BaseController
                 [
                     'title' => 'PRO PACKAGE 2',
                     'special_offer' => '',
-                    'price' => 'IDR 25.750.000',
+                    'price' => 'IDR 49.956.000',
                     'category' => 'it_acquisition',
                     'feature_desc' => 'Features:',
                     'features' => [

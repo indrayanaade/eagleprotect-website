@@ -72,29 +72,143 @@
     </section>
 
     <section class="mission-vision-section">
-        <div class="card">
-            <img src="assets/img/card-content-01" alt="Mission Image" class="card-img" />
-            <div class="card-content">
-            <h2>Our Mission</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                a galley of type and scrambled it to make a type specimen book
-            </p>
+        <div class="card-row1">
+            <div class="card-img-col">
+                <img src="<?= base_url('assets/img/card-content-03.png') ?>" alt="Mission Image" class="card-img" />
+            </div>
+            <div class="card-text-col">
+                <h2>Our Mission</h2>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                </p>
             </div>
         </div>
 
-        <div class="card">
-            <img src="assets/img/card-content-02" alt="Vision Image" class="card-img" />
-            <div class="card-content">
-            <h2>Our Vision</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-                a galley of type and scrambled it to make a type specimen book
-            </p>
+        <div class="card-row2">
+            <div class="card-img-col">
+                <img src="<?= base_url('assets/img/card-content-04.png') ?>" alt="Mission Image" class="card-img" />
+            </div>
+            <div class="card-text-col">
+                <h2>Our Vision</h2>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                </p>
             </div>
         </div>
+    </section>
+
+    <section class="our-team">
+        <div class="container-fluid">
+            <p class="section-label">Our Team</p>
+            <h1 class="main-heading">Meet Our Team</h1>
+            <div class="team-grid">
+                <!-- Anggota Tim -->
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/galuh.png') ?>');"></div>
+                    <h4 class="mt-2">Galuh Ayu Ningrum</h4>
+                    <p>PRESIDENT DIRECTOR</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/zuni.png') ?>');"></div>
+                    <h4 class="mt-2">Zuni Indriani</h4>
+                    <p>HEAD OFFICE OPERATIONS</p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Kadek Bayu Adi Putra</h4>
+                    <p>OPERATIONAL COMMAND</p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/galih.png') ?>');"></div>
+                    <h4 class="mt-2">Galih Wisnu Triatmojo</h4>
+                    <p>SALES DEPARTMENT</p>
+                </div>
+
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/kevin.png') ?>');"></div>
+                    <h4 class="mt-2">Kevin Paulus Riahtas</h4>
+                    <p>IT DEPARTMENT</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Anas Rahman</h4>
+                    <p>DRONE DEPARTMENT</p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Putu Bagus Adi Wibawa. S.T</h4>
+                    <p>LEGAL DEPARTMENT </p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/mega.png') ?>');"></div>
+                    <h4 class="mt-2">Kadek Mega Yuliantari</h4>
+                    <p>PROCUREMENT & INVENTORY CONTROL DEPARTMENT</p>
+                </div>
+
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Tamara Sallila Natasha Saini</h4>
+                    <p>QUALITY CONTROL DEPARTMENT</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Gabriella Tri Wahyuni</h4>
+                    <p>HUMAN RESOURCES (HR) DEPARTMENT</p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">I Made Agus Dwipayana</h4>
+                    <p>FINANCIAL DEPARTMENT</p>
+                </div>
+                <div class="team-member">
+                <div class="team-photo" style="background-image: url('<?= base_url('assets/img/team/sample.png') ?>');"></div>
+                    <h4 class="mt-2">Oscar Tan Eagles</h4>
+                    <p>EXCLUSIVE MARKETING PARTNER PT. FUTURIFY – CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-section">
+        <div class="tech-container">
+            <div class="tech-left">
+            <img src="assets/img/tech-drone.png" alt="Drone" class="drone-img">
+            </div>
+            <div class="tech-right">
+            <p class="section-label">Who We Are</p>
+            <h2 class="section-title">
+                We Have the Latest<br>
+                Technology Ready to Help<br>
+                Performance
+            </h2>
+            <ul class="tech-features">
+                <li>
+                <img src="assets/img/tech-icon-drone.png" alt="Check Icon" />
+                <span class="tech-desc">We use drone technology and have trained drone pilots to assist in every handling.</span>
+                </li>
+                <li>
+                <img src="assets/img/tech-icon-sos.png" alt="Check Icon" />
+                <span class="tech-desc">Our SOS Button Service is a premium safety feature designed to provide rapid emergency assistance with unparalleled reliability.</span>
+                </li>
+                <li>
+                <img src="assets/img/tech-icon-walkie.png" alt="Check Icon" />
+                <span class="tech-desc">Featuring high-level security technology, EGLNet shields and ensuring your privacy also data are always secure.</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="documentation">
+
+    </section>
+
+    <section>
+      <div><?= $this->include('layout/footer') ?></div>
     </section>
 
 <?= $this->endSection() ?>
