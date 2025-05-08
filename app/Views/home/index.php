@@ -251,6 +251,10 @@
       <div class="scrolling-text">
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
       </div>
     </div>
   </section>
@@ -597,6 +601,10 @@
   <section class="running-text-mobile" data-aos="fade-up">
     <div class="scrolling-wrapper-mobile">
       <div class="scrolling-text-mobile">
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free  &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free  &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
+        <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free  &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
         <span class="gradient-text">Feel Safe &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> &nbsp Feel Free &nbsp <img src="<?= base_url('assets/img/dot.png') ?>"> </span>
       </div>

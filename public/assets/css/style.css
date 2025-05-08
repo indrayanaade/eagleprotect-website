@@ -1336,7 +1336,7 @@ body, html, main, section, div {
   }
 
   .location-tooltip-mobile {
-    height: 100px;
+    height: 110px;
     border: 1px solid #E63822;
     border-radius: 5px;
     background-color: #fff;
