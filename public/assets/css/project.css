@@ -1,0 +1,78 @@
+.project{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/quote-bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 450px;
+    overflow: hidden;
+}
+.project-title{
+    padding-top: 150px !important;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    padding-bottom: 50px !important;
+}
+.roboto-h2-red{
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 53px;
+    font-weight: 900;
+    line-height: 69px;
+    text-align: center;
+    color: #E63822;
+}
+.lato-regular-desc{
+    font-family: 'Lato-regular', sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    text-align: center;
+}
+.program-section {
+    padding-top: 80px !important;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+    padding-bottom: 120px !important;
+    background-color: #fff;
+  }
+  
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 24px;
+  }
+  
+  .program-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9; /* mempertahankan rasio gambar seperti contoh */
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .program-content {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .program-content h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .program-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 768px) {
+    .program-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
