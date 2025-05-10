@@ -16,84 +16,83 @@ class Projects extends BaseController
                 'assets/css/style.css',
                 'assets/css/project.css'
             ],
-            'security_slides'      => [
+            'project_slides'      => [
                 [
                     'id' => 1,
-                    'img' => 'security-01.png',
-                    'title' => '24/7 Emergency Number',
-                    'desc' => 'Available anytime for immediate assistance, ensuring safety and rapid response.'
+                    'img' => 'rubish-free.png',
+                    'title' => 'Rubbish-Free Initiative',
+                    'desc' => 'We are committed to enhancing the quality of life and environment in our patrolled areas. Our goal is to collaborate with local communities and authorities to significantly improve street cleanliness, making Bali cleaner and more beautiful for everyone.'
                 ],
                 [
                     'id' => 2,
-                    'img' => 'security-02.png',
-                    'title' => 'Surveillance Equipment Maintenance and 24/7 Service',
-                    'desc' => 'Ensuring reliable performance with regular maintenance and round-the-clock support.'
+                    'img' => 'smart-city.png',
+                    'title' => 'Creating a Smart City',
+                    'desc' => 'In partnership with Polres Badung, we share the ambitious goal of transforming Bali into a smart, improved, and interconnected city. This initiative is focused on raising safety standards and finding innovative solutions to urban challenges, paving the way for a smarter future.'
                 ],
                 [
                     'id' => 3,
-                    'img' => 'security-03.png',
-                    'title' => 'Advanced Alarm System',
-                    'desc' => 'Ensuring maximum security with cutting-edge technology and real-time threat detection.'
+                    'img' => 'medical-emergency.png',
+                    'title' => 'Medical Emergency Response',
+                    'desc' => 'Working alongside leading healthcare chains, we are developing a more efficient and effective emergency response network. Our vision is to ensure that every area in Bali has a dedicated response unit, guaranteeing timely care in emergencies and making Bali a worry-free destination for health emergencies.'
                 ],
                 [
                     'id' => 4,
-                    'img' => 'security-04.png',
-                    'title' => 'EAGLE PROTECT Escort',
-                    'desc' => 'Providing safe and professional escort services for individuals and high-risk assets.'
+                    'img' => 'aerial-control.png',
+                    'title' => 'Aerial Control',
+                    'desc' => 'As part of our commitment to smart city evolution, we are implementing aerial control through drones. This initiative is designed to enhance safety in common areas and streets, manage traffic more effectively, and improve the mobility of all emergency units, including our team, police, and ambulances, all while respecting the privacy of private residences. Aerial control represents a leap forward in responsive and comprehensive urban safety.'
                 ],
                 [
                     'id' => 5,
-                    'img' => 'security-05.png',
-                    'title' => 'Private Security',
-                    'desc' => 'Delivering professional protection services tailored to individual and corporate security needs.'
+                    'img' => 'dummy-layout.png',
+                    'title' => 'Dummy Layout',
+                    'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
                 ],
                 [
                     'id' => 6,
-                    'img' => 'security-06.png',
-                    'title' => 'Private Security',
-                    'desc' => 'Instant emergency alerts for rapid response and enhanced safety.'
-                ],
-            ],
-            'legal_slides' => [
-                [
-                    'id' => 1,
-                    'img' => 'legal-01.png',
-                    'title' => 'General Legal Services',
+                    'img' => 'dummy-layout.png',
+                    'title' => 'Dummy Layout',
+                    'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
                 ],
                 [
-                    'id' => 2,
-                    'img' => 'legal-02.png',
-                    'title' => 'Legal Assistance',
+                    'id' => 7,
+                    'img' => 'dummy-layout.png',
+                    'title' => 'Dummy Layout',
+                    'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
                 ],
                 [
-                    'id' => 3,
-                    'img' => 'legal-03.png',
-                    'title' => 'Official Translator',
-                ],
-            ],
-            'healthcare_slides' => [
-                [
-                    'id' => 1,
-                    'img' => 'healthcare-01.png',
-                    'title' => 'Eagle Protect Escorted Ambulance',
-                ],
-                [
-                    'id' => 2,
-                    'img' => 'healthcare-02.png',
-                    'title' => 'Hospital and Insurance Coverage Procedures',
-                ],
-                [
-                    'id' => 3,
-                    'img' => 'healthcare-03.png',
-                    'title' => 'Motorbike Ambulance',
-                ],
-                [
-                    'id' => 4,
-                    'img' => 'healthcare-04.png',
-                    'title' => 'Pre-Registered Healthcare Members',
+                    'id' => 8,
+                    'img' => 'dummy-layout.png',
+                    'title' => 'Dummy Layout',
+                    'desc' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
                 ],
             ]
-            
         ]);        
     }
+
+    public function detail(){
+        $id = $this->request->getPost('id');
+
+        // Bisa tambahkan pengecekan validasi id jika perlu
+
+        return $this->response->setJSON([
+            'redirect' => base_url('projects/detail/' . $id)
+        ]);
+    }
+
+
+
+    public function view($id){
+        $project = $this->findProjectById($id);
+
+        if (!$project) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Project not found");
+        }
+
+        return view('project/detail', [
+            'title' => $project['title'],
+            'project' => $project
+        ]);
+    }
+
+
 }

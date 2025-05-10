@@ -46,71 +46,16 @@
     </div>
 </section>
 <section class="program-section">
-  <div class="program-grid">
-    <!-- Item 1 -->
-    <div class="program-card" style="background-image: url('assets/img/rubish-free.png');">
-      <div class="program-content">
-        <h3>Rubbish-Free Initiative</h3>
-        <p>We are committed to enhancing the quality of life and environment in our patrolled areas...</p>
-      </div>
+    <div class="program-grid">
+        <?php foreach ($project_slides as $slide): ?>
+          <div class="program-card" data-id="<?= esc($slide['id']) ?>" style="background-image: url('assets/img/<?= esc($slide['img']) ?>');">
+            <div class="program-content">
+                <h3><?= esc($slide['title']) ?></h3>
+                <p><?= esc($slide['desc']) ?></p>
+            </div>
+          </div>
+        <?php endforeach; ?>
     </div>
-
-    <!-- Item 2 -->
-    <div class="program-card" style="background-image: url('assets/img/smart-city.png');">
-      <div class="program-content">
-        <h3>Creating a Smart City</h3>
-        <p>In partnership with Profs Badung, we share the goal of transforming Bali into a smart city...</p>
-      </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="program-card" style="background-image: url('assets/img/medical-emergency.png');">
-      <div class="program-content">
-        <h3>Medical Emergency Response</h3>
-        <p>We are developing more efficient emergency response methods with healthcare partners...</p>
-      </div>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="program-card" style="background-image: url('assets/img/aerial-control.png');">
-      <div class="program-content">
-        <h3>Aerial Control</h3>
-        <p>As part of smart city evolution, we implement aerial control using drones to enhance safety...</p>
-      </div>
-    </div>
-
-    <!-- Dummy 1 -->
-    <div class="program-card" style="background-image: url('assets/img/dummy-layout.png');">
-      <div class="program-content">
-        <h3>Dummy Layout</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-      </div>
-    </div>
-
-    <!-- Dummy 2 -->
-    <div class="program-card" style="background-image: url('assets/img/dummy-layout.png');">
-      <div class="program-content">
-        <h3>Dummy Layout</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-      </div>
-    </div>
-
-    <!-- Dummy 3 -->
-    <div class="program-card" style="background-image: url('assets/img/dummy-layout.png');">
-      <div class="program-content">
-        <h3>Dummy Layout</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-      </div>
-    </div>
-
-    <!-- Dummy 4 -->
-    <div class="program-card" style="background-image: url('assets/img/dummy-layout.png');">
-      <div class="program-content">
-        <h3>Dummy Layout</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section>
