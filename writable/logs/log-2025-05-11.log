@@ -1,0 +1,148 @@
+INFO - 2025-05-11 03:39:42 --> CSRF token verified.
+INFO - 2025-05-11 03:42:17 --> CSRF token verified.
+INFO - 2025-05-11 03:44:56 --> CSRF token verified.
+INFO - 2025-05-11 03:46:04 --> CSRF token verified.
+CRITICAL - 2025-05-11 04:28:36 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 04:28:59 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 04:29:03 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 04:29:10 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 04:29:19 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 04:29:23 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 06:55:11 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 23:55:16 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 23:55:21 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 23:55:43 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 23:55:53 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-11 23:56:24 --> ErrorException: Undefined variable $totalTime
+[Method: GET, Route: /]
+in SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php on line 46.
+ 1 SYSTEMPATH/Debug/Toolbar/Views/toolbar.tpl.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Debug/Toolbar.php(533): include('/var/www/html/system/Debug/Toolbar/Views/toolbar.tpl.php')
+ 3 SYSTEMPATH/Debug/Toolbar.php(496): CodeIgniter\Debug\Toolbar->format()
+ 4 APPPATH/Config/Events.php(47): CodeIgniter\Debug\Toolbar->respond()
+ 5 SYSTEMPATH/Events/Events.php(155): CodeIgniter\Events\Events::Config\{closure}()
+ 6 SYSTEMPATH/CodeIgniter.php(339): CodeIgniter\Events\Events::trigger()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

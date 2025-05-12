@@ -323,13 +323,7 @@
     display: none;
     padding: 10px 0;
     color: #555;
-    font-size: 0.95rem;
-  }
-  .faq-answer {
-    display: none;
-    padding: 10px 0;
-    color: #555;
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .arrow {
