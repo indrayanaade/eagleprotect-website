@@ -111,7 +111,7 @@ body, html, main, section, div {
   color: #fff;
 }
 #navbar-spacer {
-  height: 90px; /* atau tinggi navbar-mu */
+  height: 90px; 
   display: none;
 }
 .custom-navbar-mobile.sticky + #navbar-spacer {

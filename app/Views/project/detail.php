@@ -2,9 +2,10 @@
 
 <?= $this->section('content') ?>
 <?php $uri = service('uri'); ?>
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar2">
+<div id="navbar-spacer-detail"></div>
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-detail">
     <div class="container-fluid">
-        <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo" src="<?= base_url('assets/img/eagle-logo-img-white.svg') ?>"></a>
+        <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo" src="<?= base_url('assets/img/eagle-logo-img-black.svg') ?>"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,9 +59,18 @@
         <div class="content-right">
             <div class="info-box">
                 <h4>Information</h4>
-                <p><span class="info_bold">Date:</span> <?= esc($projectData['info']['date']) ?></p>
-                <p><span class="info_bold">Location:</span> <?= esc($projectData['info']['location']) ?></p>
-                <p><span class="info_bold">Time:</span> <?= esc($projectData['info']['time']) ?></p>
+                <div class="row">
+                    <div class="col">
+                        <p><span class="info_bold">Date</span></p>
+                        <p><span class="info_bold">Location</span></p>
+                        <p><span class="info_bold">Time</span></p>
+                    </div>
+                    <div class="col">
+                        <p><?= esc($projectData['info']['date']) ?></p>
+                        <p><?= esc($projectData['info']['location']) ?></p>
+                        <p><?= esc($projectData['info']['time']) ?></p>
+                    </div>
+                </div>
             </div>
 
             <div class="organizer-box">
@@ -73,7 +83,7 @@
                     </div>
                 </div> <br>
                 <div class="organizer-phone">
-                    📞 &nbsp; <strong>Call More Info:</strong> &nbsp; <?= esc($projectData['organizer']['phone']) ?>
+                    📞 &nbsp; <strong>Call More Info</strong> &nbsp; <span class="phone-org"><?= esc($projectData['organizer']['phone']) ?></span>
                 </div>
             </div>
 

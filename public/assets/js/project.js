@@ -1,28 +1,51 @@
 $(document).ready(function () {
-    const navbar = $('#navbar');
-    const spacer = $('#navbar-spacer');
-    const logo = $('#navbar-logo');
-
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 50) {
-        $('#navbar').addClass('sticky');
-        navbar.addClass('sticky');
-        spacer.show();
+  const blackLogo = base_url + 'assets/img/eagle-logo-img-black.svg';
+  const whiteLogo = base_url + 'assets/img/eagle-logo-img-white.svg';
+  
+  const $navbar = $('#navbar');
+  const $navbarLogo = $('#navbar-logo');
+  const $spacer = $('#navbar-spacer-detail');
+  const $navbarMobile = $('#navbar-mobile');
+  
+  // Ambil path dari URL saat ini
+  const currentPath = window.location.pathname;
+  
+  $(window).scroll(function () {
+    const isScrolled = $(this).scrollTop() > 50;
+  
+    // Cek jika navbar dan logo ada
+    if ($navbar.length && $navbarLogo.length) {
+      if (isScrolled) {
+        $navbar.addClass('sticky');
+        $spacer.show();
+  
+        // Atur logo tergantung halaman
+        if (currentPath.startsWith('/projects/view/')) {
+          $navbarLogo.attr('src', blackLogo); // Di halaman detail -> logo putih saat sticky
+        } else if (currentPath.startsWith('/projects')) {
+          $navbarLogo.attr('src', whiteLogo); // Di halaman utama projects -> logo hitam saat sticky
+        }
+  
       } else {
-        $('#navbar').removeClass('sticky');
-        navbar.removeClass('sticky');
-        spacer.hide();
-      }
-      
-      // Sticky untuk mobile
-      if ($('#navbar-mobile').is(':visible')) {
-        if ($(this).scrollTop() > 50) {
-          $('#navbar-mobile').addClass('sticky');
+        $navbar.removeClass('sticky');
+        $spacer.hide();
+  
+        // Saat tidak sticky, bisa kembalikan ke default
+        if (currentPath.startsWith('/projects/view/')) {
+          $navbarLogo.attr('src', blackLogo); // Tetap putih di halaman detail
         } else {
-          $('#navbar-mobile').removeClass('sticky');
+          $navbarLogo.attr('src', whiteLogo); // Tetap hitam di halaman list
         }
       }
-    });
+    }
+  
+    // Sticky untuk mobile
+    if ($navbarMobile.is(':visible')) {
+      $navbarMobile.toggleClass('sticky', isScrolled);
+    }
+  });
+  
+    
 
     $(".program-card").on('click', function(e){
       e.preventDefault();
