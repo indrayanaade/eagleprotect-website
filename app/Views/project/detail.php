@@ -38,10 +38,9 @@
 </nav>
 
 <section class="project-detail">
-  <!-- <div class="container-fluid"> -->
     <div class="detail-title">
-      <h4>Projects</h4>
-      <h1><?= esc($projectData['title']) ?></h1>
+      <h4 class="site-title">Projects</h4>
+      <h1 class="title-project"><?= esc($projectData['title']) ?></h1>
     </div>
 
     <div class="cover-image">
@@ -50,29 +49,36 @@
 
     <div class="content">
         <div class="content-left">
-          <h2><?= esc($projectData['content']['main']) ?></h2>
-          <p><?= nl2br($projectData['content']['main_desc']) ?></p>
-          <h2><?= esc($projectData['content']['extra']) ?></h2>
-          <p><?= nl2br($projectData['content']['extra_desc']) ?></p>
+          <span class="txt_title_left mb-5"><?= nl2br($projectData['content']['main']) ?></span>
+          <p class="txt_desc"><?= nl2br($projectData['content']['main_desc']) ?></p>
+          <span class="txt_title_left mb-5"><?= nl2br($projectData['content']['extra']) ?></span>
+          <p class="txt_desc"><?= nl2br($projectData['content']['extra_desc']) ?></p>
         </div>
 
         <div class="content-right">
             <div class="info-box">
                 <h4>Information</h4>
-                <p><strong>Date:</strong> <?= esc($projectData['info']['date']) ?></p>
-                <p><strong>Location:</strong> <?= esc($projectData['info']['location']) ?></p>
-                <p><strong>Time:</strong> <?= esc($projectData['info']['time']) ?></p>
+                <p><span class="info_bold">Date:</span> <?= esc($projectData['info']['date']) ?></p>
+                <p><span class="info_bold">Location:</span> <?= esc($projectData['info']['location']) ?></p>
+                <p><span class="info_bold">Time:</span> <?= esc($projectData['info']['time']) ?></p>
             </div>
 
             <div class="organizer-box">
                 <h4>Contact Organizer</h4>
-                <p><strong><?= esc($projectData['organizer']['name']) ?></strong><br>
-                <?= esc($projectData['organizer']['title']) ?></p>
-                <p>📞 &nbsp <?= esc($projectData['organizer']['phone']) ?></p>
+                <div class="organizer-content">
+                    <img src="<?= base_url('assets/img/'.esc($projectData['organizer']['photo'])) ?>" alt="Profile Photo" class="profile-img" />
+                    <div class="organizer-info">
+                        <p class="txt_organizer"><strong><?= esc($projectData['organizer']['name']) ?></strong>
+                        <span class="title_organizer"><?= esc($projectData['organizer']['title']) ?></span></p>
+                    </div>
+                </div> <br>
+                <div class="organizer-phone">
+                    📞 &nbsp; <strong>Call More Info:</strong> &nbsp; <?= esc($projectData['organizer']['phone']) ?>
+                </div>
             </div>
+
         </div>
     </div>
-  <!-- </div> -->
 </section>
 
 <section>
