@@ -20,7 +20,7 @@ class Projects extends BaseController
                 [
                     'id' => 1,
                     'img' => 'rubish-free.png',
-                    'title' => 'Rubbish-Free Initiative',
+                    'title' => 'Rubbish Free Initiative',
                     'desc' => 'We are committed to enhancing the quality of life and environment in our patrolled areas. Our goal is to collaborate with local communities and authorities to significantly improve street cleanliness, making Bali cleaner and more beautiful for everyone.'
                 ],
                 [
@@ -87,7 +87,7 @@ class Projects extends BaseController
     public function view($id){
         $projects = [
             1 => [
-                "title"        => "Rubbish-Free Initiative",
+                "title"        => "Rubbish Free Initiative",
                 "cover_image"  => "rubbish-free-projects.png",
                 "content"      => [
                     "main" => "The Growing Waste Problem in Bali and Its Environmental Impact",
