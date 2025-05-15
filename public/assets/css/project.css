@@ -237,6 +237,7 @@
 }
 
 .content {
+  padding-top: 50px !important;
   padding-right: 100px !important;
   padding-left: 100px !important;
   display: flex;
@@ -252,6 +253,7 @@
 }
 
 .content-left {
+  margin-top: 50px;
   flex: 2;
   min-width: 300px;
 }

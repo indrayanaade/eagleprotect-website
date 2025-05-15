@@ -20,11 +20,11 @@
                         <div class="col-md-1 col-lg-1 col-xl-1 mb-4">
                             <h6 class="fw-bold mb-5">Page</h6>
                             <div class="footer-info">
-                                <p><a href="#!" class="text-reset text-decoration-none">Home</a></p>
-                                <p><a href="#!" class="text-reset text-decoration-none">Packages</a></p>
-                                <p><a href="#!" class="text-reset text-decoration-none">Services</a></p>
-                                <p><a href="#!" class="text-reset text-decoration-none">Projects</a></p>
-                                <p><a href="#!" class="text-reset text-decoration-none">Teams</a></p>
+                                <p><a href="<?= base_url('/') ?>" class="text-reset text-decoration-none">Home</a></p>
+                                <p><a href="<?= base_url('pricelist') ?>" class="text-reset text-decoration-none">Packages</a></p>
+                                <p><a href="<?= base_url('services') ?>" class="text-reset text-decoration-none">Services</a></p>
+                                <p><a href="<?= base_url('projects') ?>" class="text-reset text-decoration-none">Projects</a></p>
+                                <p><a href="<?= base_url('about_us') ?>" class="text-reset text-decoration-none">Teams</a></p>
                                 <p><a href="#!" class="text-reset text-decoration-none">Contacts</a></p>
                             </div>
                         </div>
