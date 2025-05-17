@@ -12,7 +12,7 @@
     <link rel="icon" href="<?=base_url()?>/assets/img/eagle-logo-desc.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url('assets/css/normalize.css')?>" rel="stylesheet" type="text/css">
     <script>
         function initMap() {
             const mapDiv = document.getElementById("map");

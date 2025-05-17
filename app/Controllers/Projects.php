@@ -301,7 +301,8 @@ class Projects extends BaseController
             ],
             "cssFiles"    => [
                 "assets/css/style.css",
-                "assets/css/project.css"
+                "assets/css/project.css",
+                "assets/css/normalize.css"
             ],
             "projectData"  => $projects[$id]
         ]);
