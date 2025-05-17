@@ -15,26 +15,27 @@
     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css">
     <script>
         function initMap() {
-            const location = { lat: -8.6717976, lng: 115.1724393 };
+            const mapDiv = document.getElementById("map");
+            if (!mapDiv) {
+                console.warn("Map container not found. Skipping initMap.");
+                return;
+            }
 
-            const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 15,
-            center: location,
-            disableDefaultUI: true,
-            styles: [
-                { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
-                { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-                { elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
-                { elementType: "labels.text.stroke", stylers: [{ color: "#f5f5f5" }] },
-                { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
-                { featureType: "road.arterial", elementType: "labels.text.fill", stylers: [{ color: "#757575" }] }
-            ]
+            const location = { lat: -8.672459, lng: 115.207538 };
+
+            const map = new google.maps.Map(mapDiv, {
+                zoom: 15,
+                center: location,
+                disableDefaultUI: true,
+                styles: [ /* your styles here */ ]
             });
 
             new google.maps.Marker({
-            position: location,
-            map: map,
-            icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                position: location,
+                map: map,
+                icon: {
+                url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+                }
             });
         }
     </script>
