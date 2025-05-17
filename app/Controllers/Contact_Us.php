@@ -2,8 +2,7 @@
 
 namespace App\Controllers;
 
-class Contact_Us extends BaseController
-{
+class Contact_Us extends BaseController{
     public function index(): string{
         $faqs = [
             [
