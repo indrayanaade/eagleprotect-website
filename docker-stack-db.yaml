@@ -1,0 +1,50 @@
+services: 
+  db-eagelprotect:
+    image: mysql:8
+    container_name: db-eagelprotect
+    hostname: db-eagelprotect
+    restart: always
+    ports:
+      - "7001:3306"
+    env_file:
+      - stack.env
+    volumes:
+      - /mnt/data/docker-volume/db-eagelprotect:/var/lib/mysql
+    command:
+        --general_log=0
+        --general-log-file=/var/lib/mysql/mysql-general.log
+        --slow-query-log=1
+        --long-query-time=30
+        --slow-query-log-file=/var/lib/mysql/mysql-slow-query.log
+        --sql-mode=''
+        --innodb_lock_wait_timeout=80
+        --innodb_rollback_on_timeout=on
+        --innodb_buffer_pool_size=512m
+        --join_buffer_size=4m
+        --key_buffer_size=4m
+        --interactive_timeout=600
+        --max_allowed_packet=256mb
+        --max_connections=200
+        --open_files_limit=1000
+        --collation-server=utf8_unicode_ci
+        --character-set-server=utf8
+    networks:
+      - gcloud-dbs-net
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 2G
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "127.0.0.1", "-uroot", "-padMin!1234"]
+      interval: 300s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  
+# Docker Networks
+networks:
+  gcloud-dbs-net:
+    name: gcloud-dbs-net
+    external: true

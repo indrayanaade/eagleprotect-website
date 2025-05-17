@@ -113,21 +113,24 @@
                 </div>
                 <div class="border custom-border"></div>
                 <div class="contact-right">
-                  <form action="/contact/submit" method="post">
-                      <h4 class="txt_send_message mb-5">Send Us Message</h4>
-                      <div class="form-group-row">
+                  <form id="contactForm" action="contact_us/submit" method="post">
+                    <h4 class="txt_send_message mb-5">Send Us Message</h4>
+                    <div class="form-group-row">
                       <input type="text" name="fullname" placeholder="Full Name" required>
                       <input type="text" name="company" placeholder="Company Name" required>
-                      </div>
-                      <div class="form-group-row">
+                    </div>
+                    <div class="form-group-row">
                       <input type="email" name="email" placeholder="Email Address" required>
                       <input type="text" name="phone" placeholder="Mobile Number (optional)">
-                      </div>
-                      <div class="form-group">
+                    </div>
+                    <div class="form-group">
                       <textarea name="message" placeholder="Message..." rows="5" required></textarea>
-                      </div>
+                    </div>
+                    <div class="justify-content-end">
                       <button type="submit" class="btn-send">SEND</button>
+                    </div>
                   </form>
+                  <div id="form-response"></div>
                 </div>
             </div>
         </div>

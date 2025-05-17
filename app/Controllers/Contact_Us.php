@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Contact_Us extends BaseController
 {
-    public function index(): string
-    {
+    public function index(): string{
         $faqs = [
             [
                 'id'       => 1,
@@ -73,5 +72,45 @@ class Contact_Us extends BaseController
             ],
             'faqs' => $faqs
         ]); 
+    }
+    public function submit(){
+        $request = service('request');
+
+        // Validasi input
+        $validation = \Config\Services::validation();
+        $validation->setRules([
+            'fullname' => 'required',
+            'company'  => 'required',
+            'email'    => 'required|valid_email',
+            'message'  => 'required'
+        ]);
+
+        if (!$validation->withRequest($request)->run()) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'status' => 'error',
+                'errors' => $validation->getErrors()
+            ]);
+        }
+
+        // Ambil data
+        $data = [
+            'fullname' => $request->getPost('fullname'),
+            'company'  => $request->getPost('company'),
+            'email'    => $request->getPost('email'),
+            'phone'    => $request->getPost('phone'),
+            'message'  => $request->getPost('message'),
+        ];
+        print_r($data);die();
+
+        // Simpan ke database (contoh, jika punya tabel 'contacts')
+        // $contactModel = new \App\Models\ContactModel();
+        // $contactModel->insert($data);
+
+        // Untuk sekarang kita kirimkan response saja
+        return $this->response->setJSON([
+            'status'  => 'success',
+            'message' => 'Message received. Thank you!',
+            'data'    => $data
+        ]);
     }
 }
