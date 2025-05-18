@@ -98,7 +98,7 @@ class Contact_Us extends BaseController{
             'company'  => $request->getPost('company'),
             'email'    => $request->getPost('email'),
             'phone'    => $request->getPost('phone'),
-            'user_message'  => $request->getPost('message'),
+            'message'  => $request->getPost('message'),
         ];
 
         // Simpan ke database (contoh, jika punya tabel 'contacts')

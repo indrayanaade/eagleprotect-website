@@ -76,7 +76,7 @@
       <p><span class="label">Company:</span> <?= esc($company) ?></p>
       <p><span class="label">Email:</span> <?= esc($email) ?></p>
       <p><span class="label">Phone:</span> <?= esc($phone) ?></p>
-      <p><span class="label">Message:</span><br><?= nl2br(esc($user_message)) ?></p>
+      <p><span class="label">Message:</span><br><?= nl2br(esc($message)) ?></p>
     </div>
 
     <div class="footer">
