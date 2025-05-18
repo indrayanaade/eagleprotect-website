@@ -127,7 +127,7 @@
                         <textarea id="message" name="message" placeholder="Message..." rows="5" maxlength="500" required></textarea>
                       </div>
                       <div class="justify-content-end">
-                        <button type="submit" class="btn-send">SEND</button>
+                        <button type="submit" id="btn-send" class="btn-send"><span class="spinner" style="display:none;"><i class="fa fa-spinner fa-spin"></i></span class="btn-text">SEND</button>
                       </div>
                     </form>
                     <div id="form-response"></div>

@@ -48,37 +48,50 @@ $(document).ready(function () {
     });
     
     $('#contactForm').on('submit', function (e) {
-        e.preventDefault();
-
-        const form = $(this);
-        const data = form.serializeArray();
-        const csrfTokenName = $('meta[name="csrf-token"]').attr('name');
-        const csrfHash = $('meta[name="csrf-token"]').attr('content');
-
-        if (csrfTokenName && csrfHash) {
-            data.push({ name: csrfTokenName, value: csrfHash });
-        }
-
-        $.ajax({
-            type: "POST",
-            url: base_url + "contact_us/submit",
-            data: $.param(data),
-            dataType: "json",
-            success: function (response) {
-                $('#form-response').html('<p style="color:green;">' + response.message + '</p>');
-                form[0].reset();
-                $('#charCount').text(maxChars + ' characters remaining');
-            },
-            error: function (xhr) {
-                let message = 'Failed to send message. Please try again.';
-                if (xhr.responseJSON && xhr.responseJSON.errors) {
-                    message = Object.values(xhr.responseJSON.errors).join('<br>');
-                } else if (xhr.responseJSON && xhr.responseJSON.message) {
-                    message = xhr.responseJSON.message;
-                }
-                $('#form-response').html('<p style="color:red;">' + message + '</p>');
-            }
-        });
-    }); 
+      e.preventDefault();
+  
+      const form = $(this);
+      const data = form.serializeArray();
+      const csrfTokenName = $('meta[name="csrf-token"]').attr('name');
+      const csrfHash = $('meta[name="csrf-token"]').attr('content');
+  
+      if (csrfTokenName && csrfHash) {
+          data.push({ name: csrfTokenName, value: csrfHash });
+      }
+  
+      // Disable button + show spinner
+      const btn = $('#btn-send');
+      btn.prop('disabled', true);
+      btn.find('.spinner').show();
+      btn.find('.btn-text').text('Sending...')
+  
+      $.ajax({
+          type: "POST",
+          url: base_url + "contact_us/submit",
+          data: $.param(data),
+          dataType: "json",
+          success: function (response) {
+              $('#form-response').html('<p style="color:green;">' + response.message + '</p>');
+              form[0].reset();
+              $('#charCount').text(maxChars + ' characters remaining');
+          },
+          error: function (xhr) {
+              let message = 'Failed to send message. Please try again.';
+              if (xhr.responseJSON && xhr.responseJSON.errors) {
+                  message = Object.values(xhr.responseJSON.errors).join('<br>');
+              } else if (xhr.responseJSON && xhr.responseJSON.message) {
+                  message = xhr.responseJSON.message;
+              }
+              $('#form-response').html('<p style="color:red;">' + message + '</p>');
+          },
+          complete: function () {
+              // Re-enable button + hide spinner
+              btn.prop('disabled', false);
+              btn.find('.spinner').hide();
+              btn.find('.btn-text').text('SEND');              
+          }
+      });
+    });
+  
 });
 
