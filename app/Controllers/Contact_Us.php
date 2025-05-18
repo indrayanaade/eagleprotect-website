@@ -73,6 +73,7 @@ class Contact_Us extends BaseController{
         ]); 
     }
     public function submit(){
+        helper('email_helper');
         $request = service('request');
 
         // Validasi input
@@ -97,12 +98,22 @@ class Contact_Us extends BaseController{
             'company'  => $request->getPost('company'),
             'email'    => $request->getPost('email'),
             'phone'    => $request->getPost('phone'),
-            'message'  => $request->getPost('message'),
+            'user_message'  => $request->getPost('message'),
         ];
 
         // Simpan ke database (contoh, jika punya tabel 'contacts')
         $contactModel = new \App\Models\ContactModel();
         $contactModel->insert($data);
+
+        $result = send_contact_email($data);
+
+        if ($result !== true) {
+            return $this->response->setStatusCode(500)->setJSON([
+                'status' => 'error',
+                'message' => 'Failed to send email.',
+                'debug'   => $result
+            ]);
+        }
 
         // Untuk sekarang kita kirimkan response saja
         return $this->response->setJSON([

@@ -98,3 +98,153 @@ in SYSTEMPATH/Security/Security.php on line 262.
  7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:07:48 --> Error: Call to undefined function App\Controllers\send_contact_email()
+[Method: POST, Route: contact_us/submit]
+in APPPATH/Controllers/Contact_Us.php on line 108.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:07:59 --> Error: Call to undefined function App\Controllers\send_contact_email()
+[Method: POST, Route: contact_us/submit]
+in APPPATH/Controllers/Contact_Us.php on line 108.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-05-18 03:08:24 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-18 03:08:24 --> 
+CRITICAL - 2025-05-18 03:10:46 --> ParseError: syntax error, unexpected variable "$this", expecting "function"
+[Method: POST, Route: contact_us/submit]
+in APPPATH/Config/Email.php on line 9.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Config/Factories.php(297): class_exists()
+ 5 SYSTEMPATH/Config/Factories.php(216): CodeIgniter\Config\Factories::locateClass()
+ 6 SYSTEMPATH/Config/Factories.php(159): CodeIgniter\Config\Factories::getDefinedInstance()
+ 7 SYSTEMPATH/Config/Factories.php(188): CodeIgniter\Config\Factories::__callStatic()
+ 8 SYSTEMPATH/Common.php(210): CodeIgniter\Config\Factories::get()
+ 9 SYSTEMPATH/Config/Services.php(234): config()
+10 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::email()
+11 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/Config/Services.php(230): CodeIgniter\Config\BaseService::getSharedInstance()
+13 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::email()
+14 SYSTEMPATH/Helpers/email_helper.php(8): CodeIgniter\Config\BaseService::__callStatic()
+15 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+16 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+17 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+18 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+19 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+21 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-05-18 03:15:39 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2025-05-18 03:15:39 --> 
+CRITICAL - 2025-05-18 03:24:21 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:27:58 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:28:53 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:29:01 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:35:54 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:39:42 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:42:23 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(18): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-18 03:45:49 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, false given
+[Method: POST, Route: contact_us/submit]
+in SYSTEMPATH/Email/Email.php on line 753.
+ 1 SYSTEMPATH/Email/Email.php(753): str_contains()
+ 2 SYSTEMPATH/Email/Email.php(556): CodeIgniter\Email\Email->stringToArray()
+ 3 SYSTEMPATH/Helpers/email_helper.php(22): CodeIgniter\Email\Email->setTo()
+ 4 APPPATH/Controllers/Contact_Us.php(108): send_contact_email()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Contact_Us->submit()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
