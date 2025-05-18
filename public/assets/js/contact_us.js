@@ -37,37 +37,48 @@ $(document).ready(function () {
       });
     });
 
-    $('#contactForm').on('submit', function (e) {
-      e.preventDefault();
-  
-      const form = $(this);
-      const data = form.serializeArray();
-  
-      const csrfTokenName = $('meta[name="csrf-token"]').attr('content');
-      const csrfHash = $('meta[name="csrf-hash"]').attr('content');
-  
-      if (csrfTokenName && csrfHash) {
-          data.push({ name: csrfTokenName, value: csrfHash });
-      }
-  
-      $.ajax({
-          type: "POST",
-          url: base_url + "contact_us/submit",
-          data: $.param(data),
-          dataType: "json",
-          success: function (response) {
-              $('#form-response').html('<p style="color:green;">' + response.message + '</p>');
-              form[0].reset();
-          },
-          error: function (xhr) {
-              let message = 'Failed to send message. Please try again.';
-              if (xhr.responseJSON && xhr.responseJSON.errors) {
-                  message = Object.values(xhr.responseJSON.errors).join('<br>');
-              } else if (xhr.responseJSON && xhr.responseJSON.message) {
-                  message = xhr.responseJSON.message;
-              }
-              $('#form-response').html('<p style="color:red;">' + message + '</p>');
-          }
-      });
+    const maxChars = 500;
+    $('#message').on('input', function () {
+        const remaining = maxChars - $(this).val().length;
+        $('#charCount').text(remaining + ' characters remaining');
     });
+
+    $('#phone').on('input', function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
+    
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const form = $(this);
+        const data = form.serializeArray();
+        const csrfTokenName = $('meta[name="csrf-token"]').attr('name');
+        const csrfHash = $('meta[name="csrf-token"]').attr('content');
+
+        if (csrfTokenName && csrfHash) {
+            data.push({ name: csrfTokenName, value: csrfHash });
+        }
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "contact_us/submit",
+            data: $.param(data),
+            dataType: "json",
+            success: function (response) {
+                $('#form-response').html('<p style="color:green;">' + response.message + '</p>');
+                form[0].reset();
+                $('#charCount').text(maxChars + ' characters remaining');
+            },
+            error: function (xhr) {
+                let message = 'Failed to send message. Please try again.';
+                if (xhr.responseJSON && xhr.responseJSON.errors) {
+                    message = Object.values(xhr.responseJSON.errors).join('<br>');
+                } else if (xhr.responseJSON && xhr.responseJSON.message) {
+                    message = xhr.responseJSON.message;
+                }
+                $('#form-response').html('<p style="color:red;">' + message + '</p>');
+            }
+        });
+    }); 
 });
+

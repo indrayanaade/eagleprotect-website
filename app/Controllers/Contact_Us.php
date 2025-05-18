@@ -99,11 +99,10 @@ class Contact_Us extends BaseController{
             'phone'    => $request->getPost('phone'),
             'message'  => $request->getPost('message'),
         ];
-        print_r($data);die();
 
         // Simpan ke database (contoh, jika punya tabel 'contacts')
-        // $contactModel = new \App\Models\ContactModel();
-        // $contactModel->insert($data);
+        $contactModel = new \App\Models\ContactModel();
+        $contactModel->insert($data);
 
         // Untuk sekarang kita kirimkan response saja
         return $this->response->setJSON([

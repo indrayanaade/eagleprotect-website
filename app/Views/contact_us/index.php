@@ -113,24 +113,25 @@
                 </div>
                 <div class="border custom-border"></div>
                 <div class="contact-right">
-                  <form id="contactForm" action="contact_us/submit" method="post">
-                    <h4 class="txt_send_message mb-5">Send Us Message</h4>
-                    <div class="form-group-row">
-                      <input type="text" name="fullname" placeholder="Full Name" required>
-                      <input type="text" name="company" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-group-row">
-                      <input type="email" name="email" placeholder="Email Address" required>
-                      <input type="text" name="phone" placeholder="Mobile Number (optional)">
-                    </div>
-                    <div class="form-group">
-                      <textarea name="message" placeholder="Message..." rows="5" required></textarea>
-                    </div>
-                    <div class="justify-content-end">
-                      <button type="submit" class="btn-send">SEND</button>
-                    </div>
-                  </form>
-                  <div id="form-response"></div>
+                <form id="contactForm" action="contact_us/submit" method="post">
+                  <h4 class="txt_send_message mb-5">Send Us Message</h4>
+                  <div class="form-group-row">
+                    <input type="text" name="fullname" placeholder="Full Name" maxlength="100" required>
+                    <input type="text" name="company" placeholder="Company Name" maxlength="100" required>
+                  </div>
+                  <div class="form-group-row">
+                    <input type="email" name="email" placeholder="Email Address" maxlength="150" required>
+                    <input type="text" name="phone" id="phone" placeholder="Mobile Number (optional)" maxlength="15" inputmode="numeric" pattern="[0-9]*">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" placeholder="Message..." rows="5" maxlength="500" required></textarea>
+                  </div>
+                  <div class="justify-content-end">
+                    <button type="submit" class="btn-send">SEND</button>
+                  </div>
+                </form>
+                <div id="form-response"></div>
+
                 </div>
             </div>
         </div>
