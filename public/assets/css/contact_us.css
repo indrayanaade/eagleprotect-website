@@ -33,7 +33,24 @@
     text-align: center;
     padding: 50px !important;
 }
+.contact-section-mobile {
+    position: relative;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/assets/img/bg-about.png') no-repeat center center/cover;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding-top: 130px !important;
+}
 .contact-offset-section {
+    background-color: #fff;
+}
+.contact-offset-section-mobile {
     background-color: #fff;
 }
   
@@ -47,14 +64,27 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
+.contact-box-mobile {
+    color: #fff;
+    padding: 10px !important;
+    width: 385px;
+    height: 160px;
+    border-radius: 10px;
+    background: #212123;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
 .content-box{
     display: flex;
 }
 
 .offset-up {
     position: relative; 
-    /* transform: translateY(-100px); */
     top: -100px;
+}
+.offset-up-mobile {
+    position: relative; 
+    top: -60px;
 }
 .txt_content_box{
     color: var(--lighter-2-background, #C4C4C4);
@@ -62,11 +92,23 @@
     font-size: 14px;
     line-height: 18.2px;
 }
+.txt_content_box_mobile{
+    color: var(--lighter-2-background, #C4C4C4);
+    font-family: 'Inter-regular',sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+}
 .txt_title_content{
     color: var(--White, #FFF);
     font-family: 'Roboto-bold',sans-serif;
     font-size: 22px;
     line-height: 28.6px;
+}
+.txt_title_content_mobile{
+    color: var(--White, #FFF);
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 17px;
+    line-height: 22.1px;
 }
 .txt_btn{
     color: var(--White, #FFF);
@@ -83,6 +125,14 @@
     line-height: 20.8px;
     margin-bottom: 100px;
 }
+.txt_form_content_mobile{
+    color: var(--lighter-2-background, #C4C4C4);
+    text-align: center;
+    font-family: 'Lato-regular',sans-serif;
+    font-size: 10px;
+    line-height: 13px;
+    margin-bottom: 50px;
+}
 .btn-contact-us {
     background: var(--Red-Guideline, #E63822);
     color: white;
@@ -90,6 +140,18 @@
     padding: 15px 20px;
     display: flex;
     width: 157px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn-contact-us-mobile {
+    background: var(--Red-Guideline, #E63822);
+    color: white;
+    border: none;
+    padding: 10px;
+    display: flex;
+    width: 360px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -106,12 +168,23 @@
     font-size: 53px;
     line-height: 68.9px;
 }
+.title-mobile{
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: 'Roboto-bold',sans-serif;
+    font-size: 25px;
+    line-height: 32.5px;
+}
 .contact-form-section {
     background-color: #212123;
-    /* padding: 20px !important; */
     border-radius: 12px;
     color: white;
-    /* max-width: 1000px; */
+    margin: auto;
+}
+.contact-form-section-mobile {
+    background-color: #212123;
+    border-radius: 12px;
+    color: white;
     margin: auto;
 }
 .box-form{
@@ -121,6 +194,15 @@
     position: relative;
     top: -70px;
     border-radius: 20px;
+    background: #212123;
+}
+.box-form-mobile{
+    width: 384px;
+    padding: 10px !important;
+    height: 715px;
+    position: relative;
+    top: -50px;
+    border-radius: 10px;
     background: #212123;
 }
 .p-rl{
@@ -133,34 +215,61 @@
     flex-wrap: wrap;
     gap: 40px;
 }
-
 .contact-left {
-    /* flex: 1; */
     min-width: 250px;
+    margin-top: 50px !important;
+}
+.contact-left-mobile {
+    min-width: 300px;
     margin-top: 50px !important;
 }
 
 .contact-left h4 {
+    font-family: 'Roboto-bold',sans-serif;
     margin-bottom: 5px;
     font-size: 16px;
 }
+.contact-left-mobile h4 {
+    font-family: 'Roboto-bold',sans-serif;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
 
 .contact-left p {
+    font-family: 'Roboto-regular',sans-serif;
     margin-bottom: 15px;
     color: #ccc;
     font-size: 14px;
 }
+.contact-left-mobile p {
+    font-family: 'Roboto-regular',sans-serif;
+    margin-bottom: 15px;
+    color: #ccc;
+    font-size: 9px;
+}
 
 .contact-right {
     flex: 2;
-    /* margin-top: 50px !important; */
-    /* min-width: 300px; */
 }
 
 .form-group-row {
     display: flex;
     gap: 20px;
     margin-bottom: 15px !important;
+}
+.form-group-row-mobile {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 15px !important;
+}
+.form-group-row-mobile input {
+    padding: 10px;
+    border: none;
+    font-size: 10px;
+    line-height: 10.4px;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
 }
 
 .form-group-row input {
@@ -203,6 +312,27 @@ textarea {
     cursor: not-allowed !important;
     opacity: 0.7;
 }
+.btn-send-mobile {
+    width: 363px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Inter-regular',sans-serif;
+    font-size: 14px;
+    margin-top: 15px;
+    background-color: #e5432e;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    cursor: pointer !important;
+    font-weight: bold;
+}
+.btn-send-mobile:disabled {
+    background-color: #aaa !important;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+}
 .custom-border{
     border: 1px solid #464646 !important;
 }
@@ -213,11 +343,28 @@ textarea {
     font-size: 18px;
     line-height: 23.4px;
 }
+.txt_send_message_mobile{
+    color: var(--White, #FFF);
+    font-family: 'Lato-regular',sans-serif;
+    text-align: left;
+    font-size: 10px;
+    line-height: 13px;    
+}
 .map-section{
     padding: 100px !important;
 }
+.map-section-mobile{
+    /* padding: 100px !important; */
+}
 #map {
     height: 400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}  
+
+#map-mobile {
+    height: 300px;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -272,4 +419,28 @@ textarea {
 .spinner i {
     font-size: 16px;
 }  
-  
+
+.mobile-view{
+    justify-content: center;
+    gap: 10px;
+    display: inline-grid;
+}
+.contact-left-mobile .row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.faq-question-mobile {
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15.6px;
+    color: #030303;
+}
+.faq-answer-mobile {
+    display: none;
+    padding: 10px 0;
+    color: #555;
+    font-size: 10px;
+}

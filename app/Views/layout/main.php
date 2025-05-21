@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="<?= csrf_token() ?>">
     <meta name="csrf-hash" content="<?= csrf_hash() ?>">
-    <meta name="csrf-token" content="<?= csrf_hash() ?>">
 
     <title><?= esc($title ?? 'Top Security Service Company in Bali | Tailored Solutions | Bali'); ?></title>
     <link href="<?=base_url('assets/adminlte/plugins/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
@@ -16,29 +15,35 @@
     <link href="<?=base_url('assets/css/normalize.css')?>" rel="stylesheet" type="text/css">
     <script>
         function initMap() {
+            const location = { lat: -8.672459, lng: 115.207538 };
             const mapDiv = document.getElementById("map");
+
             if (!mapDiv) {
-                console.warn("Map container not found. Skipping initMap.");
-                return;
+            console.warn("Map div not found. Delaying map init...");
+            // Coba lagi setelah 100ms
+            setTimeout(initMap, 100);
+            return;
             }
 
-            const location = { lat: -8.672459, lng: 115.207538 };
-
             const map = new google.maps.Map(mapDiv, {
-                zoom: 15,
-                center: location,
-                disableDefaultUI: true,
-                styles: [ /* your styles here */ ]
+            zoom: 15,
+            center: location,
+            disableDefaultUI: true,
             });
 
             new google.maps.Marker({
-                position: location,
-                map: map,
-                icon: {
-                url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
-                }
+            position: location,
+            map: map,
+            icon: {
+                url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            },
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Jalankan saat halaman siap
+            initMap();
+        });
     </script>
     <script 
         async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd_cW8JOG0TfD-6Xe1fW0J9ExheFqTR_8&callback=initMap">
