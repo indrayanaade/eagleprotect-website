@@ -52,6 +52,21 @@ $(document).ready(function () {
     currentPage++;
     loadNews();
   });
+
+  $('#cards-container').off('click', '.card[data-slug]').on('click', '.card[data-slug]', function () {
+    const slug = $(this).data('slug');
+  
+    $.ajax({
+      url: `${base_url}news_room/detail/view/${slug}`,
+      method: 'GET',
+      success: function (html) {
+        window.location.href = `${base_url}news_room/detail/view/${slug}`;
+      },
+      error: function () {
+        alert('Failed to load news detail.');
+      }
+    });
+  });  
       
 });
 
@@ -59,12 +74,15 @@ let currentPage = 1;
 let currentCategory = 'all';
 
 function loadNews() {
+  const excludedSlug = $('.news-related').data('exclude') || '';
+
   $.ajax({
     url: `${base_url}news_room/fetch`,
     method: 'GET',
     data: {
       page: currentPage,
-      category: currentCategory
+      excluded_slug: excludedSlug,
+      category: currentCategory,
     },
     success: function(response) {
       $('#cards-container').html('');
@@ -74,7 +92,7 @@ function loadNews() {
       if (response.data.length > 0) {
         response.data.forEach(item => {
           $('#cards-container').append(`
-            <div class="card">
+            <div class="card" data-slug="${item.slug}">
               <img class="news-image" src="${base_url}assets/img/news/${item.thumbnail}" alt="News Image">
               <div class="card-body">
                 <p class="meta"><span class="tag">${item.category_name}</span> • ${item.published_at}</p>

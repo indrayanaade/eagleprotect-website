@@ -21,4 +21,5 @@ $routes->get('services/detail/(:num)/(:segment)', 'Services::showDetail/$1/$2');
 $routes->get('project', 'Projects::index');
 $routes->get('news_room', 'News_Rooms::index');
 $routes->get('news_room/fetch', 'News_Rooms::fetch');
+$routes->get('news_room/detail/view/(:segment)', 'News_Rooms::detailView/$1');
 $routes->get('career', 'Career::index');

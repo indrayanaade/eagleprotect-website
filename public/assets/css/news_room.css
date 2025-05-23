@@ -216,5 +216,8 @@
     border-top-right-radius: 12px;
     display: block;
   }
+  .detail-news{
+    padding: 110px !important;
+  }
   
   

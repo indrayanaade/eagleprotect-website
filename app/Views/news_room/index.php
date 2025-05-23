@@ -44,42 +44,42 @@
     <p class="text-muted mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
     <?php if ($headline): ?>
-    <div class="card headline-card border-0 shadow-sm rounded-4 overflow-hidden">
-      <div class="row g-0 align-items-stretch">
-        <!-- Left Content -->
-        <div class="col-lg-6 p-5 d-flex flex-column justify-content-between headline-desc">
-          <div>
-            <span class="text-danger fw-semibold text-uppercase small"><?= esc($headline->category_name) ?></span>
-            <h3 class="fw-bold mt-2 mb-3 fs-4"><?= esc($headline->title) ?></h3>
-            <p class="text-muted mb-0">
-              <?= esc($headline->excerpt) ?>
-            </p>
+    <a href="<?= base_url('news_room/detail/view/' . $headline->slug) ?>" class="text-decoration-none text-dark">
+      <div class="card headline-card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="row g-0 align-items-stretch">
+          <!-- Left Content -->
+          <div class="col-lg-6 p-5 d-flex flex-column justify-content-between headline-desc">
+            <div>
+              <span class="text-danger fw-semibold text-uppercase small"><?= esc($headline->category_name) ?></span>
+              <h3 class="fw-bold mt-2 mb-3 fs-4"><?= esc($headline->title) ?></h3>
+              <p class="text-muted mb-0">
+                <?= esc($headline->excerpt) ?>
+              </p>
+            </div>
+            <div class="mt-4">
+              <small class="text-muted"><?= date('F jS Y', strtotime($headline->published_at)) ?></small>
+            </div>
           </div>
-          <div class="mt-4">
-            <small class="text-muted"><?= date('F jS Y', strtotime($headline->published_at)) ?></small>
-          </div>
-        </div>
 
-        <!-- Right Image -->
-        <div class="col-lg-6">
-          <div class="headline-image h-100">
-            <img 
-              src="<?= base_url('assets/img/news/' . $headline->thumbnail) ?>" 
-              alt="Headline News" 
-              class="img-fluid h-100 w-100 object-fit-cover rounded-end-4">
+          <!-- Right Image -->
+          <div class="col-lg-6">
+            <div class="headline-image h-100">
+              <img 
+                src="<?= base_url('assets/img/news/' . $headline->thumbnail) ?>" 
+                alt="<?= esc($headline->title) ?>" 
+                class="img-fluid h-100 w-100 object-fit-cover rounded-end-4">
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </a>
     <?php else: ?>
       <div class="alert alert-warning">No headline news available.</div>
     <?php endif; ?>
-
   </div>
 </section>
 
-
-<section class="news-related">
+<section class="news-related" data-exclude="<?= esc($headline->slug ?? '') ?>">
   <div class="container-fluid">
     <h1 class="text-center">News Related to Eagle Protect</h1>
     
@@ -102,6 +102,22 @@
       <button id="nextPage">Next</button>
     </div>
   </div>
+  <!-- Spinner Overlay (Loading) -->
+  <div id="modal-loading-spinner" class="position-absolute top-50 start-50 translate-middle d-none" style="z-index: 1052;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content rounded-4">
+        <!-- AJAX akan mengisi bagian ini -->
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <section>
