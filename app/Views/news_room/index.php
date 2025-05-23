@@ -39,138 +39,74 @@
 </nav>
 
 <section class="py-5 bg-white headline-section">
-  <div class="container">
+  <div class="container-fluid">
     <h2 class="fw-bold display-5 mb-2">Our Newsroom</h2>
     <p class="text-muted mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
+    <?php if ($headline): ?>
     <div class="card headline-card border-0 shadow-sm rounded-4 overflow-hidden">
       <div class="row g-0 align-items-stretch">
         <!-- Left Content -->
         <div class="col-lg-6 p-5 d-flex flex-column justify-content-between headline-desc">
           <div>
-            <span class="text-danger fw-semibold text-uppercase small">Category</span>
-            <h3 class="fw-bold mt-2 mb-3 fs-4">Lorem Ipsum Is Simple Dummy Text</h3>
+            <span class="text-danger fw-semibold text-uppercase small"><?= esc($headline->category_name) ?></span>
+            <h3 class="fw-bold mt-2 mb-3 fs-4"><?= esc($headline->title) ?></h3>
             <p class="text-muted mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              <?= esc($headline->excerpt) ?>
             </p>
           </div>
           <div class="mt-4">
-            <small class="text-muted">May 23th 2025</small>
+            <small class="text-muted"><?= date('F jS Y', strtotime($headline->published_at)) ?></small>
           </div>
         </div>
 
         <!-- Right Image -->
         <div class="col-lg-6">
           <div class="headline-image h-100">
-            <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="Headline News" class="img-fluid h-100 w-100 object-fit-cover rounded-end-4">
+            <img 
+              src="<?= base_url('assets/img/news/' . $headline->thumbnail) ?>" 
+              alt="Headline News" 
+              class="img-fluid h-100 w-100 object-fit-cover rounded-end-4">
           </div>
         </div>
       </div>
+    </div>
+    <?php else: ?>
+      <div class="alert alert-warning">No headline news available.</div>
+    <?php endif; ?>
+
+  </div>
+</section>
+
+
+<section class="news-related">
+  <div class="container-fluid">
+    <h1 class="text-center">News Related to Eagle Protect</h1>
+    
+    <div class="categories">
+      <button class="category active" data-category="all">All</button>
+      <?php foreach ($categories as $cat): ?>
+        <button class="category" data-category="<?= esc($cat['category_name']) ?>">
+          <?= esc($cat['category_name']) ?>
+        </button>
+      <?php endforeach; ?>
+    </div>
+
+    <div class="cards" id="cards-container">
+      <!-- Cards loaded by jQuery AJAX -->
+    </div>
+
+    <div class="pagination">
+      <button id="prevPage">Previous</button>
+      <span id="pageIndicator">1</span>
+      <button id="nextPage">Next</button>
     </div>
   </div>
 </section>
 
-<section class="news-related">
-    <div class="container">
-      <h1>News Related to Eagle Protect</h1>
-      
-      <div class="categories">
-        <button class="category active">CATEGORY 1</button>
-        <button class="category">CATEGORY 2</button>
-        <button class="category">CATEGORY 3</button>
-        <button class="category">CATEGORY 2</button>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="<?= base_url('assets/img/rubbish-free-projects.png') ?>" alt="News Image">
-          <div class="card-body">
-            <p class="meta"><span class="tag">Category</span> • May 23th 2025</p>
-            <h3>Lorem Ipsum Is Simple Dummy Text</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-      <div><?= $this->include('layout/footer') ?></div>
-  </section>
+<section>
+    <div><?= $this->include('layout/footer') ?></div>
+</section>
 
 
 <?= $this->endSection() ?>
