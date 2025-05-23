@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <?php $uri = service('uri'); ?>
 
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-detail">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-detail-2">
     <div class="container-fluid">
         <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo" src="<?= base_url('assets/img/eagle-logo-img-black.svg') ?>"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,17 +41,17 @@
 <section class="detail-news">
   <div class="container-fluid">
     <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
-        <li class="breadcrumb-item"><a href="<?= base_url('news_room') ?>">News</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Detail News</li>
-      </ol>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb-custom text-uppercase">
+            <li><a href="<?= base_url() ?>">Home</a></li>
+            <li><a href="<?= base_url('news_room') ?>">News</a></li>
+            <li class="active"><?= esc($news['slug']) ?></li>
+        </ol>
     </nav>
 
     <!-- Category Tag -->
-    <div class="text-center mb-3">
-      <span class="badge bg-danger px-3 py-2 text-white text-uppercase"><?= esc($news['category_name']) ?></span>
+    <div class="text-badge mt-5">
+      <span class="badge-category text-uppercase"><?= esc($news['category_name']) ?></span>
     </div>
 
     <!-- Title -->
@@ -62,34 +62,46 @@
       by <?= esc($news['news_author']) ?> <br>
       <small><?= date('H:i A', strtotime($news['created_at'])) ?> | <?= date('d F Y', strtotime($news['published_at'])) ?></small>
     </p>
+  </div>
+</section>
 
-    <!-- Featured Image -->
-    <div class="text-center mb-5">
-      <img src="<?= base_url('assets/img/news/' . $news['thumbnail']) ?>" alt="<?= esc($news['title']) ?>" class="img-fluid rounded w-100" style="max-height: 500px; object-fit: cover;">
+<section class="news-content position-relative pb-5">
+  <!-- Offset Featured Image -->
+  <div class="image-wrapper ratio-wrapper">
+    <img src="<?= base_url('assets/img/news/' . $news['thumbnail']) ?>" 
+         alt="<?= esc($news['title']) ?>" 
+         class="img-detail">
+  </div>
+
+  <div class="container mt-5">
+    <div class="d-flex align-items-start flex-md-row flex-column">
+        
+        <!-- Social Icons -->
+        <div class="social-icons d-none d-md-flex flex-column align-items-center pt-2">
+        <a href="#" class="text-danger"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-danger"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-danger"><i class="bi bi-linkedin fs-4"></i></a>
+        </div>
+
+        <!-- News Content -->
+        <div class="flex-grow-1 news-contents">
+            <h1 class="fw-bold text-center mb-3"><?= esc($news['title']) ?></h1>
+            <?= $news['news_content'] ?>
+        </div>
+
     </div>
 
-    <!-- Share Icons -->
-    <div class="mb-4 d-flex flex-column align-items-start gap-2" style="position: absolute; left: 40px;">
-      <a href="#" class="text-danger"><i class="bi bi-instagram fs-4"></i></a>
-      <a href="#" class="text-danger"><i class="bi bi-linkedin fs-4"></i></a>
-      <a href="#" class="text-danger"><i class="bi bi-envelope fs-4"></i></a>
-    </div>
-
-    <!-- Content -->
-    <div class="news-content mb-5" style="max-width: 900px; margin: auto;">
-      <?= $news['news_content'] ?> <!-- Sudah berupa HTML -->
-    </div>
-
-    <!-- Another News -->
     <?php if (!empty($relatedNews)): ?>
-    <div class="pt-5 border-top">
+    <div class="pt-5">
       <h3 class="fw-bold mb-4">Read Another News</h3>
       <div class="row g-4">
         <?php foreach ($relatedNews as $item): ?>
         <div class="col-md-4">
           <a href="<?= base_url('news_room/detail/view/' . $item['slug']) ?>" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
-              <img src="<?= base_url('assets/img/news/' . $item['thumbnail']) ?>" class="card-img-top" alt="<?= esc($item['title']) ?>" style="height: 200px; object-fit: cover;">
+              <img src="<?= base_url('assets/img/news/' . $item['thumbnail']) ?>" 
+                   class="card-img-top news-thumbnail" 
+                   alt="<?= esc($item['title']) ?>">
               <div class="card-body">
                 <p class="text-danger small mb-1"><?= $item['category_name'] ?> • <?= date('M jS Y', strtotime($item['published_at'])) ?></p>
                 <h5 class="fw-bold"><?= esc($item['title']) ?></h5>
@@ -104,6 +116,7 @@
     <?php endif; ?>
   </div>
 </section>
+
 
 <section>
     <div><?= $this->include('layout/footer') ?></div>

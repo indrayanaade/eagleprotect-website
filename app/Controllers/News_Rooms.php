@@ -64,6 +64,9 @@ class News_Rooms extends BaseController
         return view('news_room/detail_view', [
             'news' => $news,
             'relatedNews'  => $relatedNews,
+            'slug'         => $slug,
+            'title'       => 'News Room',
+            'activeMenu'  => 'News Room',
             'jsFiles'     => [
                 'assets/adminlte/plugins/jquery/jquery-3.7.1.min.js',
                 'assets/js/news_room.js'

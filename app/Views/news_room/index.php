@@ -40,8 +40,8 @@
 
 <section class="py-5 bg-white headline-section">
   <div class="container-fluid">
-    <h2 class="fw-bold display-5 mb-2">Our Newsroom</h2>
-    <p class="text-muted mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <h2 class="display-5 mb-2 text-header">Our Newsroom</h2>
+    <p class="text-quotes mb-5">Stay informed with the latest updates, insights, and stories from Eagle Protect. We bring you timely news on safety, innovation, and the people behind our mission to protect what matters most.</p>
 
     <?php if ($headline): ?>
     <a href="<?= base_url('news_room/detail/view/' . $headline->slug) ?>" class="text-decoration-none text-dark">
@@ -50,14 +50,14 @@
           <!-- Left Content -->
           <div class="col-lg-6 p-5 d-flex flex-column justify-content-between headline-desc">
             <div>
-              <span class="text-danger fw-semibold text-uppercase small"><?= esc($headline->category_name) ?></span>
-              <h3 class="fw-bold mt-2 mb-3 fs-4"><?= esc($headline->title) ?></h3>
-              <p class="text-muted mb-0">
+              <span class="text-category text-uppercase"><?= esc($headline->category_name) ?></span>
+              <h3 class="mt-2 mb-3 text-title"><?= esc($headline->title) ?></h3>
+              <p class="text-excerpt mb-0">
                 <?= esc($headline->excerpt) ?>
               </p>
             </div>
             <div class="mt-4">
-              <small class="text-muted"><?= date('F jS Y', strtotime($headline->published_at)) ?></small>
+              <small class="text-publish"><?= date('F jS Y', strtotime($headline->published_at)) ?></small>
             </div>
           </div>
 
@@ -81,7 +81,7 @@
 
 <section class="news-related" data-exclude="<?= esc($headline->slug ?? '') ?>">
   <div class="container-fluid">
-    <h1 class="text-center">News Related to Eagle Protect</h1>
+    <h1 class="text-related">News Related to Eagle Protect</h1>
     
     <div class="categories">
       <button class="category active" data-category="all">All</button>
@@ -100,21 +100,6 @@
       <button id="prevPage">Previous</button>
       <span id="pageIndicator">1</span>
       <button id="nextPage">Next</button>
-    </div>
-  </div>
-  <!-- Spinner Overlay (Loading) -->
-  <div id="modal-loading-spinner" class="position-absolute top-50 start-50 translate-middle d-none" style="z-index: 1052;">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-
-  <!-- Bootstrap Modal -->
-  <div class="modal fade" id="newsDetailModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content rounded-4">
-        <!-- AJAX akan mengisi bagian ini -->
-      </div>
     </div>
   </div>
 

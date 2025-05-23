@@ -95,9 +95,9 @@ function loadNews() {
             <div class="card" data-slug="${item.slug}">
               <img class="news-image" src="${base_url}assets/img/news/${item.thumbnail}" alt="News Image">
               <div class="card-body">
-                <p class="meta"><span class="tag">${item.category_name}</span> • ${item.published_at}</p>
+                <p class="meta"><span class="tag">${item.category_name}</span> • <span="text-publish">${item.published_at}</span></p>
                 <h3>${item.title}</h3>
-                <p>${item.excerpt}</p>
+                <p class="text-excerpt">${item.excerpt}</p>
               </div>
             </div>
           `);
