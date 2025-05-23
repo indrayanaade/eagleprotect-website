@@ -19,10 +19,8 @@
             const mapDiv = document.getElementById("map");
 
             if (!mapDiv) {
-            console.warn("Map div not found. Delaying map init...");
-            // Coba lagi setelah 100ms
-            setTimeout(initMap, 100);
-            return;
+                setTimeout(initMap, 100);
+                return;
             }
 
             const map = new google.maps.Map(mapDiv, {
