@@ -1,4 +1,4 @@
-CRITICAL - 2025-05-20 08:02:58 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "@vite"
+CRITICAL - 2025-05-24 05:47:41 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "@vite"
 [Method: GET, Route: @vite/env]
 in SYSTEMPATH/Router/Router.php on line 739.
  1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
@@ -8,7 +8,7 @@ in SYSTEMPATH/Router/Router.php on line 739.
  5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
  7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
-CRITICAL - 2025-05-20 08:02:59 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: ";"
+CRITICAL - 2025-05-24 05:47:50 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: ";"
 [Method: GET, Route: s/2323e23393e2931323e25333/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties]
 in SYSTEMPATH/Router/Router.php on line 739.
  1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
