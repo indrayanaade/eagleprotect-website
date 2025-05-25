@@ -2,8 +2,8 @@
 
 <?= $this->section('content') ?>
 <?php $uri = service('uri'); ?>
-
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-detail-2">
+<div class="only-desktop">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark custom-navbar-detail-2">
     <div class="container-fluid">
         <a class="navbar-brand ps-5 fw-bold" href="<?= base_url('/') ?>"><img id="navbar-logo" src="<?= base_url('assets/img/eagle-logo-img-black.svg') ?>"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,90 +36,95 @@
             </ul>
         </div>
     </div>
-</nav>
+  </nav>
 
-<section class="detail-news">
-  <div class="container-fluid">
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb-custom text-uppercase">
-            <li><a href="<?= base_url() ?>">Home</a></li>
-            <li><a href="<?= base_url('news_room') ?>">News</a></li>
-            <li class="active"><?= esc($news['slug']) ?></li>
-        </ol>
-    </nav>
+  <section class="detail-news">
+    <div class="container-fluid">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb-custom text-uppercase">
+              <li><a href="<?= base_url() ?>">Home</a></li>
+              <li><a href="<?= base_url('news_room') ?>">News</a></li>
+              <li class="active"><?= esc($news['slug']) ?></li>
+          </ol>
+      </nav>
 
-    <!-- Category Tag -->
-    <div class="text-badge mt-5">
-      <span class="badge-category text-uppercase"><?= esc($news['category_name']) ?></span>
-    </div>
-
-    <!-- Title -->
-    <h1 class="fw-bold text-center mb-2"><?= esc($news['title']) ?></h1>
-
-    <!-- Author + Date -->
-    <p class="text-center text-muted mb-4">
-      by <?= esc($news['news_author']) ?> <br>
-      <small><?= date('H:i A', strtotime($news['created_at'])) ?> | <?= date('d F Y', strtotime($news['published_at'])) ?></small>
-    </p>
-  </div>
-</section>
-
-<section class="news-content position-relative pb-5">
-  <!-- Offset Featured Image -->
-  <div class="image-wrapper ratio-wrapper">
-    <img src="<?= base_url('assets/img/news/' . $news['thumbnail']) ?>" 
-         alt="<?= esc($news['title']) ?>" 
-         class="img-detail">
-  </div>
-
-  <div class="container mt-5">
-    <div class="d-flex align-items-start flex-md-row flex-column">
-        
-        <!-- Social Icons -->
-        <div class="social-icons d-none d-md-flex flex-column align-items-center pt-2">
-        <a href="#" class="text-danger"><i class="bi bi-instagram fs-4"></i></a>
-        <a href="#" class="text-danger"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="#" class="text-danger"><i class="bi bi-linkedin fs-4"></i></a>
-        </div>
-
-        <!-- News Content -->
-        <div class="flex-grow-1 news-contents">
-            <h1 class="fw-bold text-center mb-3"><?= esc($news['title']) ?></h1>
-            <?= $news['news_content'] ?>
-        </div>
-
-    </div>
-
-    <?php if (!empty($relatedNews)): ?>
-    <div class="pt-5">
-      <h3 class="fw-bold mb-4">Read Another News</h3>
-      <div class="row g-4">
-        <?php foreach ($relatedNews as $item): ?>
-        <div class="col-md-4">
-          <a href="<?= base_url('news_room/detail/view/' . $item['slug']) ?>" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="<?= base_url('assets/img/news/' . $item['thumbnail']) ?>" 
-                   class="card-img-top news-thumbnail" 
-                   alt="<?= esc($item['title']) ?>">
-              <div class="card-body">
-                <p class="text-danger small mb-1"><?= $item['category_name'] ?> • <?= date('M jS Y', strtotime($item['published_at'])) ?></p>
-                <h5 class="fw-bold"><?= esc($item['title']) ?></h5>
-                <p class="text-muted small"><?= esc($item['excerpt']) ?></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <?php endforeach; ?>
+      <!-- Category Tag -->
+      <div class="text-badge mt-5">
+        <span class="badge-category text-uppercase"><?= esc($news['category_name']) ?></span>
       </div>
+
+      <!-- Title -->
+      <h1 class="txt_detail_title"><?= esc($news['title']) ?></h1>
+
+      <!-- Author + Date -->
+      <p class="txt_author">
+        by <?= esc($news['news_author']) ?> <br>
+        <small class="txt_publish"><?= date('H:i A', strtotime($news['created_at'])) ?> | <?= date('d F Y', strtotime($news['published_at'])) ?></small>
+      </p>
     </div>
-    <?php endif; ?>
-  </div>
-</section>
+  </section>
 
+  <section class="news-content position-relative pb-5">
+    <!-- Offset Featured Image -->
+    <div class="image-wrapper ratio-wrapper">
+      <img src="<?= base_url('assets/img/news/' . $news['thumbnail']) ?>" 
+          alt="<?= esc($news['title']) ?>" 
+          class="img-detail">
+    </div>
 
-<section>
-    <div><?= $this->include('layout/footer') ?></div>
-</section>
+    <div class="container mt-5">
+      <div class="d-flex align-items-start flex-md-row flex-column">
+          
+          <!-- Social Icons -->
+          <div class="social-icons d-none d-md-flex flex-column align-items-center pt-2">
+          <a href="#" class="text-danger"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-danger"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-danger"><i class="bi bi-linkedin fs-4"></i></a>
+          </div>
+
+          <!-- News Content -->
+          <div class="flex-grow-1 news-contents">
+              <h1 class="txt_content_title"><?= esc($news['title']) ?></h1>
+              <p class="txt_content_desc"><?= $news['news_content'] ?></p>
+          </div>
+
+      </div>
+
+      <?php if (!empty($relatedNews)): ?>
+      <div class="pt-5">
+        <h3 class="txt_read_another">Read Another News</h3>
+        <div class="row g-4">
+          <?php foreach ($relatedNews as $item): ?>
+          <div class="col-md-4">
+            <a href="<?= base_url('news_room/detail/view/' . $item['slug']) ?>" class="text-decoration-none text-dark">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="<?= base_url('assets/img/news/' . $item['thumbnail']) ?>" 
+                    class="card-img-top news-thumbnail" 
+                    alt="<?= esc($item['title']) ?>">
+                <div class="card-body">
+                  <p class="text-category mb-1"><?= $item['category_name'] ?> • <small class="text-publish"><?= date('M jS Y', strtotime($item['published_at'])) ?></small></p>
+                  <h5 class="text-title"><?= esc($item['title']) ?></h5>
+                  <p class="text-excerpt"><?= esc($item['excerpt']) ?></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+      <?php endif; ?>
+    </div>
+  </section>
+
+  <section>
+      <div><?= $this->include('layout/footer') ?></div>
+  </section>
+
+</div>
+
+<div class="only-mobile">
+
+</div>
 
 <?= $this->endSection() ?>
