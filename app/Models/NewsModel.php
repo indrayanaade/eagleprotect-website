@@ -69,6 +69,17 @@ class NewsModel extends Model{
             ->get()
             ->getResultArray();
     }
+    public function getRelatedNewsMobile(string $slug, int $limit = 4){
+        return $this->db->table($this->table)
+            ->select('news.id, news.slug, mns.category_name, news.title, news.thumbnail, news.excerpt, news.published_at')
+            ->join('master_news_category mns', 'mns.id = news.category_id')
+            ->where('news.slug !=', $slug)
+            ->where('news.void', 0)
+            ->orderBy('news.published_at', 'DESC')
+            ->limit($limit)
+            ->get()
+            ->getResultArray();
+    }
 
     public function getHeadlineWithSlug(){
         return $this->db->table($this->table)

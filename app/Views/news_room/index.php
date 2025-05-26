@@ -110,6 +110,7 @@
       <div><?= $this->include('layout/footer') ?></div>
   </section>
 </div>
+
 <div class="only-mobile">
   <nav id="navbar-mobile" class="navbar navbar-expand-lg navbar-dark custom-navbar-mobile">
     <div class="container-fluid">
@@ -183,6 +184,32 @@
         <div class="alert alert-warning">No headline news available.</div>
       <?php endif; ?>
     </div>
+  </section>
+
+  <section class="news-related-mobile" data-exclude="<?= esc($headline->slug ?? '') ?>">
+    <div class="container-fluid">
+      <h1 class="text-related-mobile">News Related to Eagle Protect</h1>
+      
+      <div class="categories-mobile">
+        <button class="category-mobile active" data-category="all">All</button>
+        <?php foreach ($categories as $cat): ?>
+          <button class="category-mobile" data-category="<?= esc($cat['category_name']) ?>">
+            <?= esc($cat['category_name']) ?>
+          </button>
+        <?php endforeach; ?>
+      </div>
+  
+      <div class="cards" id="cards-container-mobile">
+        <!-- Cards loaded by jQuery AJAX -->
+      </div>
+  
+      <div class="pagination">
+        <button id="prevPageMobile">Previous</button>
+        <span id="pageIndicator">1</span>
+        <button id="nextPageMobile">Next</button>
+      </div>
+    </div>
+
   </section>
 
   <section class="footer-mod">

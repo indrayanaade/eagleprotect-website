@@ -60,10 +60,12 @@ class News_Rooms extends BaseController
         }
 
         $relatedNews = $model->getRelatedNews($slug);
+        $relatedNewsMobile = $model->getRelatedNewsMobile($slug);
 
         return view('news_room/detail_view', [
             'news' => $news,
             'relatedNews'  => $relatedNews,
+            'relatedNewsMobile'  => $relatedNewsMobile,
             'slug'         => $slug,
             'title'       => 'News Room',
             'activeMenu'  => 'News Room',

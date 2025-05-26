@@ -41,6 +41,14 @@ $(document).ready(function () {
     loadNews();
   });
 
+  $('.category-mobile').on('click', function() {
+    $('.category-mobile').removeClass('active');
+    $(this).addClass('active');
+    currentCategory = $(this).data('category');
+    currentPage = 1;
+    loadNews();
+  });  
+
   $('#prevPage').on('click', function() {
     if (currentPage > 1) {
       currentPage--;
@@ -67,6 +75,21 @@ $(document).ready(function () {
       }
     });
   });  
+
+  $('#cards-container-mobile').off('click', '.card[data-slug]').on('click', '.card[data-slug]', function () {
+    const slug = $(this).data('slug');
+  
+    $.ajax({
+      url: `${base_url}news_room/detail/view/${slug}`,
+      method: 'GET',
+      success: function (html) {
+        window.location.href = `${base_url}news_room/detail/view/${slug}`;
+      },
+      error: function () {
+        alert('Failed to load news detail.');
+      }
+    });
+  }); 
       
 });
 
@@ -74,7 +97,11 @@ let currentPage = 1;
 let currentCategory = 'all';
 
 function loadNews() {
-  const excludedSlug = $('.news-related').data('exclude') || '';
+  const isMobile = window.innerWidth <= 430;
+  const targetContainer = isMobile ? '#cards-container-mobile' : '#cards-container';
+  const excludedSlug = isMobile
+    ? $('.news-related-mobile').data('exclude')
+    : $('.news-related').data('exclude');
 
   $.ajax({
     url: `${base_url}news_room/fetch`,
@@ -85,17 +112,16 @@ function loadNews() {
       category: currentCategory,
     },
     success: function(response) {
-      $('#cards-container').html('');
+      $(targetContainer).html('');
       $('#pageIndicator').text(response.current_page);
 
-      // Tampilkan berita jika ada
       if (response.data.length > 0) {
         response.data.forEach(item => {
-          $('#cards-container').append(`
+          $(targetContainer).append(`
             <div class="card" data-slug="${item.slug}">
               <img class="news-image" src="${base_url}assets/img/news/${item.thumbnail}" alt="News Image">
               <div class="card-body">
-                <p class="meta"><span class="tag">${item.category_name}</span> • <span="text-publish">${item.published_at}</span></p>
+                <p class="meta"><span class="tag">${item.category_name}</span> • <span class="text-publish">${item.published_at}</span></p>
                 <h3>${item.title}</h3>
                 <p class="text-excerpt">${item.excerpt}</p>
               </div>
@@ -103,15 +129,31 @@ function loadNews() {
           `);
         });
       } else {
-        $('#cards-container').html('<p class="text-center text-muted">No news available.</p>');
+        $(targetContainer).html('<p class="text-center text-muted">No news available.</p>');
       }
 
-      // ✅ Atur status tombol pagination
+      // ✅ Layout 1 kolom jika hanya 1 data
+      if (response.data.length === 1) {
+        $(targetContainer).addClass('single-card');
+      } else {
+        $(targetContainer).removeClass('single-card');
+      }
+
+      // ✅ Tampilkan atau sembunyikan pagination
+      if (response.total_pages > 1) {
+        $('.pagination').show();
+      } else {
+        $('.pagination').hide();
+      }
+
       $('#prevPage').prop('disabled', response.current_page <= 1);
       $('#nextPage').prop('disabled', response.current_page >= response.total_pages || response.total_pages === 0);
+      $('#prevPageMobile').prop('disabled', response.current_page <= 1);
+      $('#nextPageMobile').prop('disabled', response.current_page >= response.total_pages || response.total_pages === 0);
     }
   });
 }
+
 
   
   
