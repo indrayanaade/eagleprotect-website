@@ -38,7 +38,7 @@
     </div>
   </nav>
 
-  <section class="detail-news">
+  <section class="detail-news" data-aos="fade-up">
     <div class="container-fluid">
       <!-- Breadcrumb -->
       <nav aria-label="breadcrumb">
@@ -65,7 +65,7 @@
     </div>
   </section>
 
-  <section class="news-content position-relative pb-5">
+  <section class="news-content position-relative pb-5" data-aos="fade-up">
     <!-- Offset Featured Image -->
     <div class="image-wrapper ratio-wrapper">
       <img src="<?= base_url('assets/img/news/' . $news['thumbnail']) ?>" 
@@ -117,7 +117,7 @@
     </div>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
   </section>
 
@@ -158,7 +158,7 @@
     </div>
   </nav>
 
-  <section class="detail-news-mobile">
+  <section class="detail-news-mobile" data-aos="fade-up">
     <div class="container-fluid">
 
       <!-- Category Tag -->
@@ -202,7 +202,7 @@
     </div>
   </section>
 
-  <section class="relatedNews">
+  <section class="relatedNews" data-aos="fade-up">
     <?php if (!empty($relatedNewsMobile)): ?>
       <div class="row pt-5">
         <?php foreach ($relatedNewsMobile as $item): ?>
@@ -227,7 +227,7 @@
     <?php endif; ?>
   </section>
 
-  <section class="footer-mod">
+  <section class="footer-mod" data-aos="fade-up">
     <div class="container-fluid">
         <div class="border-bottom-custom">
         <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">
