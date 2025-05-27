@@ -39,7 +39,7 @@
         </div>
     </nav>
     
-    <section class="project-detail">
+    <section class="project-detail" data-aos="fade-up">
         <div class="detail-title">
           <h4 class="site-title">Projects</h4>
           <h1 class="title-project"><?= esc($projectData['title']) ?></h1>
@@ -92,7 +92,7 @@
         </div>
     </section>
     
-    <section>
+    <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
     </section>
 </div>
@@ -130,7 +130,7 @@
         </div>
         </div>
     </nav>
-    <section class="project-detail-mobile">
+    <section class="project-detail-mobile" data-aos="fade-up">
         <div class="detail-title-mobile">
           <h4 class="site-title-mobile">Projects</h4>
           <h1 class="title-project-mobile"><?= esc($projectData['title']) ?></h1>
@@ -182,7 +182,7 @@
             </div>
         </div>
     </section>
-    <section class="footer-mod">
+    <section class="footer-mod" data-aos="fade-up">
         <div class="container-fluid">
             <div class="border-bottom-custom">
             <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

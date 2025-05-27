@@ -38,7 +38,7 @@
     </div>
 </nav>
 
-<section class="section-careers">
+<section class="section-careers" data-aos="fade-up">
   <div class="container-fluid">
     <div class="careers-content">
       <div class="left-content">
@@ -52,7 +52,7 @@
   </div>
 </section>
 
-<section class="section-positions bg-light">
+<section class="section-positions bg-light" data-aos="fade-up">
   <div class="container-fluid">
     <!-- <h2 class="section-title mb-4">Open Positions</h2> -->
 
@@ -89,7 +89,7 @@
   </div>
 </section>
 
-<section class="faq">
+<section class="faq" data-aos="fade-up">
     <div class="container-fluid faq-content">
         <h2 class="roboto-h2-black mt-2 mb-5">FAQs</h2>
         <?php foreach ($faqs as $index => $faq): ?>
@@ -104,7 +104,7 @@
     </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
     <div><?= $this->include('layout/footer') ?></div>
 </section>
 

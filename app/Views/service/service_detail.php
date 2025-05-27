@@ -37,17 +37,17 @@
       </div>
     </div>
   </nav>
-  <section class="img-content">
+  <section class="img-content" data-aos="fade-up">
     <img src="<?= base_url('assets/img/' . $img) ?>" alt="<?= esc($packages_name) ?>" />
   </section>
-  <section class="detail-content">
+  <section class="detail-content" data-aos="fade-up">
     <div class="container-fluid content">
       <h4 class="roboto-h4">LEGAL SERVICES</h4>
       <h2 class="roboto-h2-black"><?= esc($packages_name) ?></h2>
       <p class="description mt-5"><?= nl2br(esc($description)) ?></p>
     </div>
   </section>
-  <section class="faq">
+  <section class="faq" data-aos="fade-up">
     <div class="container-fluid faq-content">
       <h4 class="roboto-h4">LEGAL SERVICES</h4>
       <h2 class="roboto-h2-black mt-2 mb-5">FAQs</h2>
@@ -62,7 +62,7 @@
         <?php endforeach; ?>
     </div>
   </section>
-  <section>
+  <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
   </section>
 </div>
@@ -101,17 +101,17 @@
     </div>
   </nav>
 
-  <section class="img-content-mobile">
+  <section class="img-content-mobile" data-aos="fade-up">
     <img src="<?= base_url('assets/img/' . $img_mobile) ?>" alt="<?= esc($packages_name) ?>" />
   </section>
-  <section class="detail-content-mobile">
+  <section class="detail-content-mobile" data-aos="fade-up">
     <div class="container-fluid">
       <h4 class="roboto-h4-mobile"><?= esc($tagline) ?></h4>
       <h2 class="roboto-h2-black-mobile"><?= esc($packages_name) ?></h2>
       <p class="description-mobile mt-2"><?= nl2br(esc($description)) ?></p>
     </div>
   </section>
-  <section class="faq-mobile">
+  <section class="faq-mobile" data-aos="fade-up">
     <div class="container-fluid">
       <h4 class="roboto-h4-mobile"><?= esc($tagline) ?></h4>
       <h2 class="roboto-h2-black-mobile mt-2 mb-3">FAQs</h2>
@@ -127,7 +127,7 @@
     </div>
   </section>
 
-  <section class="footer-mod">
+  <section class="footer-mod" data-aos="fade-up">
     <div class="container-fluid">
         <div class="border-bottom-custom">
         <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

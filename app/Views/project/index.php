@@ -38,7 +38,7 @@
             </div>
         </div>
     </nav>
-    <section class="project">
+    <section class="project" data-aos="fade-up">
         <div class="container-fluid p-50 text-md-start order-md-last align-items-center justify-content-end">
             <div class="project-title">
                 <h2 class="roboto-h2-red">PROJECTS</h2>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-    <section class="program-section">
+    <section class="program-section" data-aos="fade-up">
         <div class="program-grid">
             <?php foreach ($project_slides as $slide): ?>
             <div class="program-card" data-id="<?= esc($slide['id']) ?>" style="background-image: url('assets/img/<?= esc($slide['img']) ?>');">
@@ -58,7 +58,7 @@
             <?php endforeach; ?>
         </div>
     </section>
-    <section>
+    <section data-aos="fade-up">
         <div><?= $this->include('layout/footer') ?></div>
     </section>
 </div>
@@ -96,7 +96,7 @@
         </div>
         </div>
     </nav>
-    <section class="project-mobile">
+    <section class="project-mobile" data-aos="fade-up">
         <div class="container-fluid text-md-start order-md-last align-items-center justify-content-end">
             <div class="project-title-mobile">
                 <h2 class="roboto-h2-red-mobile">PROJECTS</h2>
@@ -104,7 +104,7 @@
             </div>
         </div>
     </section>
-    <section class="program-section-mobile">
+    <section class="program-section-mobile" data-aos="fade-up">
         <div class="program-grid-mobile">
             <?php foreach ($project_slides as $slide): ?>
             <div class="program-card-mobile" data-id="<?= esc($slide['id']) ?>" style="background-image: url('assets/img/<?= esc($slide['img']) ?>');">
@@ -116,7 +116,7 @@
             <?php endforeach; ?>
         </div>
     </section>
-    <section class="footer-mod">
+    <section class="footer-mod" data-aos="fade-up">
         <div class="container-fluid">
             <div class="border-bottom-custom">
             <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

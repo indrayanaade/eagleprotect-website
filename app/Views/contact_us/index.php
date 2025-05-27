@@ -53,11 +53,11 @@
     </div>
   </nav>
   
-  <section class="contact-section">
+  <section class="contact-section" data-aos="fade-up">
     <span class="title">CONTACT US</span>
   </section>
   
-  <section class="contact-offset-section">
+  <section class="contact-offset-section" data-aos="fade-up">
     <div class="container-fluid d-flex gap-4 justify-content-center">
       <div class="contact-box offset-up">
           <h5 class="txt_title_content">CUSTOMER SERVICE</h5>
@@ -147,7 +147,7 @@
     </div>
   </section>
   
-  <section class="faq">
+  <section class="faq" data-aos="fade-up">
     <div class="container-fluid faq-content">
       <h2 class="roboto-h2-black mt-2 mb-5">FAQs</h2>
         <?php foreach ($faqs as $index => $faq): ?>
@@ -162,7 +162,7 @@
     </div>
   </section>
   
-  <section class="map-section">
+  <section class="map-section" data-aos="fade-up">
     <div id="map-wrapper" style="position: relative;">
       <div id="map"></div>
       <div class="custom-info-box">
@@ -175,7 +175,7 @@
     </div>
   </section>
   
-  <section>
+  <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
   </section>
 </div>
@@ -215,11 +215,11 @@
     </div>
   </nav>
 
-  <section class="contact-section-mobile">
+  <section class="contact-section-mobile" data-aos="fade-up">
     <span class="title-mobile">CONTACT US</span>
   </section>
 
-  <section class="contact-offset-section">
+  <section class="contact-offset-section" data-aos="fade-up">
     <div class="container-fluid mobile-view">
       <div class="contact-box-mobile offset-up-mobile">
           <h5 class="txt_title_content_mobile">CUSTOMER SERVICE</h5>
@@ -307,7 +307,7 @@
     </div>
   </section>
 
-  <section class="faq-mobile">
+  <section class="faq-mobile" data-aos="fade-up">
     <div class="container-fluid">
       <h2 class="roboto-h2-black-mobile mt-2 mb-2">FAQs</h2>
         <?php foreach ($faqs as $index => $faq): ?>
@@ -322,9 +322,9 @@
     </div>
   </section>
 
-  <div class="map-container"></div>
+  <div class="map-container" data-aos="fade-up"></div>
 
-  <section class="footer-mod">
+  <section class="footer-mod" data-aos="fade-up">
     <div class="container-fluid">
         <div class="border-bottom-custom">
         <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

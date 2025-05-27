@@ -37,12 +37,12 @@
             </div>
         </div>
     </nav>
-    <section class="about-section">
+    <section class="about-section" data-aos="fade-up">
         <h1 class="about-title">ABOUT US</h1>
         <img src="assets/img/hero-7.png" alt="About Team" class="team-image" />
     </section>
 
-    <section class="who-we-are">
+    <section class="who-we-are" data-aos="fade-up">
         <div class="container-fluid">
             <p class="section-label">Who We Are</p>
             <h1 class="main-heading">
@@ -73,7 +73,7 @@
         </div>
     </section>
 
-    <section class="mission-vision-section">
+    <section class="mission-vision-section" data-aos="fade-up">
         <div class="card-row1">
             <div class="card-img-col">
                 <img src="<?= base_url('assets/img/card-content-03.png') ?>" alt="Mission Image" class="card-img" />
@@ -103,7 +103,7 @@
         </div>
     </section>
 
-    <section class="our-team">
+    <section class="our-team" data-aos="fade-up">
         <div class="container-fluid">
             <p class="section-label">Our Team</p>
             <h1 class="main-heading">Meet Our Team</h1>
@@ -175,7 +175,7 @@
         </div>
     </section>
 
-    <section class="tech-section">
+    <section class="tech-section" data-aos="fade-up">
         <div class="tech-container">
             <div class="tech-left">
             <img src="assets/img/tech-drone.png" alt="Drone" class="drone-img">
@@ -205,7 +205,7 @@
         </div>
     </section>
 
-    <section class="documentation-section">
+    <section class="documentation-section" data-aos="fade-up">
         <div class="container-fluid p-100">
             <div class="doc-header">
             <div class="text-left">
@@ -244,7 +244,7 @@
         </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
         <div><?= $this->include('layout/footer') ?></div>
     </section>
 </div>
@@ -284,12 +284,12 @@
         </div>
     </nav>
 
-    <section class="about-section-mobile">
+    <section class="about-section-mobile" data-aos="fade-up">
         <h1 class="about-title-mobile">ABOUT US</h1>
         <img src="assets/img/hero-7-mobile.png" alt="About Team" class="team-image-mobile" />
     </section>
 
-    <section class="who-we-are-mobile">
+    <section class="who-we-are-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <p class="section-label-mobile">Who We Are</p>
             <h1 class="main-heading-mobile">
@@ -321,7 +321,7 @@
         </div>
     </section>
 
-    <section class="mission-vision-section-mobile">
+    <section class="mission-vision-section-mobile" data-aos="fade-up">
         <div class="card-row1-mobile">
             <div class="card-img-col-mobile">
                 <img src="<?= base_url('assets/img/card-content-03.png') ?>" alt="Mission Image" class="card-img" />
@@ -351,7 +351,7 @@
         </div>
     </section>
 
-    <section class="our-team-mobile">
+    <section class="our-team-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <p class="section-label-mobile">Our Team</p>
             <h1 class="main-heading-mobile">Meet Our Team</h1>
@@ -422,7 +422,7 @@
         </div>
     </section>
 
-    <section class="tech-section-mobile">
+    <section class="tech-section-mobile" data-aos="fade-up">
         <div class="tech-hero-mobile">
             <img src="assets/img/tech-drone-mobile.png" alt="Drone" class="drone-img-mobile">
             <div class="tech-content-mobile">
@@ -451,7 +451,7 @@
     </section>
 
 
-    <section class="documentation-section-mobile">
+    <section class="documentation-section-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <div class="doc-header-mobile">
             <div class="text-left">
@@ -489,7 +489,7 @@
         </div>
     </section>
     
-    <section class="footer-mod">
+    <section class="footer-mod" data-aos="fade-up">
         <div class="container-fluid">
             <div class="border-bottom-custom">
             <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

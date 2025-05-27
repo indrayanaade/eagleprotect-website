@@ -38,7 +38,7 @@
         </div>
     </nav>
 
-    <section class="pricelist">
+    <section class="pricelist" data-aos="fade-up">
         <div class="container-fluid my-5">
             <h2 class="h2-roboto">PRICELIST</h2>
             <p class="p-lato">We have several Pricelists that can meet your needs.</p>
@@ -161,7 +161,7 @@
         </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
     </section>
 </div>
@@ -200,7 +200,7 @@
         </div>
         </div>
     </nav>
-    <div class="tab-sticky pt-3">
+    <div class="tab-sticky pt-3" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="h2-roboto-mobile">PRICELIST</h2>
             <p class="p-lato-mobile">We have several Pricelists that can meet your needs.</p>
@@ -215,7 +215,7 @@
             <button class="btn filter-btn-mobile" data-category="by_request"><span class="txt_category">BY REQUEST</span></button>
         </div>
     </div>
-    <section class="pricelist-mobile">
+    <section class="pricelist-mobile" data-aos="fade-up">
         
         <div class="swiper mySwiper-mobile">
             <div class="swiper-wrapper">
@@ -319,7 +319,7 @@
             </div>
         </div>
     </section>
-    <section class="footer-mod">
+    <section class="footer-mod" data-aos="fade-up">
         <div class="container-fluid">
             <div class="border-bottom-custom">
             <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

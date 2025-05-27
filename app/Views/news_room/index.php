@@ -39,7 +39,7 @@
       </div>
   </nav>
   
-  <section class="py-5 bg-white headline-section">
+  <section class="py-5 bg-white headline-section" data-aos="fade-up">
     <div class="container-fluid">
       <h2 class="display-5 mb-2 text-header">Our Newsroom</h2>
       <p class="text-quotes mb-5">Stay informed with the latest updates, insights, and stories from Eagle Protect. We bring you timely news on safety, innovation, and the people behind our mission to protect what matters most.</p>
@@ -80,7 +80,7 @@
     </div>
   </section>
   
-  <section class="news-related" data-exclude="<?= esc($headline->slug ?? '') ?>">
+  <section class="news-related" data-exclude="<?= esc($headline->slug ?? '') ?>" data-aos="fade-up">
     <div class="container-fluid">
       <h1 class="text-related">News Related to Eagle Protect</h1>
       
@@ -106,7 +106,7 @@
   
   </section>
   
-  <section>
+  <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
   </section>
 </div>
@@ -146,7 +146,7 @@
     </div>
   </nav>
 
-  <section class="py-5 bg-white headline-section-mobile">
+  <section class="py-5 bg-white headline-section-mobile" data-aos="fade-up">
     <div class="container-fluid">
       <h2 class="display-5 mb-2 text-header-mobile">Our Newsroom</h2>
       <p class="text-quotes-mobile mb-5">Stay informed with the latest updates, insights, and stories from Eagle Protect. We bring you timely news on safety, innovation, and the people behind our mission to protect what matters most.</p>
@@ -186,7 +186,7 @@
     </div>
   </section>
 
-  <section class="news-related-mobile" data-exclude="<?= esc($headline->slug ?? '') ?>">
+  <section class="news-related-mobile" data-exclude="<?= esc($headline->slug ?? '') ?>" data-aos="fade-up">
     <div class="container-fluid">
       <h1 class="text-related-mobile">News Related to Eagle Protect</h1>
       
@@ -212,7 +212,7 @@
 
   </section>
 
-  <section class="footer-mod">
+  <section class="footer-mod" data-aos="fade-up">
     <div class="container-fluid">
         <div class="border-bottom-custom">
         <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

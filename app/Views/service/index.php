@@ -37,7 +37,7 @@
             </div>
         </div>
     </nav>
-    <section class="service">
+    <section class="service" data-aos="fade-up">
         <div class="container-fluid p-50 text-md-start order-md-last align-items-center justify-content-end">
             <div class="p-50 mt-3">
                 <h2 class="roboto-h2-red">OUR SERVICE</h2>
@@ -49,7 +49,7 @@
         $chunked_slides_security = array_chunk($security_slides, 5);
         $globalIndex = 0; // <<< Tambah counter global 
     ?>
-    <section class="security-service">
+    <section class="security-service" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">SECURITY SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-security">
@@ -92,7 +92,7 @@
         $chunked_slides_legal = array_chunk($legal_slides, 4);
         $globalIndex = 0; // <<< Tambah counter global  
     ?>
-    <section class="legal-service">
+    <section class="legal-service" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title text-center">LEGAL SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-legal">
@@ -135,7 +135,7 @@
         $chunked_slides_healthcare = array_chunk($healthcare_slides, 4); 
         $globalIndex = 0; // <<< Tambah counter global
     ?>
-    <section class="healthcare-service">
+    <section class="healthcare-service" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title mt-5 text-center">HEALTHCARE SERVICES</h2>
             <div class="swiper mySwiper mt-4" id="swiper-healthcare">
@@ -173,7 +173,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section data-aos="fade-up">
       <div><?= $this->include('layout/footer') ?></div>
     </section>
 </div>
@@ -211,7 +211,7 @@
         </div>
         </div>
     </nav>
-    <section class="service-mobile">
+    <section class="service-mobile" data-aos="fade-up">
         <div class="container-fluid text-md-start order-md-last align-items-center justify-content-end">
             <div class="our-service mt-5">
                 <h2 class="roboto-h2-red-mobile mt-2">OUR SERVICE</h2>
@@ -223,7 +223,7 @@
         $chunked_slides_security = array_chunk($security_slides, 3); 
         $globalIndex = 0; // <<< Tambah counter global
     ?>
-    <section class="security-service-mobile">
+    <section class="security-service-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title-mobile mt-5 text-center">SECURITY SERVICES</h2>
             <div class="swiper mySwiper mt-3" id="swiper-security-mobile">
@@ -273,7 +273,7 @@
         $chunked_slides_legal = array_chunk($legal_slides, 3); 
         $globalIndex = 0; // <<< Tambah counter global
     ?>
-    <section class="legal-service-mobile">
+    <section class="legal-service-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title-mobile mt-5 text-center">LEGAL SERVICES</h2>
             <div class="swiper mySwiper mt-3" id="swiper-legal-mobile">
@@ -322,7 +322,7 @@
         $chunked_slides_legal = array_chunk($healthcare_slides, 4); 
         $globalIndex = 0; // <<< Tambah counter global
     ?>
-    <section class="healthcare-service-mobile">
+    <section class="healthcare-service-mobile" data-aos="fade-up">
         <div class="container-fluid">
             <h2 class="roboto-h2-title-mobile mt-5 text-center">HEALTHCARE SERVICES</h2>
             <div class="swiper mySwiper mt-3" id="swiper-healthcare-mobile">
@@ -367,7 +367,7 @@
     </section>
 
 
-    <section class="footer-mod">
+    <section class="footer-mod" data-aos="fade-up">
         <div class="container-fluid">
             <div class="border-bottom-custom">
             <section class="footer-bg-image-mobile d-flex flex-column align-items-center justify-content-center text-white">

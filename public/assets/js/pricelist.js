@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    AOS.init({
+        duration: 1000, // opsional, atur durasi animasi
+        once: false,     // animasi hanya muncul sekali
+    });
     const navbar = $('#navbar');
     const spacer = $('#navbar-spacer');
     const logo = $('#navbar-logo');

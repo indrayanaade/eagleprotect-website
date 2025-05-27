@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    AOS.init({
+        duration: 1000, // opsional, atur durasi animasi
+        once: false,     // animasi hanya muncul sekali
+    });
     const blackLogo = base_url + 'assets/img/eagle-logo-img-black.svg';
     const whiteLogo = base_url + 'assets/img/eagle-logo-img-white.svg';
     
