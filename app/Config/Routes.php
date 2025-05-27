@@ -22,4 +22,5 @@ $routes->get('project', 'Projects::index');
 $routes->get('news_room', 'News_Rooms::index');
 $routes->get('news_room/fetch', 'News_Rooms::fetch');
 $routes->get('news_room/detail/view/(:segment)', 'News_Rooms::detailView/$1');
-$routes->get('career', 'Career::index');
+$routes->get('careers', 'Careers::index');
+$routes->get('careers/data', 'Careers::data');

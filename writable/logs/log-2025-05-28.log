@@ -1,0 +1,44 @@
+CRITICAL - 2025-05-28 00:01:00 --> ErrorException: Access level to App\Models\CareerModel::builder() must be public (as in class CodeIgniter\Model)
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-28 00:01:02 --> ErrorException: Access level to App\Models\CareerModel::builder() must be public (as in class CodeIgniter\Model)
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-28 00:01:20 --> ErrorException: Access level to App\Models\CareerModel::builder() must be public (as in class CodeIgniter\Model)
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-28 00:02:45 --> ErrorException: Declaration of App\Models\CareerModel::builder() must be compatible with CodeIgniter\Model::builder(?string $table = null)
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-28 00:03:12 --> ErrorException: Declaration of App\Models\CareerModel::builder() must be compatible with CodeIgniter\Model::builder(?string $table = null)
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-05-28 00:04:30 --> ParseError: syntax error, unexpected token "->"
+[Method: GET, Route: careers]
+in APPPATH/Models/CareerModel.php on line 41.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 APPPATH/Controllers/Careers.php(10): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Careers->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-05-28 00:53:40 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: careers]
+in APPPATH/Views/career/index.php on line 112.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Careers.php(10): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Careers->index()
+ 5 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
