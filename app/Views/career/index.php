@@ -78,6 +78,13 @@
 
     <!-- Hasil -->
     <div class="row g-4" id="careerResults"></div>
+
+    <div class="d-flex justify-content-end align-items-center gap-3 mt-4" id="paginationWrapper">
+        <button id="prevPage" class="btn btn-outline-danger btn-sm px-3">Previous</button>
+        <span id="pageIndicator" class="fw-semibold text-muted">1</span>
+        <button id="nextPage" class="btn btn-outline-danger btn-sm px-3">Next</button>
+    </div>
+
     
   </div>
 </section>

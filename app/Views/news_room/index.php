@@ -97,7 +97,7 @@
         <!-- Cards loaded by jQuery AJAX -->
       </div>
   
-      <div class="pagination">
+      <div class="pagination justify-content-end">
         <button id="prevPage">Previous</button>
         <span id="pageIndicator">1</span>
         <button id="nextPage">Next</button>

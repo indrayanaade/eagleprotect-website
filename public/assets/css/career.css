@@ -235,4 +235,11 @@
     font-size: 12px;
     line-height: 15.6px;
 }
+#paginationWrapper button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.custom-navbar-detail.sticky .hover-overlay:hover.active .txt_nav {
+    color: #E63822;
+}
   

@@ -53,6 +53,10 @@
     color: #fff; 
 }
 
+.custom-navbar-detail.sticky .hover-overlay:hover.active .txt_nav {
+  color: #E63822;
+}
+
 .custom-navbar-detail-2 {
   padding: 15px 50px;
   background-color: #EDEDED;

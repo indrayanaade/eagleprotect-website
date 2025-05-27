@@ -77,10 +77,9 @@ class Careers extends BaseController
         ]);
     }
 
-    public function data()
-    {
+    public function data(){
         $model = new CareerModel();
-        $positions = $model->getActiveCareers(); // Semua data posisi aktif
+        $positions = $model->getActiveCareers(); 
 
         return $this->response->setJSON($positions);
     }
