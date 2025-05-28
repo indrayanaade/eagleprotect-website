@@ -200,7 +200,7 @@
         </div>
         </div>
     </nav>
-    <div class="tab-sticky pt-3" data-aos="fade-up">
+    <div class="tab-sticky pt-3">
         <div class="container-fluid">
             <h2 class="h2-roboto-mobile">PRICELIST</h2>
             <p class="p-lato-mobile">We have several Pricelists that can meet your needs.</p>
