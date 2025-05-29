@@ -46,7 +46,7 @@
         </div>
     
         <div class="cover-image">
-            <img src="<?= base_url('assets/img/' . esc($projectData['cover_image'])) ?>" alt="<?= esc($projectData['title']) ?>" />
+            <img src="<?= base_url('assets/img/' . esc($projectData['cover_image'])) ?>" class="img-cover" alt="<?= esc($projectData['title']) ?>" />
         </div>
     
         <div class="content">

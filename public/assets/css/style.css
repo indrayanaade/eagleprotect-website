@@ -401,9 +401,10 @@ body, html, main, section, div {
   font-weight: 700;
 }
 .roboto-h4{
-  font-family: 'Robot-bold', sans-serif;
+  font-family: 'RobotO-bold', sans-serif;
   font-size: 22px;
   line-height: 28.6px;
+  padding: 10px;
 }
 .roboto-h4-mobile{
   font-family: 'Robot-bold', sans-serif;
@@ -1010,8 +1011,14 @@ body, html, main, section, div {
   
   .box {
     background-color: #F0F0F0;
+    height: 350px;
+    border-radius: 0;
+    box-shadow: none;
+
+  }
+  .box-mobile {
+    background-color: #F0F0F0;
     height: 100%;
-    border: 1px solid #ddd;
     border-radius: 0;
     box-shadow: none;
 
@@ -1026,9 +1033,14 @@ body, html, main, section, div {
   }
 
   .box-img {
-    background: transparent;
-    margin-top: 50px;
-    /* margin-bottom: 20px; */
+    margin-top: 30px;
+    display: inline-flex;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-decoration: none;
   }
 
   .custom-icon {

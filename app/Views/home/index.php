@@ -44,26 +44,26 @@
       <div class="row text-center">
         <div class="col-md-3 mb-4">
           <div class="box box-light-1 mb-4">
-            <img src="<?= base_url('assets/img/corp.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 1">
-            <p class="fw-bold p-5 roboto-h4">CORPORATE & PRIVATE SECURITY</p>
+            <img src="<?= base_url('assets/img/corp.png') ?>" class="img-fluid box-img" alt="Icon 1">
+            <p class="roboto-h4">CORPORATE & PRIVATE SECURITY</p>
           </div>
         </div>
         <div class="col-md-3 mb-4">
           <div class="box box-light-2 mb-4">
-            <img src="<?= base_url('assets/img/cyber.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 2">
-            <p class="fw-bold p-5 roboto-h4">CYBERSECURITY SYSTEM</p>
+            <img src="<?= base_url('assets/img/cyber.png') ?>" class="img-fluid box-img" alt="Icon 2">
+            <p class="roboto-h4">CYBERSECURITY SYSTEM</p>
           </div>
         </div>
         <div class="col-md-3 mb-4">
           <div class="box box-light-1 mb-4">
-            <img src="<?= base_url('assets/img/tech.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 3">
-            <p class="fw-bold p-5 roboto-h4">TECHNOLOGY INTEGRATION</p>
+            <img src="<?= base_url('assets/img/tech.png') ?>" class="img-fluid box-img" alt="Icon 3">
+            <p class="roboto-h4">TECHNOLOGY INTEGRATION</p>
           </div>
         </div>
         <div class="col-md-3 mb-4">
           <div class="box box-light-2 mb-4">
-            <img src="<?= base_url('assets/img/personel.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 4">
-            <p class="fw-bold p-5 roboto-h4">PERSONAL PROTECTION</p>
+            <img src="<?= base_url('assets/img/personel.png') ?>" class="img-fluid box-img" alt="Icon 4">
+            <p class="roboto-h4">PERSONAL PROTECTION</p>
           </div>
         </div>
       </div>
@@ -337,25 +337,25 @@
     <div class="container-fluid mt-5 mb-5">
       <div class="row text-center">
         <div class="col-6">
-          <div class="box box-light-1 p-4 h-100">
+          <div class="box-mobile box-light-1 p-4 h-100">
             <img src="<?= base_url('assets/img/corp.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 1">
             <p class="fw-bold mt-3 roboto-h4-mobile">CORPORATE & PRIVATE SECURITY</p>
           </div>
         </div>
         <div class="col-6">
-          <div class="box box-light-2 p-4 h-100">
+          <div class="box-mobile box-light-2 p-4 h-100">
             <img src="<?= base_url('assets/img/cyber.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 2">
             <p class="fw-bold mt-3 roboto-h4-mobile">CYBERSECURITY SYSTEM</p>
           </div>
         </div>
         <div class="col-6">
-          <div class="box box-light-1 p-4 h-100">
+          <div class="box-mobile box-light-1 p-4 h-100">
             <img src="<?= base_url('assets/img/tech.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 3">
             <p class="fw-bold mt-3 roboto-h4-mobile">TECHNOLOGY INTEGRATION</p>
           </div>
         </div>
         <div class="col-6">
-          <div class="box box-light-2 p-4 h-100">
+          <div class="box-mobile box-light-2 p-4 h-100">
             <img src="<?= base_url('assets/img/personel.png') ?>" class="img-fluid d-block mx-auto box-img" alt="Icon 4">
             <p class="fw-bold mt-3 roboto-h4-mobile">PERSONAL PROTECTION</p>
           </div>

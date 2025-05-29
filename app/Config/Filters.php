@@ -72,6 +72,7 @@ class Filters extends BaseFilters
             'csrf' => [
                 'except' => [
                     'services/detail',
+                    'projects/detail',
                     'contact_us/submit'
                 ]
             ]

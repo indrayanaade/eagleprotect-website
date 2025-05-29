@@ -235,6 +235,9 @@
   margin-bottom: 2rem;
   object-fit: cover;
 }
+.img-cover{
+  width: 100%;
+}
 
 .content {
   padding-top: 50px !important;
@@ -361,6 +364,9 @@
   color: var(--black-50, #818181);
   font-family: 'Inter-bold',sans-serif;
   font-size: 12px;
+}
+.custom-navbar-detail.sticky .hover-overlay:hover.active .txt_nav {
+  color: #E63822;
 }
 
 .organizer-box strong {

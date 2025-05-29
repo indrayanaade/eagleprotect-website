@@ -46,7 +46,7 @@
         </div>
     </section>
     <?php
-        $chunked_slides_security = array_chunk($security_slides, 5);
+        $chunked_slides_security = array_chunk($security_slides, 3);
         $globalIndex = 0; // <<< Tambah counter global 
     ?>
     <section class="security-service" data-aos="fade-up">
